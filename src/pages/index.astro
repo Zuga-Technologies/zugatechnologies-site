@@ -1,25 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Section from '../components/Section.astro';
-import Container from '../components/Container.astro';
-import Eyebrow from '../components/Eyebrow.astro';
-import Button from '../components/Button.astro';
+import Hero from '../components/sections/Hero.astro';
+import Studios from '../components/sections/Studios.astro';
+import Moat from '../components/sections/Moat.astro';
+import Team from '../components/sections/Team.astro';
+import Contact from '../components/sections/Contact.astro';
 ---
 
-<Layout title="[MIKE-PENDING: site title]" description="[MIKE-PENDING: site description]">
-  <Section variant="hero" size="lg" id="hero">
-    <Container width="narrow">
-      <Eyebrow>[MIKE-PENDING: hero-eyebrow]</Eyebrow>
-      <h1 class="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink-100 sm:text-5xl">
-        [MIKE-PENDING: hero-headline]
-      </h1>
-      <p class="mt-6 text-pretty text-lg text-ink-300">
-        [MIKE-PENDING: hero-subheadline]
-      </p>
-      <div class="mt-10 flex flex-wrap items-center gap-3">
-        <Button variant="primary" href="#contact">[MIKE-PENDING: hero-primary-cta]</Button>
-        <Button variant="secondary" href="#what">[MIKE-PENDING: hero-secondary-cta]</Button>
-      </div>
-    </Container>
-  </Section>
+<Layout title="[MIKE-PENDING: site-title]" description="[MIKE-PENDING: site-description]">
+  <Hero />
+  <Studios />
+  <Moat />
+  <Team />
+  <Contact />
 </Layout>

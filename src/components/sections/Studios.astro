@@ -1,0 +1,44 @@
+---
+import Section from '../Section.astro';
+import Container from '../Container.astro';
+import Eyebrow from '../Eyebrow.astro';
+
+/* 4 studio tiles. Mike picks which 4 to feature (current shortlist:
+   Zugabot, ZugaGamerOverlay, ZugaLife, ZugaCode) and how each is described.
+   Studio names are placeholder-tagged because positioning is a Mike
+   decision — he may want code-names, product-names, or roman-numeral framing. */
+const tiles = [
+  { name: '[MIKE-PENDING: studio-1-name]', body: '[MIKE-PENDING: studio-1-blurb]', status: '[MIKE-PENDING: studio-1-status]' },
+  { name: '[MIKE-PENDING: studio-2-name]', body: '[MIKE-PENDING: studio-2-blurb]', status: '[MIKE-PENDING: studio-2-status]' },
+  { name: '[MIKE-PENDING: studio-3-name]', body: '[MIKE-PENDING: studio-3-blurb]', status: '[MIKE-PENDING: studio-3-status]' },
+  { name: '[MIKE-PENDING: studio-4-name]', body: '[MIKE-PENDING: studio-4-blurb]', status: '[MIKE-PENDING: studio-4-status]' },
+];
+---
+
+<Section variant="muted" id="what">
+  <Container>
+    <div class="max-w-narrow">
+      <Eyebrow>[MIKE-PENDING: studios-eyebrow]</Eyebrow>
+      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl">
+        [MIKE-PENDING: studios-heading]
+      </h2>
+      <p class="mt-5 text-ink-300">
+        [MIKE-PENDING: studios-intro]
+      </p>
+    </div>
+
+    <ul class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {tiles.map((tile) => (
+        <li class="rounded-lg border border-rule bg-ink-950 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-base font-semibold text-ink-100">{tile.name}</h3>
+            <span class="rounded-full border border-rule px-2 py-0.5 text-[10px] uppercase tracking-wider text-ink-400">
+              {tile.status}
+            </span>
+          </div>
+          <p class="mt-3 text-sm text-ink-400">{tile.body}</p>
+        </li>
+      ))}
+    </ul>
+  </Container>
+</Section>

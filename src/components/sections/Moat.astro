@@ -1,0 +1,42 @@
+---
+import Section from '../Section.astro';
+import Container from '../Container.astro';
+import Eyebrow from '../Eyebrow.astro';
+
+/* Three moat pillars. Current shortlist (subject to Mike framing):
+   1. Computational consciousness architecture
+   2. Behavioral mechanistic interpretability (BMI thesis)
+   3. Anthropic Partner Network cohort
+   Mike has hard veto on positioning, esp. anything naming Anthropic. */
+const pillars = [
+  { title: '[MIKE-PENDING: moat-1-title]', body: '[MIKE-PENDING: moat-1-body]' },
+  { title: '[MIKE-PENDING: moat-2-title]', body: '[MIKE-PENDING: moat-2-body]' },
+  { title: '[MIKE-PENDING: moat-3-title]', body: '[MIKE-PENDING: moat-3-body]' },
+];
+---
+
+<Section id="moat">
+  <Container>
+    <div class="max-w-narrow">
+      <Eyebrow>[MIKE-PENDING: moat-eyebrow]</Eyebrow>
+      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl">
+        [MIKE-PENDING: moat-heading]
+      </h2>
+      <p class="mt-5 text-ink-300">
+        [MIKE-PENDING: moat-intro]
+      </p>
+    </div>
+
+    <dl class="mt-12 grid grid-cols-1 gap-x-12 gap-y-10 lg:grid-cols-3">
+      {pillars.map((p, i) => (
+        <div>
+          <dt class="flex items-baseline gap-3">
+            <span class="font-mono text-xs text-accent-500">0{i + 1}</span>
+            <span class="text-base font-semibold text-ink-100">{p.title}</span>
+          </dt>
+          <dd class="mt-3 text-sm leading-relaxed text-ink-400">{p.body}</dd>
+        </div>
+      ))}
+    </dl>
+  </Container>
+</Section>

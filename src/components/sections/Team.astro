@@ -1,0 +1,39 @@
+---
+import Section from '../Section.astro';
+import Container from '../Container.astro';
+import Eyebrow from '../Eyebrow.astro';
+
+/* Founder cards + cohort note. Names are [MIKE-PENDING] because how-they're-presented
+   (full / first-only / role-only / no-names) is a positioning decision in Mike's lane.
+   Photo decisions also Mike-pending — corp sites range from "no faces" (Vercel-y) to
+   "full headshot grid" (Linear-y). */
+const founders = [
+  { name: '[MIKE-PENDING: founder-1-name]', role: '[MIKE-PENDING: founder-1-role]', bio: '[MIKE-PENDING: founder-1-bio]' },
+  { name: '[MIKE-PENDING: founder-2-name]', role: '[MIKE-PENDING: founder-2-role]', bio: '[MIKE-PENDING: founder-2-bio]' },
+];
+---
+
+<Section variant="muted" id="team">
+  <Container>
+    <div class="max-w-narrow">
+      <Eyebrow>[MIKE-PENDING: team-eyebrow]</Eyebrow>
+      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl">
+        [MIKE-PENDING: team-heading]
+      </h2>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+      {founders.map((f) => (
+        <article class="rounded-lg border border-rule bg-ink-950 p-6">
+          <h3 class="text-base font-semibold text-ink-100">{f.name}</h3>
+          <p class="mt-1 text-xs uppercase tracking-wider text-ink-500">{f.role}</p>
+          <p class="mt-4 text-sm leading-relaxed text-ink-400">{f.bio}</p>
+        </article>
+      ))}
+    </div>
+
+    <p class="mt-10 max-w-narrow text-sm text-ink-400">
+      [MIKE-PENDING: cohort-line — e.g. "Plus a partner-network cohort of N building across X domains."]
+    </p>
+  </Container>
+</Section>
