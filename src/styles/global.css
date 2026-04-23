@@ -1,1 +1,69 @@
 @import "tailwindcss";
+
+/*
+ * Zuga Technologies — corporate identity tokens.
+ *
+ * Intentionally distinct from ZugaApp product palette (amber + glow + multi-semantic).
+ * Investor / partner / cohort audience reads visual restraint as seriousness.
+ * Every token here is overridable by Mike in a one-file edit if he wants a different
+ * direction post-Phase-5 sign-off.
+ */
+
+@theme {
+  /* Surface scale — neutral, near-black to off-white */
+  --color-ink-950: oklch(0.13 0.005 280);
+  --color-ink-900: oklch(0.18 0.006 280);
+  --color-ink-800: oklch(0.24 0.008 280);
+  --color-ink-700: oklch(0.32 0.009 280);
+  --color-ink-600: oklch(0.44 0.012 280);
+  --color-ink-500: oklch(0.55 0.014 280);
+  --color-ink-400: oklch(0.70 0.012 280);
+  --color-ink-300: oklch(0.80 0.008 280);
+  --color-ink-200: oklch(0.88 0.005 280);
+  --color-ink-100: oklch(0.96 0.002 280);
+  --color-ink-50:  oklch(0.99 0.001 280);
+
+  /* Single accent — cool steel-cyan, AI-adjacent without being cliché.
+     Picked to contrast against ZugaApp amber so the two brands read as
+     distinct identities. [MIKE-PENDING: confirm or pick a different hue] */
+  --color-accent-400: oklch(0.78 0.08 220);
+  --color-accent-500: oklch(0.68 0.10 220);
+  --color-accent-600: oklch(0.58 0.12 220);
+
+  /* Borders */
+  --color-rule-strong: oklch(0.28 0.008 280);
+  --color-rule:        oklch(0.22 0.007 280);
+  --color-rule-soft:   oklch(0.18 0.006 280);
+
+  /* Typography — system stack only, no Google Fonts (third-party = Mike-gated) */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Container widths.
+     NOTE: avoiding the name `prose` because Tailwind v4 reserves it for
+     a built-in 65ch utility — silent override conflict, dropped my value. */
+  --container-narrow: 42rem;
+  --container-page:   72rem;
+
+  /* Section vertical rhythm — corporate sites breathe more than product UIs */
+  --spacing-section-sm: 4rem;
+  --spacing-section:    6rem;
+  --spacing-section-lg: 9rem;
+}
+
+/* Subtle base — text rendering quality matters at investor-eye scrutiny */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Selection color — small detail, reads as "considered" */
+::selection {
+  background-color: var(--color-accent-600);
+  color: var(--color-ink-50);
+}

@@ -1,0 +1,26 @@
+---
+interface Props {
+  id?: string;
+  variant?: 'standard' | 'muted' | 'hero';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+}
+
+const { id, variant = 'standard', size = 'md', class: className = '' } = Astro.props;
+
+const bgClass =
+  variant === 'muted' ? 'bg-ink-900' :
+  variant === 'hero'  ? 'bg-ink-950' :
+                        'bg-ink-950';
+
+const padClass =
+  size === 'sm' ? 'py-section-sm' :
+  size === 'lg' ? 'py-section-lg' :
+                  'py-section';
+
+const borderClass = variant === 'muted' ? 'border-y border-rule-soft' : '';
+---
+
+<section id={id} class:list={[bgClass, padClass, borderClass, className]}>
+  <slot />
+</section>
