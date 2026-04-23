@@ -9,9 +9,11 @@ const year = new Date().getFullYear();
     <p>
       © {year} [MIKE-PENDING: legal entity name]. All rights reserved.
     </p>
+    {/* hrefs intentionally `#` until Mike confirms whether /privacy and /terms pages
+        will exist (Mike-lane: legal). Real targets remain [MIKE-PENDING] decisions. */}
     <nav class="flex items-center gap-6" aria-label="Footer">
-      <a href="/privacy" class="hover:text-ink-300 transition-colors">[MIKE-PENDING: privacy-link-text]</a>
-      <a href="/terms" class="hover:text-ink-300 transition-colors">[MIKE-PENDING: terms-link-text]</a>
+      <a href="#" class="hover:text-ink-300 transition-colors">[MIKE-PENDING: privacy-link-text]</a>
+      <a href="#" class="hover:text-ink-300 transition-colors">[MIKE-PENDING: terms-link-text]</a>
       <span class="text-ink-700">[MIKE-PENDING: optional social link]</span>
     </nav>
   </Container>

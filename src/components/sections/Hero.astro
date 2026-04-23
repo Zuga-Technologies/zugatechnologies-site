@@ -14,11 +14,14 @@ import Button from '../Button.astro';
     <p class="mt-6 text-pretty text-lg text-ink-300">
       [MIKE-PENDING: hero-subheadline]
     </p>
+    {/* href values intentionally `#` so accidental clicks during Mike review don't 404.
+        Real targets [MIKE-PENDING: hero-primary-cta-href] + [MIKE-PENDING: hero-secondary-cta-href]
+        are still tracked here for audit grep. */}
     <div class="mt-10 flex flex-wrap items-center gap-3">
-      <Button variant="primary" href="[MIKE-PENDING: hero-primary-cta-href]">
+      <Button variant="primary" href="#">
         [MIKE-PENDING: hero-primary-cta-label]
       </Button>
-      <Button variant="secondary" href="[MIKE-PENDING: hero-secondary-cta-href]">
+      <Button variant="secondary" href="#">
         [MIKE-PENDING: hero-secondary-cta-label]
       </Button>
     </div>

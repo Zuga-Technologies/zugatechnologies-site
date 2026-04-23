@@ -20,8 +20,10 @@ import Button from '../Button.astro';
     <p class="mt-5 text-ink-300">
       [MIKE-PENDING: contact-body]
     </p>
+    {/* href intentionally `#` so review clicks don't open a broken mail composer.
+        Real mailto address [MIKE-PENDING: contact-email-address] tracked here for audit. */}
     <div class="mt-10 flex flex-wrap items-center gap-3">
-      <Button variant="primary" href="mailto:[MIKE-PENDING: contact-email-address]">
+      <Button variant="primary" href="#">
         [MIKE-PENDING: contact-email-cta-label]
       </Button>
       <span class="text-sm text-ink-500">
