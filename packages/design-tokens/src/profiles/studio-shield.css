@@ -1,0 +1,13 @@
+/* @zuga/design-tokens — profiles/studio-shield.css
+ * Used by: ZugaShield
+ * Family: security
+ * Accent: red
+ * WHY: red signals the security/integrity domain. Designers must use red sparingly elsewhere.
+ */
+
+:root {
+  --accent-brand:        var(--color-red-500);
+  --accent-brand-subtle: var(--color-red-100);
+  --accent-brand-strong: var(--color-red-600);
+  --accent-fg:           var(--color-slate-50);
+}

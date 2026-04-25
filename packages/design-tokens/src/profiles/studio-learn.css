@@ -1,0 +1,12 @@
+/* @zuga/design-tokens — profiles/studio-learn.css
+ * Used by: ZugaLearn
+ * Family: education
+ * Accent: indigo
+ */
+
+:root {
+  --accent-brand:        var(--color-indigo-500);
+  --accent-brand-subtle: var(--color-indigo-100);
+  --accent-brand-strong: var(--color-indigo-600);
+  --accent-fg:           var(--color-slate-50);
+}

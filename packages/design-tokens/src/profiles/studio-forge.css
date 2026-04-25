@@ -1,0 +1,12 @@
+/* @zuga/design-tokens — profiles/studio-forge.css
+ * Used by: ZugaForge
+ * Family: creation-hub
+ * Accent: orange
+ */
+
+:root {
+  --accent-brand:        var(--color-orange-500);
+  --accent-brand-subtle: var(--color-orange-100);
+  --accent-brand-strong: var(--color-orange-600);
+  --accent-fg:           var(--color-slate-50);
+}

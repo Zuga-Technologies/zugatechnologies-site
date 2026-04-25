@@ -1,0 +1,12 @@
+/* @zuga/design-tokens — profiles/studio-code.css
+ * Used by: ZugaCode
+ * Family: dev
+ * Accent: blue
+ */
+
+:root {
+  --accent-brand:        var(--color-blue-500);
+  --accent-brand-subtle: var(--color-blue-100);
+  --accent-brand-strong: var(--color-blue-600);
+  --accent-fg:           var(--color-slate-50);
+}

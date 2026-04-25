@@ -1,0 +1,12 @@
+/* @zuga/design-tokens — profiles/studio-audio.css
+ * Used by: ZugaAudio
+ * Family: audio
+ * Accent: magenta
+ */
+
+:root {
+  --accent-brand:        var(--color-magenta-500);
+  --accent-brand-subtle: var(--color-magenta-100);
+  --accent-brand-strong: var(--color-magenta-600);
+  --accent-fg:           var(--color-slate-50);
+}
