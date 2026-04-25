@@ -1,0 +1,11 @@
+/* @zuga/design-tokens — profiles/corp.css
+ * Used by: zugatechnologies-site (corp marketing landing + bible)
+ * Accent: master cyan (no override — corp identity uses master directly)
+ *
+ * Even though there are no token overrides, this file exists so consumers
+ * importing this profile can declare intent ("I am the corp surface") for
+ * tooling/audit purposes. tokens-lint reads .zuga-design.json's profile
+ * field; this CSS file is loaded as a no-op marker.
+ */
+
+/* No overrides — corp consumes Tier 2 defaults as-is */
