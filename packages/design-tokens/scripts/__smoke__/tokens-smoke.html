@@ -1,5 +1,6 @@
 <!DOCTYPE html><html><head>
 <link rel="stylesheet" href="../../src/tokens.css">
+<link rel="stylesheet" href="../../src/tokens-dark.css">
 <style>
   body { background: var(--surface-canvas); color: var(--text-primary); font-family: var(--font-family-sans); padding: var(--space-6); }
   .swatch { padding: var(--space-4); margin: var(--space-1) 0; border-radius: var(--radius-md); }
@@ -9,6 +10,7 @@
   .panel small { color: var(--text-tertiary); }
 </style></head>
 <body>
+  <button onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'" style="position: sticky; top: var(--space-2); padding: var(--space-2) var(--space-4); background: var(--accent-brand); color: var(--accent-fg); border: 0; border-radius: var(--radius-md); cursor: pointer; font-weight: var(--font-weight-semibold);">Toggle dark mode</button>
   <h1>tokens.css smoke test</h1>
   <h2>Master Zuga accent</h2>
   <div class="swatch" style="background: var(--color-cyan-500); color: white;">cyan-500 — should be #06b6d4</div>

@@ -1,0 +1,70 @@
+/* @zuga/design-tokens — tokens-dark.css
+ * Dark-mode swap for Tier 2 semantic vars.
+ * Tier 1 primitives are unchanged (raw values stay constant).
+ * Apply via: <html data-theme="dark"> OR @media (prefers-color-scheme: dark)
+ *
+ * After P0-T09 contrast fixes: accent-brand is cyan-700 (AA-safe on white).
+ * On dark surfaces, accent-brand stays cyan-700 — sufficient contrast on slate-900.
+ */
+
+[data-theme="dark"], html.dark {
+  /* SURFACE — flip the canvas/primary/secondary/tertiary scale */
+  --surface-canvas:    var(--color-slate-950);
+  --surface-primary:   var(--color-slate-900);
+  --surface-secondary: var(--color-slate-800);
+  --surface-tertiary:  var(--color-slate-700);
+  --surface-inverse:   var(--color-slate-50);
+  --surface-overlay:   rgba(2, 6, 23, 0.7);
+  --surface-brand:     var(--color-cyan-950);
+
+  /* TEXT — invert primary/secondary/tertiary; link uses lighter stop for AA on dark */
+  --text-primary:    var(--color-slate-50);
+  --text-secondary:  var(--color-slate-300);
+  --text-tertiary:   var(--color-slate-400);
+  --text-muted:      var(--color-slate-500);
+  --text-inverse:    var(--color-slate-900);
+  --text-link:       var(--color-cyan-400);
+  --text-link-hover: var(--color-cyan-300);
+
+  /* BORDER — flip subtle/default/strong scale */
+  --border-subtle:  var(--color-slate-800);
+  --border-default: var(--color-slate-700);
+  --border-strong:  var(--color-slate-600);
+
+  /* FEEDBACK SUBTLE — deepest stops for dark-mode subtle bg */
+  --feedback-success-subtle: var(--color-green-950);
+  --feedback-warn-subtle:    var(--color-amber-950);
+  --feedback-danger-subtle:  var(--color-red-950);
+  --feedback-info-subtle:    var(--color-cyan-950);
+
+  /* feedback-*, accent-*, density-*, spacing-* unchanged from light defaults */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --surface-canvas:    var(--color-slate-950);
+    --surface-primary:   var(--color-slate-900);
+    --surface-secondary: var(--color-slate-800);
+    --surface-tertiary:  var(--color-slate-700);
+    --surface-inverse:   var(--color-slate-50);
+    --surface-overlay:   rgba(2, 6, 23, 0.7);
+    --surface-brand:     var(--color-cyan-950);
+
+    --text-primary:    var(--color-slate-50);
+    --text-secondary:  var(--color-slate-300);
+    --text-tertiary:   var(--color-slate-400);
+    --text-muted:      var(--color-slate-500);
+    --text-inverse:    var(--color-slate-900);
+    --text-link:       var(--color-cyan-400);
+    --text-link-hover: var(--color-cyan-300);
+
+    --border-subtle:  var(--color-slate-800);
+    --border-default: var(--color-slate-700);
+    --border-strong:  var(--color-slate-600);
+
+    --feedback-success-subtle: var(--color-green-950);
+    --feedback-warn-subtle:    var(--color-amber-950);
+    --feedback-danger-subtle:  var(--color-red-950);
+    --feedback-info-subtle:    var(--color-cyan-950);
+  }
+}
