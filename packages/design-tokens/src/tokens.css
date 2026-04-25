@@ -313,14 +313,16 @@
 
 /* ============ TIER 2 — SEMANTIC: accent / feedback / density / spacing-section ============ */
 :root {
-  /* ACCENT — sub-brand-overridable. Default = master cyan. */
-  --accent-brand:        var(--color-cyan-500);
+  /* ACCENT — sub-brand-overridable. Default = master cyan-700 (AA-compliant on white text).
+   * Master Zuga accent is the cyan hue family [MIKE-CHECKPOINT-h01]; specific stop is -700
+   * to maintain WCAG AA 4.5:1 with --accent-fg:#ffffff. */
+  --accent-brand:        var(--color-cyan-700);
   --accent-brand-subtle: var(--color-cyan-100);
-  --accent-brand-strong: var(--color-cyan-600);
+  --accent-brand-strong: var(--color-cyan-800);
   --accent-fg:           #ffffff;
 
   /* FEEDBACK */
-  --feedback-success:        var(--color-green-600);
+  --feedback-success:        var(--color-green-700);
   --feedback-success-subtle: var(--color-green-100);
   --feedback-success-fg:     #ffffff;
 
@@ -332,7 +334,7 @@
   --feedback-danger-subtle: var(--color-red-100);
   --feedback-danger-fg:     #ffffff;
 
-  --feedback-info:        var(--color-cyan-600);
+  --feedback-info:        var(--color-cyan-700);
   --feedback-info-subtle: var(--color-cyan-100);
   --feedback-info-fg:     #ffffff;
 
