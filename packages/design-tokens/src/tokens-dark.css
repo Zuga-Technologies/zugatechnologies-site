@@ -31,6 +31,10 @@
   --border-default: var(--color-slate-700);
   --border-strong:  var(--color-slate-600);
 
+  /* TODO[T23-color-in-practice]: subtle-bg + main-color contrast on dark is borderline AA
+   * (e.g., green-700 fg on green-950 bg ≈ 3.2:1). Resolution: dark-mode subtle alert
+   * boxes should pair with text-primary (slate-50) for foreground, NOT feedback-*. To be
+   * formalized in bible §5 Color in Practice contrast tables. */
   /* FEEDBACK SUBTLE — deepest stops for dark-mode subtle bg */
   --feedback-success-subtle: var(--color-green-950);
   --feedback-warn-subtle:    var(--color-amber-950);
@@ -40,6 +44,8 @@
   /* feedback-*, accent-*, density-*, spacing-* unchanged from light defaults */
 }
 
+/* ↓ MUST KEEP IN SYNC with [data-theme="dark"] block above.
+ * If you change one block, change the other — they intentionally duplicate. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --surface-canvas:    var(--color-slate-950);
@@ -62,6 +68,10 @@
     --border-default: var(--color-slate-700);
     --border-strong:  var(--color-slate-600);
 
+    /* TODO[T23-color-in-practice]: subtle-bg + main-color contrast on dark is borderline AA
+     * (e.g., green-700 fg on green-950 bg ≈ 3.2:1). Resolution: dark-mode subtle alert
+     * boxes should pair with text-primary (slate-50) for foreground, NOT feedback-*. To be
+     * formalized in bible §5 Color in Practice contrast tables. */
     --feedback-success-subtle: var(--color-green-950);
     --feedback-warn-subtle:    var(--color-amber-950);
     --feedback-danger-subtle:  var(--color-red-950);
