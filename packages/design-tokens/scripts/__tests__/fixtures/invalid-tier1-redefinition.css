@@ -1,0 +1,4 @@
+:root {
+  /* WHY: trying to override a Tier 1 primitive — should be rejected. */
+  --color-slate-500: #ff0000;
+}

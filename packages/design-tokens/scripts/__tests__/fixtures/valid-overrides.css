@@ -1,0 +1,10 @@
+:root {
+  /* WHY: ZugaLife is the wellness studio; mint reinforces calm/clean. */
+  --accent-brand: var(--color-mint-500);
+  /* WHY: Subtle mint tint for soft backgrounds in wellness contexts. */
+  --accent-brand-subtle: var(--color-mint-100);
+  /* WHY: Strong mint shade for pressed states and high-contrast CTA. */
+  --accent-brand-strong: var(--color-mint-600);
+  /* WHY: Slate-50 foreground ensures legible contrast on mint surfaces. */
+  --accent-fg: var(--color-slate-50);
+}

@@ -1,0 +1,4 @@
+:root {
+  /* WHY: too short */
+  --accent-brand: var(--color-mint-500);
+}
