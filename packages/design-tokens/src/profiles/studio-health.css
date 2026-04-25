@@ -1,0 +1,12 @@
+/* @zuga/design-tokens — profiles/studio-health.css
+ * Used by: ZugaHealth
+ * Family: wellness (sibling: studio-life)
+ * Accent: mint
+ */
+
+:root {
+  --accent-brand:        var(--color-mint-500);
+  --accent-brand-subtle: var(--color-mint-100);
+  --accent-brand-strong: var(--color-mint-600);
+  --accent-fg:           var(--color-slate-50);
+}

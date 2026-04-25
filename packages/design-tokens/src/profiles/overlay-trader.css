@@ -1,0 +1,7 @@
+/* @zuga/design-tokens — profiles/overlay-trader.css */
+:root {
+  --accent-brand:        var(--color-emerald-500);
+  --accent-brand-subtle: var(--color-emerald-100);
+  --accent-brand-strong: var(--color-emerald-600);
+  --accent-fg:           #ffffff;
+}

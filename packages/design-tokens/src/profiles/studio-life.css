@@ -1,0 +1,15 @@
+/* @zuga/design-tokens — profiles/studio-life.css
+ * Used by: ZugaLife (wellness)
+ * Family: wellness (sibling: studio-health)
+ * Accent: mint
+ *
+ * WHY: ZugaLife is the wellness studio; mint reinforces calm/clean over
+ *      master cyan's more clinical posture. Persona is in a soft mental state.
+ */
+
+:root {
+  --accent-brand:        var(--color-mint-500);
+  --accent-brand-subtle: var(--color-mint-100);
+  --accent-brand-strong: var(--color-mint-600);
+  --accent-fg:           var(--color-slate-50);
+}

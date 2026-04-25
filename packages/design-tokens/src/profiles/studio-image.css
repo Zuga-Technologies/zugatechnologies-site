@@ -1,0 +1,12 @@
+/* @zuga/design-tokens — profiles/studio-image.css
+ * Used by: ZugaImage
+ * Family: creative (siblings: studio-image, studio-video, studio-motion)
+ * Accent: violet
+ */
+
+:root {
+  --accent-brand:        var(--color-violet-500);
+  --accent-brand-subtle: var(--color-violet-100);
+  --accent-brand-strong: var(--color-violet-600);
+  --accent-fg:           var(--color-slate-50);
+}

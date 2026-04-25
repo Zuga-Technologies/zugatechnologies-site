@@ -1,0 +1,19 @@
+/* @zuga/design-tokens — profiles/studio-trader.css
+ * Used by: ZugaTrader
+ * Family: markets (sibling: overlay-trader)
+ * Accent: emerald (NOT green — green is reserved for feedback.success)
+ *
+ * WHY: emerald separates markets-brand from feedback.success in the same UI.
+ *      "Trade succeeded" (green) and the brand accent must be distinguishable
+ *      side-by-side. See ADR-0003.
+ */
+
+:root {
+  --accent-brand:        var(--color-emerald-500);
+  --accent-brand-subtle: var(--color-emerald-100);
+  --accent-brand-strong: var(--color-emerald-600);
+  --accent-fg:           #ffffff;
+  /* Density override: ZugaTrader is data-heavy */
+  --density-comfortable: 0.9375;
+  --density-compact:     0.8125;
+}
