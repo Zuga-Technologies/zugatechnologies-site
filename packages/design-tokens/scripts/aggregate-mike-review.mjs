@@ -40,16 +40,16 @@ export function validateCheckpoints(checkpoints) {
   for (const cp of checkpoints) {
     const draftMatch = cp.contextBlock.match(/Antonio'?s draft\s*\|\s*(.+?)\s*\|/i);
     const draft = draftMatch ? draftMatch[1].trim() : '';
-    if (
-      !draft ||
-      draft.length < 20 ||
-      PLACEHOLDER_TOKENS.some(t => draft.toLowerCase().includes(t.toLowerCase()))
-    ) {
-      invalid.push({
-        key: cp.key,
-        reason: "Antonio's draft is empty, too short (<20 chars), or contains placeholder",
-      });
+    let reason = null;
+    if (!draft) {
+      reason = "Antonio's draft is empty";
+    } else if (draft.length < 20) {
+      reason = `Antonio's draft is only ${draft.length} chars (need >=20)`;
+    } else {
+      const found = PLACEHOLDER_TOKENS.find(t => draft.toLowerCase().includes(t.toLowerCase()));
+      if (found) reason = `Antonio's draft contains placeholder token "${found}"`;
     }
+    if (reason) invalid.push({ key: cp.key, reason });
   }
   return { invalid };
 }
@@ -106,7 +106,16 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   const bibleDir = process.argv[2] || './docs/bible';
   const outputPath = process.argv[3] || './docs/MIKE-REVIEW.md';
 
-  const checkpoints = await extractCheckpoints(bibleDir);
+  let checkpoints;
+  try {
+    checkpoints = await extractCheckpoints(bibleDir);
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.error(`ERROR: Bible directory not found: ${bibleDir}`);
+      process.exit(2);
+    }
+    throw err;
+  }
   const validation = validateCheckpoints(checkpoints);
 
   if (validation.invalid.length > 0) {
