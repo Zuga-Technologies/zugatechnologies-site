@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head>
 <link rel="stylesheet" href="../../src/tokens.css">
 <link rel="stylesheet" href="../../src/tokens-dark.css">
+<link rel="stylesheet" href="../../src/components/button.css">
 <style>
   body { background: var(--surface-canvas); color: var(--text-primary); font-family: var(--font-family-sans); padding: var(--space-6); }
   .swatch { padding: var(--space-4); margin: var(--space-1) 0; border-radius: var(--radius-md); }
@@ -57,5 +58,12 @@
     <div style="background: var(--feedback-warn-subtle); color: var(--feedback-warn); padding: var(--space-3); border-radius: var(--radius-md); margin-bottom: var(--space-2);">Warn state</div>
     <div style="background: var(--feedback-danger-subtle); color: var(--feedback-danger); padding: var(--space-3); border-radius: var(--radius-md); margin-bottom: var(--space-2);">Danger state</div>
     <button style="background: var(--accent-brand); color: var(--accent-fg); padding: var(--space-2) var(--space-4); border-radius: var(--radius-md); border: 0; font-weight: var(--font-weight-semibold); cursor: pointer;">Master accent button</button>
+  </div>
+  <h2>Tier 3 — button variants (smoke)</h2>
+  <div style="display: flex; gap: var(--space-3); padding: var(--space-6);">
+    <button style="background: var(--component-button-bg-primary); color: var(--component-button-fg-primary); padding: var(--component-button-padding-y) var(--component-button-padding-x); border-radius: var(--component-button-radius); border: 0; font-weight: var(--component-button-font-weight); font-size: var(--component-button-font-size); min-height: var(--component-button-min-height);">Primary</button>
+    <button style="background: var(--component-button-bg-secondary); color: var(--component-button-fg-secondary); padding: var(--component-button-padding-y) var(--component-button-padding-x); border-radius: var(--component-button-radius); border: 1px solid var(--component-button-border-secondary); font-weight: var(--component-button-font-weight); min-height: var(--component-button-min-height);">Secondary</button>
+    <button style="background: var(--component-button-bg-ghost); color: var(--component-button-fg-ghost); padding: var(--component-button-padding-y) var(--component-button-padding-x); border-radius: var(--component-button-radius); border: 0; font-weight: var(--component-button-font-weight); min-height: var(--component-button-min-height);">Ghost</button>
+    <button style="background: var(--component-button-bg-danger); color: var(--component-button-fg-danger); padding: var(--component-button-padding-y) var(--component-button-padding-x); border-radius: var(--component-button-radius); border: 0; font-weight: var(--component-button-font-weight); min-height: var(--component-button-min-height);">Danger</button>
   </div>
 </body></html>

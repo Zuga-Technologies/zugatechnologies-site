@@ -1,0 +1,18 @@
+/* @zuga/design-tokens — components/input.css
+ * Tier 3 component-scoped tokens for text inputs. Chain to Tier 2 semantic.
+ */
+
+:root {
+  --component-input-padding-x:      var(--space-3);
+  --component-input-padding-y:      var(--space-2);
+  --component-input-radius:         var(--radius-md);
+  --component-input-bg:             var(--surface-primary);
+  --component-input-bg-disabled:    var(--surface-secondary);
+  --component-input-border:         var(--border-default);
+  --component-input-border-focus:   var(--border-focus);
+  --component-input-border-error:   var(--feedback-danger);
+  --component-input-fg:             var(--text-primary);
+  --component-input-fg-placeholder: var(--text-muted);
+  --component-input-font-size:      var(--type-scale-sm);
+  --component-input-min-height:     2.25rem;
+}

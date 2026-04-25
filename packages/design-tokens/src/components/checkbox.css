@@ -1,0 +1,12 @@
+/* @zuga/design-tokens — components/checkbox.css */
+
+:root {
+  --component-checkbox-size: 1rem;
+  --component-checkbox-radius: var(--radius-sm);
+  --component-checkbox-bg: var(--surface-primary);
+  --component-checkbox-bg-checked: var(--accent-brand);
+  --component-checkbox-fg-check: var(--accent-fg);
+  --component-checkbox-border-default: var(--border-default);
+  --component-checkbox-border-focus: var(--border-focus);
+  --component-checkbox-border-error: var(--feedback-danger);
+}

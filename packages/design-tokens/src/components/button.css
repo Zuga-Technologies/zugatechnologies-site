@@ -1,0 +1,41 @@
+/* @zuga/design-tokens — components/button.css
+ * Tier 3 component-scoped tokens. All defaults chain to Tier 2 semantic.
+ * Sub-brand profiles can override these via theme-overrides.css.
+ */
+
+:root {
+  /* Sizing */
+  --component-button-padding-x: var(--space-4);
+  --component-button-padding-y: var(--space-2);
+  --component-button-gap:        var(--space-2);
+  --component-button-radius:     var(--radius-md);
+  --component-button-min-height: 2.25rem;  /* 36px */
+
+  /* Type */
+  --component-button-font-weight: var(--font-weight-semibold);
+  --component-button-font-size:   var(--type-scale-sm);
+
+  /* Primary variant */
+  --component-button-bg-primary:           var(--accent-brand);
+  --component-button-bg-primary-hover:     var(--accent-brand-strong);
+  --component-button-bg-primary-active:    var(--accent-brand-strong);
+  --component-button-bg-primary-disabled:  var(--color-slate-300);
+  --component-button-fg-primary:           var(--accent-fg);
+  --component-button-fg-primary-disabled:  var(--color-slate-500);
+
+  /* Secondary variant */
+  --component-button-bg-secondary:        var(--surface-secondary);
+  --component-button-bg-secondary-hover:  var(--surface-tertiary);
+  --component-button-fg-secondary:        var(--text-primary);
+  --component-button-border-secondary:    var(--border-default);
+
+  /* Ghost variant */
+  --component-button-bg-ghost:        transparent;
+  --component-button-bg-ghost-hover:  var(--surface-secondary);
+  --component-button-fg-ghost:        var(--text-primary);
+
+  /* Danger variant */
+  --component-button-bg-danger:        var(--feedback-danger);
+  --component-button-bg-danger-hover:  var(--color-red-700);
+  --component-button-fg-danger:        var(--feedback-danger-fg);
+}

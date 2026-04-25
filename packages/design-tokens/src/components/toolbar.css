@@ -1,0 +1,9 @@
+/* @zuga/design-tokens — components/toolbar.css */
+
+:root {
+  --component-toolbar-bg: var(--surface-primary);
+  --component-toolbar-padding-x: var(--space-4);
+  --component-toolbar-padding-y: var(--space-2);
+  --component-toolbar-gap: var(--space-2);
+  --component-toolbar-border-bottom: var(--border-subtle);
+}

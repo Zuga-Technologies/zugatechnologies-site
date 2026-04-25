@@ -1,0 +1,14 @@
+/* @zuga/design-tokens — components/modal.css */
+
+:root {
+  --component-modal-bg:           var(--surface-primary);
+  --component-modal-fg:           var(--text-primary);
+  --component-modal-border:       var(--border-default);
+  --component-modal-radius:       var(--radius-xl);
+  --component-modal-shadow:       var(--shadow-xl);
+  --component-modal-padding:      var(--space-8);
+  --component-modal-max-width:    32rem;
+  --component-modal-backdrop:     var(--surface-overlay);
+  --component-modal-backdrop-z:   var(--z-modal-backdrop);
+  --component-modal-z:            var(--z-modal);
+}

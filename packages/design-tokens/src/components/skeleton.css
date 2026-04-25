@@ -1,0 +1,9 @@
+/* @zuga/design-tokens — components/skeleton.css */
+
+:root {
+  --component-skeleton-bg:           var(--surface-secondary);
+  --component-skeleton-bg-shimmer:   var(--surface-tertiary);
+  --component-skeleton-radius:       var(--radius-md);
+  --component-skeleton-duration:     var(--motion-duration-slower);
+  --component-skeleton-easing:       var(--motion-easing-standard);
+}

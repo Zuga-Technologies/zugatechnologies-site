@@ -1,0 +1,11 @@
+/* @zuga/design-tokens — components/nav.css */
+
+:root {
+  --component-nav-bg: var(--surface-primary);
+  --component-nav-fg: var(--text-secondary);
+  --component-nav-fg-hover: var(--text-primary);
+  --component-nav-fg-active: var(--accent-brand);
+  --component-nav-padding-x: var(--space-3);
+  --component-nav-padding-y: var(--space-2);
+  --component-nav-gap: var(--space-1);
+}

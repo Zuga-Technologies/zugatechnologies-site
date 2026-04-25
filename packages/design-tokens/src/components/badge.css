@@ -1,0 +1,17 @@
+/* @zuga/design-tokens — components/badge.css */
+
+:root {
+  --component-badge-padding-x:    var(--space-2);
+  --component-badge-padding-y:    var(--space-0_5);
+  --component-badge-radius:       var(--radius-full);
+  --component-badge-font-size:    var(--type-scale-xs);
+  --component-badge-font-weight:  var(--font-weight-semibold);
+  --component-badge-bg-default:   var(--surface-secondary);
+  --component-badge-fg-default:   var(--text-primary);
+  --component-badge-bg-brand:     var(--accent-brand-subtle);
+  --component-badge-fg-brand:     var(--accent-brand-strong);
+  --component-badge-bg-success:   var(--feedback-success-subtle);
+  --component-badge-fg-success:   var(--feedback-success);
+  --component-badge-bg-danger:    var(--feedback-danger-subtle);
+  --component-badge-fg-danger:    var(--feedback-danger);
+}

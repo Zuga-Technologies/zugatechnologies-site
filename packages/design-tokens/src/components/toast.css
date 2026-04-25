@@ -1,0 +1,15 @@
+/* @zuga/design-tokens — components/toast.css */
+
+:root {
+  --component-toast-padding:     var(--space-4);
+  --component-toast-radius:      var(--radius-md);
+  --component-toast-shadow:      var(--shadow-lg);
+  --component-toast-max-width:   24rem;
+  --component-toast-z:           var(--z-toast);
+  --component-toast-bg-info:     var(--surface-primary);
+  --component-toast-bg-success:  var(--feedback-success-subtle);
+  --component-toast-bg-warn:     var(--feedback-warn-subtle);
+  --component-toast-bg-danger:   var(--feedback-danger-subtle);
+  --component-toast-fg:          var(--text-primary);
+  --component-toast-border:      var(--border-default);
+}

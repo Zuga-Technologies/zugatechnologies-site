@@ -1,0 +1,10 @@
+/* @zuga/design-tokens — components/card.css */
+
+:root {
+  --component-card-padding:        var(--space-6);
+  --component-card-radius:         var(--radius-lg);
+  --component-card-bg:             var(--surface-primary);
+  --component-card-border:         var(--border-subtle);
+  --component-card-shadow:         var(--shadow-sm);
+  --component-card-shadow-hover:   var(--shadow-md);
+}

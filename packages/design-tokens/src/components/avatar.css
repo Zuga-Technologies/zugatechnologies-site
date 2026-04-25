@@ -1,0 +1,11 @@
+/* @zuga/design-tokens — components/avatar.css */
+
+:root {
+  --component-avatar-size-sm: 1.5rem;
+  --component-avatar-size-md: 2rem;
+  --component-avatar-size-lg: 3rem;
+  --component-avatar-bg: var(--surface-secondary);
+  --component-avatar-fg: var(--text-primary);
+  --component-avatar-radius: var(--radius-full);
+  --component-avatar-border: 2px solid var(--surface-primary);
+}

@@ -1,0 +1,11 @@
+/* @zuga/design-tokens — components/tabs.css */
+
+:root {
+  --component-tabs-bg: transparent;
+  --component-tabs-fg: var(--text-secondary);
+  --component-tabs-fg-active: var(--accent-brand);
+  --component-tabs-border-bottom: var(--border-subtle);
+  --component-tabs-border-bottom-active: var(--accent-brand);
+  --component-tabs-padding-x: var(--space-4);
+  --component-tabs-padding-y: var(--space-2);
+}

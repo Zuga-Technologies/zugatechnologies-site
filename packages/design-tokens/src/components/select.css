@@ -1,0 +1,16 @@
+/* @zuga/design-tokens — components/select.css */
+
+:root {
+  --component-select-padding-x:      var(--space-3);
+  --component-select-padding-y:      var(--space-2);
+  --component-select-radius:         var(--radius-md);
+  --component-select-bg:             var(--surface-primary);
+  --component-select-bg-disabled:    var(--surface-secondary);
+  --component-select-border:         var(--border-default);
+  --component-select-border-focus:   var(--border-focus);
+  --component-select-fg:             var(--text-primary);
+  --component-select-fg-placeholder: var(--text-muted);
+  --component-select-font-size:      var(--type-scale-sm);
+  --component-select-min-height:     2.25rem;
+  --component-select-arrow-color:    var(--text-secondary);
+}
