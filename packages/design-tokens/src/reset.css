@@ -1,0 +1,21 @@
+/* @zuga/design-tokens — reset.css */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html, body { height: 100%; }
+body {
+  line-height: var(--font-line-height-normal, 1.5);
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family-sans, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif);
+}
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+:focus-visible { outline: 2px solid var(--border-focus, currentColor); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
