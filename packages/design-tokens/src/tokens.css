@@ -310,3 +310,42 @@
   --border-strong:  var(--color-slate-400);
   --border-focus:   var(--color-cyan-500);
 }
+
+/* ============ TIER 2 — SEMANTIC: accent / feedback / density / spacing-section ============ */
+:root {
+  /* ACCENT — sub-brand-overridable. Default = master cyan. */
+  --accent-brand:        var(--color-cyan-500);
+  --accent-brand-subtle: var(--color-cyan-100);
+  --accent-brand-strong: var(--color-cyan-600);
+  --accent-fg:           #ffffff;
+
+  /* FEEDBACK */
+  --feedback-success:        var(--color-green-600);
+  --feedback-success-subtle: var(--color-green-100);
+  --feedback-success-fg:     #ffffff;
+
+  --feedback-warn:        var(--color-amber-600);
+  --feedback-warn-subtle: var(--color-amber-100);
+  --feedback-warn-fg:     var(--color-slate-900);
+
+  --feedback-danger:        var(--color-red-600);
+  --feedback-danger-subtle: var(--color-red-100);
+  --feedback-danger-fg:     #ffffff;
+
+  --feedback-info:        var(--color-cyan-600);
+  --feedback-info-subtle: var(--color-cyan-100);
+  --feedback-info-fg:     #ffffff;
+
+  /* DENSITY — overridable per repo (e.g., ZugaTrader compact for data-heavy) */
+  --density-comfortable: 1;
+  --density-compact:     0.875;
+
+  /* SPACING — section-level */
+  --spacing-section:    var(--space-16);
+  --spacing-section-sm: var(--space-12);
+  --spacing-section-lg: var(--space-24);
+
+  --spacing-gap-tight:   var(--space-2);
+  --spacing-gap-default: var(--space-4);
+  --spacing-gap-loose:   var(--space-8);
+}
