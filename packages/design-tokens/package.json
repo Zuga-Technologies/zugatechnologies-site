@@ -1,0 +1,29 @@
+{
+  "name": "@zuga/design-tokens",
+  "version": "0.1.0",
+  "type": "module",
+  "files": ["src/", "scripts/", "README.md", "CHANGELOG.md"],
+  "exports": {
+    "./tokens.css": "./src/tokens.css",
+    "./tokens-dark.css": "./src/tokens-dark.css",
+    "./reset.css": "./src/reset.css",
+    "./profiles/*.css": "./src/profiles/*.css",
+    "./components/*.css": "./src/components/*.css"
+  },
+  "bin": {
+    "zuga-tokens-lint": "./scripts/tokens-lint.mjs"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "scripts": {
+    "lint": "node scripts/tokens-lint.mjs",
+    "drift": "node scripts/drift-detect.mjs",
+    "review": "node scripts/aggregate-mike-review.mjs",
+    "propagate": "node scripts/propagate-mike-approvals.mjs"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0"
+  }
+}
