@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "consumers": [
+    { "repo": "Zuga-Technologies/zugatechnologies-site", "profile": "corp", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaApp",              "profile": "product-shell", "branch": "main", "subPath": "frontend" },
+    { "repo": "Zuga-Technologies/ZugaLife",             "profile": "studio-life", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaHealth",           "profile": "studio-health", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaTrader",           "profile": "studio-trader", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaTraderOverlay",    "profile": "overlay-trader", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaImage",            "profile": "studio-image", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaVideo",            "profile": "studio-video", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaMotion",           "profile": "studio-motion", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaCode",             "profile": "studio-code", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaCloud",            "profile": "studio-cloud", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaAudio",            "profile": "studio-audio", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaForge",            "profile": "studio-forge", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaThemes",           "profile": "studio-themes", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaLearn",            "profile": "studio-learn", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaCraft",            "profile": "studio-craft", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaNews",             "profile": "studio-news", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaGamerOverlay",     "profile": "overlay-gamer", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaShield",           "profile": "studio-shield", "branch": "main" },
+    { "repo": "Zuga-Technologies/ZugaClaw",             "profile": "internal-claw", "branch": "main" },
+    { "repo": "Zuga-Technologies/BugaBot",              "profile": "internal-bugabot", "branch": "main" }
+  ]
+}
