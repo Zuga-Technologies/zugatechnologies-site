@@ -25,11 +25,7 @@ importers:
         specifier: ^3.23.0
         version: 3.25.76
 
-  packages/design-tokens:
-    devDependencies:
-      vitest:
-        specifier: ^2.0.0
-        version: 2.1.9(lightningcss@1.32.0)
+  packages/design-tokens: {}
 
 packages:
 

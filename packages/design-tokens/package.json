@@ -22,8 +22,5 @@
     "drift": "node scripts/drift-detect.mjs",
     "review": "node scripts/aggregate-mike-review.mjs",
     "propagate": "node scripts/propagate-mike-approvals.mjs"
-  },
-  "devDependencies": {
-    "vitest": "^2.0.0"
   }
 }
