@@ -204,3 +204,36 @@
   --radius-2xl:  1rem;
   --radius-full: 9999px;
 }
+
+/* ============ TIER 1 — TYPOGRAPHY ============ */
+:root {
+  /* Type scale (modular ratio ~1.2) */
+  --type-scale-xs:   0.75rem;   /* 12px */
+  --type-scale-sm:   0.875rem;  /* 14px */
+  --type-scale-base: 1rem;      /* 16px */
+  --type-scale-lg:   1.125rem;  /* 18px */
+  --type-scale-xl:   1.25rem;   /* 20px */
+  --type-scale-2xl:  1.5rem;    /* 24px */
+  --type-scale-3xl:  1.875rem;  /* 30px */
+  --type-scale-4xl:  2.25rem;   /* 36px */
+  --type-scale-5xl:  3rem;      /* 48px */
+  --type-scale-6xl:  3.75rem;   /* 60px */
+  --type-scale-7xl:  4.5rem;    /* 72px */
+
+  /* Font family (system-first; no third-party fonts) */
+  --font-family-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-family-display: var(--font-family-sans);  /* [MIKE-CHECKPOINT-typ01] custom face deferred */
+
+  /* Font weight */
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  /* Line height */
+  --font-line-height-tight:   1.1;
+  --font-line-height-snug:    1.25;
+  --font-line-height-normal:  1.5;
+  --font-line-height-relaxed: 1.625;
+}
