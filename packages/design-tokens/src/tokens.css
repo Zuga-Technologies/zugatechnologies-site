@@ -282,3 +282,31 @@
   --shadow-xl:   0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
   --shadow-ring: 0 0 0 3px var(--border-focus, rgba(6, 182, 212, 0.5));
 }
+
+/* ============ TIER 2 — SEMANTIC: surface / text / border (light mode defaults) ============ */
+:root {
+  /* SURFACE */
+  --surface-canvas:    var(--color-slate-50);
+  --surface-primary:   #ffffff;
+  --surface-secondary: var(--color-slate-100);
+  --surface-tertiary:  var(--color-slate-200);
+  --surface-inverse:   var(--color-slate-900);
+  --surface-overlay:   rgba(15, 23, 42, 0.5);
+  --surface-brand:     var(--color-cyan-50);
+
+  /* TEXT */
+  --text-primary:    var(--color-slate-900);
+  --text-secondary:  var(--color-slate-700);
+  --text-tertiary:   var(--color-slate-500);
+  --text-muted:      var(--color-slate-400);
+  --text-inverse:    var(--color-slate-50);
+  --text-link:       var(--color-cyan-700);
+  --text-link-hover: var(--color-cyan-800);
+  --text-on-brand:   #ffffff;
+
+  /* BORDER */
+  --border-subtle:  var(--color-slate-200);
+  --border-default: var(--color-slate-300);
+  --border-strong:  var(--color-slate-400);
+  --border-focus:   var(--color-cyan-500);
+}
