@@ -1,0 +1,41 @@
+name: Drift detect
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install --frozen-lockfile
+      - name: Run drift detect
+        id: drift
+        run: |
+          set +e
+          node packages/design-tokens/scripts/drift-detect.mjs > drift-report.json
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+      - name: Open or update issue if drift found
+        if: steps.drift.outputs.exit_code != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('drift-report.json', 'utf8');
+            const today = new Date().toISOString().slice(0, 10);
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `drift-report-${today}`,
+              body: '```json\n' + report + '\n```',
+              labels: ['drift', 'auto']
+            });
