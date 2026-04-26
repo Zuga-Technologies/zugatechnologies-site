@@ -11,7 +11,7 @@ deviations: []
 
 ## Persona
 
-The corp surface is zugatechnologies-site — the marketing landing, the design bible, investor pages, and the public face of Zuga Technologies as a company. Visitors are prospective partners, investors, press, and technically curious people evaluating whether to build on or work with the platform. They arrive without a product context and need the brand to read immediately: confident, focused, modern. This is the handshake before anything else loads.
+The corp surface is zugatechnologies-site — the marketing landing, the design bible, investor pages, and the public face of Zuga Technologies as a company. Visitors are prospective partners, investors, press, and technically curious people evaluating whether to build on or work with the platform. They arrive without a product context and need the brand to read immediately as confident and focused. This is the handshake before anything else loads.
 
 ## Accent rationale
 
