@@ -1,0 +1,25 @@
+---
+interface Props {
+  doLabel?: string;
+  dontLabel?: string;
+}
+const { doLabel = 'Do', dontLabel = "Don't" } = Astro.props;
+---
+<div style={`display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);`}>
+  <div style={`border: 1px solid var(--border-default); border-radius: var(--radius-lg); overflow: hidden;`}>
+    <div style={`padding: var(--space-2) var(--space-4); background: var(--feedback-success-subtle); color: var(--feedback-success); font-size: var(--type-scale-sm); font-weight: var(--font-weight-semibold);`}>
+      ✓ {doLabel}
+    </div>
+    <div style={`padding: var(--space-4);`}>
+      <slot name="do" />
+    </div>
+  </div>
+  <div style={`border: 1px solid var(--border-default); border-radius: var(--radius-lg); overflow: hidden;`}>
+    <div style={`padding: var(--space-2) var(--space-4); background: var(--feedback-danger-subtle); color: var(--feedback-danger); font-size: var(--type-scale-sm); font-weight: var(--font-weight-semibold);`}>
+      ✗ {dontLabel}
+    </div>
+    <div style={`padding: var(--space-4);`}>
+      <slot name="dont" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+---
+interface Props {
+  fg: string;
+  bg: string;
+  level?: 'AA' | 'AAA';
+  passes: boolean;
+}
+const { fg, bg, level = 'AA', passes } = Astro.props;
+---
+<span style={`display: inline-flex; align-items: center; gap: var(--space-1); padding: var(--space-0_5) var(--space-2); border-radius: var(--radius-full); font-size: var(--type-scale-xs); font-family: var(--font-family-mono); font-weight: var(--font-weight-medium); background: ${passes ? 'var(--feedback-success-subtle)' : 'var(--feedback-danger-subtle)'}; color: ${passes ? 'var(--feedback-success)' : 'var(--feedback-danger)'};`}>
+  <span>{passes ? '✓' : '✗'}</span>
+  <span>{level} {passes ? 'pass' : 'fail'}</span>
+  <span style="color: var(--text-tertiary);">{fg} / {bg}</span>
+</span>

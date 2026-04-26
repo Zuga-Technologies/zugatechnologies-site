@@ -1,0 +1,9 @@
+---
+interface Props { token: string; label?: string; }
+const { token, label } = Astro.props;
+---
+<div style={`display: flex; align-items: center; gap: var(--space-3); padding: var(--space-2);`}>
+  <div style={`width: 3rem; height: 3rem; background: var(${token}); border-radius: var(--radius-md); border: 1px solid var(--border-default);`}></div>
+  <code style="font-family: var(--font-family-mono); font-size: var(--type-scale-sm);">{token}</code>
+  {label && <span style="color: var(--text-secondary);">{label}</span>}
+</div>

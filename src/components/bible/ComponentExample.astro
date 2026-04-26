@@ -1,0 +1,18 @@
+---
+interface Props {
+  code: string;
+  framework?: 'astro' | 'vue' | 'plain-html';
+}
+const { code, framework = 'plain-html' } = Astro.props;
+---
+<div style={`display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); border: 1px solid var(--border-default); border-radius: var(--radius-lg); overflow: hidden;`}>
+  <div style={`padding: var(--space-6); background: var(--surface-primary); display: flex; align-items: center; justify-content: center;`}>
+    <Fragment set:html={code} />
+  </div>
+  <div style={`background: var(--surface-secondary); padding: var(--space-4);`}>
+    <span style={`display: inline-block; margin-bottom: var(--space-2); padding: var(--space-0_5) var(--space-2); background: var(--accent-brand-subtle); color: var(--accent-brand); border-radius: var(--radius-sm); font-size: var(--type-scale-xs); font-family: var(--font-family-mono);`}>
+      {framework}
+    </span>
+    <pre style={`margin: 0; overflow-x: auto; font-size: var(--type-scale-xs); font-family: var(--font-family-mono); color: var(--text-primary); white-space: pre-wrap; word-break: break-all;`}><code>{code}</code></pre>
+  </div>
+</div>
