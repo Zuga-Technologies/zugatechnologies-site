@@ -1,20 +1,11 @@
----
-section: 3
-title: Voice & Tone
-summary: How Zuga writes — register, contractions, pronouns, capitalization, do/don't.
-mikeCheckpoint: true
----
+# Mike Review
 
-# 3. Voice & Tone
+Generated: 2026-04-26T00:33:47.490Z
+Total checkpoints: 14
 
-> Authored: 2026-04-25
-> Mike checkpoints: voice01–voice11
+## Bucket — Voice & tone
 
-Voice is who we are. Tone is how we sound in a given context. Voice stays constant; tone shifts by surface. All decisions below are tagged for Mike review.
-
-## 3.1 Master Tone
-
-The single adjective set that defines Zuga writing at every surface is [MIKE-CHECKPOINT-voice01].
+### MIKE-CHECKPOINT-voice01 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice01** — confirm master tone descriptor
 >
@@ -27,11 +18,10 @@ The single adjective set that defines Zuga writing at every surface is [MIKE-CHE
 > ✅ Approve → flip to `[MIKE-APPROVED-voice01: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-## 3.2 Tone by Surface
 
-### Marketing (Landing pages, social, press)
+---
 
-The marketing tone is [MIKE-CHECKPOINT-voice02].
+### MIKE-CHECKPOINT-voice02 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice02** — confirm marketing tone
 >
@@ -44,9 +34,10 @@ The marketing tone is [MIKE-CHECKPOINT-voice02].
 > ✅ Approve → flip to `[MIKE-APPROVED-voice02: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-### Product UI (In-app copy, button labels, tooltips)
 
-The product-UI tone is [MIKE-CHECKPOINT-voice03].
+---
+
+### MIKE-CHECKPOINT-voice03 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice03** — confirm product-UI tone
 >
@@ -59,9 +50,10 @@ The product-UI tone is [MIKE-CHECKPOINT-voice03].
 > ✅ Approve → flip to `[MIKE-APPROVED-voice03: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-### Error States (Validation errors, API failures, 4xx/5xx)
 
-The error-state tone is [MIKE-CHECKPOINT-voice04].
+---
+
+### MIKE-CHECKPOINT-voice04 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice04** — confirm error-state tone
 >
@@ -74,9 +66,10 @@ The error-state tone is [MIKE-CHECKPOINT-voice04].
 > ✅ Approve → flip to `[MIKE-APPROVED-voice04: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-### Empty States (Zero-data, first-use, no results)
 
-The empty-state tone is [MIKE-CHECKPOINT-voice05].
+---
+
+### MIKE-CHECKPOINT-voice05 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice05** — confirm empty-state tone
 >
@@ -89,9 +82,10 @@ The empty-state tone is [MIKE-CHECKPOINT-voice05].
 > ✅ Approve → flip to `[MIKE-APPROVED-voice05: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-### Onboarding (First-run, signup, feature discovery)
 
-The onboarding tone is [MIKE-CHECKPOINT-voice06].
+---
+
+### MIKE-CHECKPOINT-voice06 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice06** — confirm onboarding tone
 >
@@ -104,11 +98,10 @@ The onboarding tone is [MIKE-CHECKPOINT-voice06].
 > ✅ Approve → flip to `[MIKE-APPROVED-voice06: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-## 3.3 Grammar Rules
 
-### Pronouns and Contractions
+---
 
-The pronoun and contraction rule is [MIKE-CHECKPOINT-voice07].
+### MIKE-CHECKPOINT-voice07 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice07** — confirm pronoun and contraction rules
 >
@@ -121,13 +114,10 @@ The pronoun and contraction rule is [MIKE-CHECKPOINT-voice07].
 > ✅ Approve → flip to `[MIKE-APPROVED-voice07: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-## 3.4 Terminology Dictionary
 
-These entries are binding. Drift from any entry requires a terminology change proposal, not a one-off exception.
+---
 
-### Zugabot vs ZugaChat
-
-[MIKE-CHECKPOINT-voice08]
+### MIKE-CHECKPOINT-voice08 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice08** — confirm Zugabot vs ZugaChat terminology rule
 >
@@ -140,9 +130,10 @@ These entries are binding. Drift from any entry requires a terminology change pr
 > ✅ Approve → flip to `[MIKE-APPROVED-voice08: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-### ZugaTokens vs credits
 
-[MIKE-CHECKPOINT-voice09]
+---
+
+### MIKE-CHECKPOINT-voice09 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice09** — confirm ZugaTokens vs credits terminology rule
 >
@@ -155,9 +146,10 @@ These entries are binding. Drift from any entry requires a terminology change pr
 > ✅ Approve → flip to `[MIKE-APPROVED-voice09: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-### Studios vs apps
 
-[MIKE-CHECKPOINT-voice10]
+---
+
+### MIKE-CHECKPOINT-voice10 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice10** — confirm studios vs apps terminology rule
 >
@@ -170,9 +162,10 @@ These entries are binding. Drift from any entry requires a terminology change pr
 > ✅ Approve → flip to `[MIKE-APPROVED-voice10: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-### Food court vs food truck (internal framing)
 
-[MIKE-CHECKPOINT-voice11]
+---
+
+### MIKE-CHECKPOINT-voice11 (from docs\bible\03-voice-and-tone.md)
 
 > **🛑 MIKE-CHECKPOINT-voice11** — confirm food court / food truck internal framing rule
 >
@@ -185,15 +178,56 @@ These entries are binding. Drift from any entry requires a terminology change pr
 > ✅ Approve → flip to `[MIKE-APPROVED-voice11: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
 
-## 3.5 Do / Don't Quick Reference
 
-| Do | Don't |
-|---|---|
-| "Run the agent" | "Leverage the AI-powered assistant" |
-| "240 ZugaTokens remaining" | "240 credits remaining" |
-| "Open ZugaChat" (the interface) | "Open Zugabot" (for the chat UI) |
-| "Add a studio from the directory" | "Install an app from the marketplace" |
-| "Couldn't reach the server. Try again." | "Oops! Something went wrong on our end!" |
-| "You have 3 habits this week." | "You're crushing it! 3 habits tracked!" |
-| Oxford comma: "studios, agents, and tokens" | "studios, agents and tokens" |
-| Sentence case on UI labels: "Add habit" | Title case on UI labels: "Add Habit" |
+---
+
+## Bucket — Wordmark
+
+### MIKE-CHECKPOINT-wm01 (from docs\bible\02-brand-foundation.md)
+
+> **🛑 MIKE-CHECKPOINT-wm01** — confirm wordmark direction
+>
+> | Field | Value |
+> |---|---|
+> | Antonio's draft | All-caps "ZUGA" set in a geometric sans — Inter or equivalent, weight 700, tracked +20. The wordmark is set in master cyan (#06b6d4) on dark surfaces and near-black (#0f172a) on light surfaces. No tagline lockup at small sizes. |
+> | Alternates considered | Mixed-case "Zuga" (title case) — rejected: feels like a consumer startup, loses authority at product scale. Lowercase "zuga" — rejected: too casual for a company that runs financial tooling. |
+> | Renders on | Corp landing header, ZugaApp navbar, all studio top-bars, email headers, GitHub org avatar, social card OG images |
+>
+> ✅ Approve → flip to `[MIKE-APPROVED-wm01: YYYY-MM-DD]`
+> ✏️ Modify  → edit "Antonio's draft" field
+
+
+---
+
+### MIKE-CHECKPOINT-wm02 (from docs\bible\02-brand-foundation.md)
+
+> **🛑 MIKE-CHECKPOINT-wm02** — confirm logo mark / glyph treatment
+>
+> | Field | Value |
+> |---|---|
+> | Antonio's draft | Geometric "Z" constructed from two horizontal strokes and one diagonal — all strokes equal weight, rounded terminals, no serifs. The Z sits inside a square container with 15% padding. Background: master cyan (#06b6d4). Foreground: white (#ffffff). Corner radius: 22% of container width (feels like a modern app icon, not a logo stamp). |
+> | Alternates considered | Circular container — rejected: squares tile better in OS icon grids and favicon contexts. Stylized Z with a cutting diagonal notch — rejected: too aggressive, doesn't read cleanly at 16px. Wordmark-only (no glyph) — rejected: doesn't work in 32px favicon or 1:1 avatar slot. |
+> | Renders on | Browser favicon (16px, 32px), iOS/Android app icon (1024px source), GitHub org avatar, Discord server icon, ZugaApp PWA manifest icon |
+>
+> ✅ Approve → flip to `[MIKE-APPROVED-wm02: YYYY-MM-DD]`
+> ✏️ Modify  → edit "Antonio's draft" field
+
+
+---
+
+### MIKE-CHECKPOINT-wm03 (from docs\bible\02-brand-foundation.md)
+
+> **🛑 MIKE-CHECKPOINT-wm03** — confirm master accent hue
+>
+> | Field | Value |
+> |---|---|
+> | Antonio's draft | `#06b6d4` (Tailwind cyan-500). Passes WCAG AA at 4.5:1 against #0f172a (near-black). Used for: primary CTAs, active nav indicators, focus rings, master wordmark on dark surfaces, hyperlinks in body copy. Never used as a background color behind body text. |
+> | Alternates considered | `#0891b2` (cyan-600) — rejected: too somber for a tech-forward brand, loses energy at small sizes. `#22d3ee` (cyan-400) — rejected: fails WCAG AA on white backgrounds, feels juvenile. `#3b82f6` (blue-500) — rejected: indistinguishable from a dozen SaaS products; cyan is the differentiation. |
+> | Renders on | Corp landing CTAs, ZugaApp primary buttons, ZugaApp navbar active states, ZugaThemes accent pills, focus ring system-wide, master wordmark on dark surfaces |
+>
+> ✅ Approve → flip to `[MIKE-APPROVED-wm03: YYYY-MM-DD]`
+> ✏️ Modify  → edit "Antonio's draft" field
+
+
+---
+
