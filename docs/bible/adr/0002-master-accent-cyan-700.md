@@ -12,7 +12,7 @@ consequences: "All Zuga primary buttons render at cyan-700, not cyan-500. Contra
 
 ## Context
 
-The master Zuga brand hue is cyan — chosen for its precision, cool composure, and perceptual distance from the success-green, danger-red, and warn-amber feedback states already in use. Cyan communicates a modern, intelligence-forward product without the "enterprise blue" convention that signals legacy software.
+The master Zuga brand hue is cyan — chosen for its precision, cool composure, and perceptual distance from the success-green, danger-red, and warn-amber feedback states already in use.
 
 The first implementation defaulted `--accent-brand` to cyan-500 (`#06b6d4`), the mid-ramp reference stop. Cyan-500 is visually prominent and works well in marketing contexts on dark surfaces. The problem is interactive use on white: as documented in the §5.11 contrast table, cyan-500 against white fails WCAG SC 1.4.3 (Contrast Minimum) for normal-weight text at any size. Placing cyan-500 directly as a button background with white foreground, or as link text on a white surface, produces a non-compliant pairing. This is not a theoretical concern — primary buttons and text links are the highest-frequency interactive elements in the product.
 
