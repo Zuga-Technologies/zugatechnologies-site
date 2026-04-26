@@ -146,6 +146,7 @@ No motion-sensitive animations are inherent to auth flows. The Card appearing on
 | Full-page redirect on session expiry | The user loses their in-progress state (a draft, a form, a selected tab). Re-auth in a Modal preserves context. |
 | Auto-submit the 2FA code without a fallback Button | Paste behavior is inconsistent across browsers; assistive technology users may navigate to the field without triggering the character events that fire auto-submit. |
 | Skip `autocomplete="one-time-code"` on the 2FA Input | iOS and Android surface the OTP from SMS/email with a single tap when this attribute is present; omitting it forces manual code entry on mobile. |
+| Hide password requirements until validation fails | Surface minimum rules as helper text from the moment the password Input renders. Hidden rules force users to guess and retry — every retry is friction the bible exists to prevent. |
 
 ## Pattern-specific notes
 

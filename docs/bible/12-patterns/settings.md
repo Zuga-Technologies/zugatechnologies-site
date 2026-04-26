@@ -44,7 +44,7 @@ ZugaLife uses it for notification frequency, privacy controls, and wellness goal
 │  │                                              │   │
 │  │  Label: Display name                         │   │
 │  │  ┌──────────────────────────────────────┐    │   │
-│  │  │ Antonio Delgado                      │    │   │
+│  │  │ Jane Designer                        │    │   │
 │  │  └──────────────────────────────────────┘    │   │
 │  │                                              │   │
 │  │  Label: Timezone                             │   │

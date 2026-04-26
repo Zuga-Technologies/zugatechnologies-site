@@ -159,8 +159,8 @@ Hard wall Modal entrance (if animated) must be gated on `prefers-reduced-motion:
 
 **ZugaTokens and fiat:** The Zuga billing model uses ZugaTokens as the primary currency unit for in-app purchases. All paywall UI must state both the ZugaTokens amount and the approximate fiat equivalent so users can evaluate cost regardless of their token balance. The exact fiat conversion may fluctuate — display "approximately" and round to the nearest cent.
 
-**ZugaThemes marketplace:** The marketplace uses the soft wall pattern exclusively. No full-screen hard walls — the browsing experience is core, the premium unlock is secondary. Theme creators earn 90% of the token transaction; the paywall must not appear extractive given this split.
+**ZugaThemes marketplace:** The marketplace uses the soft wall pattern exclusively. No full-screen hard walls — the browsing experience is core, the premium unlock is secondary. Theme creators earn 90% of the ZugaToken transaction; the paywall must not appear extractive given this split.
 
-**ZugaLife Pro:** ZugaLife's paywall is commercially highest-priority given the Stripe-review blocked launch. The paywall must be tested end-to-end in staging before Stripe review submission — the billing partner integration and plan flag update flow are the launch blocker, not the paywall UI itself.
+**ZugaLife Pro:** ZugaLife's paywall is commercially highest-priority given the billing-partner-review blocked launch. The paywall must be tested end-to-end in staging before billing partner review submission — the billing partner integration and plan flag update flow are the launch blocker, not the paywall UI itself.
 
 **Billing partner abstraction:** This pattern references "billing partner" and "billing partner checkout" rather than naming a specific payment processor. The bible documents the product pattern, not the implementation dependency. Studios implement the billing integration against the ZugaApp billing service, which abstracts the processor.

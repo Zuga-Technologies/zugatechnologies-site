@@ -1,6 +1,6 @@
 ---
 name: Error States
-summary: Consistent error presentation for 404, 500, network failures, and permission errors — classified by severity and recovery path.
+summary: Consistent error presentation covering validation, network, 401, 403, 404, and 500 — classified by severity and recovery path.
 components:
   - Toast
   - Button
