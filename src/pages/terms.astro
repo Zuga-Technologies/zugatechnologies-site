@@ -1,0 +1,136 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+
+const lastUpdated = 'April 26, 2026';
+---
+
+<Layout
+  title="Terms of Use — Zuga Technologies"
+  description="Terms of Use governing Zuga Technologies LLC products and websites."
+>
+  <article class="py-section">
+    <Container width="narrow">
+      <h1 class="text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl">Terms of Use</h1>
+      <p class="mt-2 text-sm text-ink-500">Last updated: {lastUpdated}</p>
+
+      <div class="mt-12 space-y-10 text-ink-300 leading-relaxed">
+        <p>
+          These Terms of Use ("Terms") govern your use of products, services, and websites operated by Zuga Technologies LLC ("we", "us", "our"), including ZugaApp, ZugaGamer Overlay, and related products and websites (collectively, "our Products"). By using any of our Products, you agree to these Terms.
+        </p>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">1. Products and Sites</h2>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">ZugaApp</strong> (zugabot.ai) — AI workspace platform with studios for coding, trading, news, learning, and more</li>
+            <li><strong class="text-ink-200">ZugaGamer Overlay</strong> — AI-powered voice gaming assistant (desktop overlay)</li>
+            <li><strong class="text-ink-200">ZugaLife</strong> — Wellness, journaling, and meditation</li>
+            <li><strong class="text-ink-200">The Box Breather</strong> (theboxbreather.com) — Free breathing exercise timer</li>
+            <li><strong class="text-ink-200">zugatechnologies.com</strong> — Corporate website (informational)</li>
+            <li>Additional products and websites released under Zuga Technologies</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">2. Eligibility</h2>
+          <p class="mt-3">You must be at least 13 years old to use our Products. If you are under 18, you must have parental or guardian consent.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">3. Accounts</h2>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li>Some Products require an account (ZugaApp). Others work without one (ZugaGamer Overlay, The Box Breather, zugatechnologies.com).</li>
+            <li>You are responsible for maintaining the security of your account credentials.</li>
+            <li>One account works across all Zuga Technologies products that require authentication.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">4. Subscriptions and Payments</h2>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">ZugaApp:</strong> Credit-based system (pay-per-use tokens) via Stripe. See <a href="https://zugabot.ai/tokens" class="text-accent-500 hover:text-accent-400">Token Dashboard</a> for pricing.</li>
+            <li><strong class="text-ink-200">ZugaGamer Overlay:</strong> Free tier (20 AI queries/day) or Pro ($9.99/month via Tebex/Overwolf).</li>
+            <li><strong class="text-ink-200">BYOK:</strong> You may provide your own API keys for unlimited access. You are solely responsible for costs on your own accounts.</li>
+          </ul>
+          <p class="mt-3">Subscriptions are billed monthly. Cancel at any time through the respective payment platform (Stripe, Tebex, Overwolf). Cancellation takes effect at the end of the current billing period.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">5. Acceptable Use</h2>
+          <p class="mt-3">You agree not to:</p>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li>Use our Products for any illegal purpose</li>
+            <li>Reverse engineer, decompile, or modify our Products</li>
+            <li>Attempt to circumvent rate limits, subscription tiers, or security measures</li>
+            <li>Use our Products to harass, abuse, or harm others</li>
+            <li>Transmit malicious content through any input method</li>
+            <li>Use ZugaGamer Overlay to cheat or gain unfair competitive advantage in violation of game rules</li>
+            <li>Resell, redistribute, or sublicense access to our Products</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">6. AI-Generated Content</h2>
+          <p class="mt-3">Our Products use artificial intelligence to generate responses, analysis, and recommendations. AI output is provided "as is." We do not guarantee accuracy, completeness, or reliability. Specifically:</p>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li>AI responses may contain errors or outdated information</li>
+            <li>Trading analysis (ZugaTrader) is informational only — not financial advice</li>
+            <li>Game strategy advice may not reflect the latest patches</li>
+            <li>Health and wellness suggestions (ZugaLife, The Box Breather) are for general wellness purposes only and are not medical advice. They are not a substitute for professional medical or mental health care.</li>
+            <li>You should not rely solely on AI-generated content for important decisions</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">7. Third-Party Services</h2>
+          <p class="mt-3">Our Products integrate with third-party services (Anthropic, Deepgram, Cartesia, Spotify, Stripe, Tebex, Overwolf, and others), each subject to their own terms. We are not responsible for the availability, accuracy, or terms of third-party services.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">8. Intellectual Property</h2>
+          <p class="mt-3">Our Products, including code, design, and branding, are the property of Zuga Technologies LLC. Game names, logos, music, and third-party content referenced by our Products belong to their respective owners.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">9. Anti-Cheat Compatibility (ZugaGamer)</h2>
+          <p class="mt-3">ZugaGamer Overlay operates as a standard desktop overlay. It does not inject code into game processes, modify game files, or read game memory. However, we cannot guarantee compatibility with all anti-cheat systems. Use is at your own risk regarding potential conflicts with game anti-cheat software.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">10. Limitation of Liability</h2>
+          <p class="mt-3 text-xs uppercase text-ink-400">To the maximum extent permitted by law, Zuga Technologies LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our Products, including but not limited to: game bans, account suspensions, financial losses from trading decisions, API charges on personal accounts, or loss of data.</p>
+          <p class="mt-3">Our total liability shall not exceed the amount you paid for the applicable Product in the 12 months preceding the claim.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">11. Disclaimer of Warranties</h2>
+          <p class="mt-3 text-xs uppercase text-ink-400">Our Products are provided "as is" and "as available" without warranties of any kind, express or implied. We do not warrant that our Products will be uninterrupted, error-free, or compatible with all systems.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">12. Termination</h2>
+          <p class="mt-3">We may suspend or terminate your access for violation of these Terms. You may stop using our Products and delete your account at any time.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">13. Changes</h2>
+          <p class="mt-3">We may update these Terms from time to time. Continued use after changes constitutes acceptance. We will notify users of material changes through our Products or via email.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">14. Governing Law</h2>
+          <p class="mt-3">These Terms are governed by the laws of the State of New York and the United States. Any disputes shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, with venue in New York.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">15. Contact</h2>
+          <p class="mt-3">
+            <strong class="text-ink-200">Zuga Technologies LLC</strong>, a New York limited liability company<br>
+            Email: <a href="mailto:buga@zugabot.ai" class="text-accent-500 hover:text-accent-400">buga@zugabot.ai</a><br>
+            Website: <a href="https://zugatechnologies.com" class="text-accent-500 hover:text-accent-400">zugatechnologies.com</a>
+          </p>
+        </section>
+      </div>
+    </Container>
+  </article>
+</Layout>

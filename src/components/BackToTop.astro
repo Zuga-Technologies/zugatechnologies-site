@@ -1,0 +1,42 @@
+---
+/* Fixed top-right back-to-top button. Hidden until the user scrolls past
+   ~half a viewport, then fades in. Smooth-scrolls to top on click. */
+---
+
+<button
+  id="back-to-top"
+  type="button"
+  aria-label="Back to top"
+  class="fixed right-5 top-5 z-40 flex h-10 w-10 items-center justify-center rounded-full border border-rule bg-ink-900/75 text-ink-300 opacity-0 backdrop-blur-sm transition-all duration-300 hover:border-rule-strong hover:bg-ink-800 hover:text-ink-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500 sm:right-6 sm:top-6 pointer-events-none"
+>
+  <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M8 13V3" />
+    <path d="M3 8l5-5 5 5" />
+  </svg>
+</button>
+
+<script>
+  const btn = document.getElementById('back-to-top');
+  if (btn) {
+    let visible = false;
+    const threshold = () => Math.max(400, window.innerHeight * 0.5);
+    const onScroll = () => {
+      const shouldShow = window.scrollY > threshold();
+      if (shouldShow !== visible) {
+        visible = shouldShow;
+        if (visible) {
+          btn.classList.remove('opacity-0', 'pointer-events-none');
+          btn.classList.add('opacity-100');
+        } else {
+          btn.classList.add('opacity-0', 'pointer-events-none');
+          btn.classList.remove('opacity-100');
+        }
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    onScroll();
+  }
+</script>

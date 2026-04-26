@@ -3,37 +3,50 @@ import Section from '../Section.astro';
 import Container from '../Container.astro';
 import Eyebrow from '../Eyebrow.astro';
 
-/* Founder cards + cohort note. Names are [MIKE-PENDING] because how-they're-presented
-   (full / first-only / role-only / no-names) is a positioning decision in Mike's lane.
-   Photo decisions also Mike-pending — corp sites range from "no faces" (Vercel-y) to
-   "full headshot grid" (Linear-y). */
+/* Founder cards. Mike still has positioning veto on display style
+   (full names / role labels / photos vs no-photos). Photos deliberately
+   omitted in this first pass — text-only reads as serious for an investor
+   audience and avoids the "team grid" cliché until we have intentional shots. */
 const founders = [
-  { name: '[MIKE-PENDING: founder-1-name]', role: '[MIKE-PENDING: founder-1-role]', bio: '[MIKE-PENDING: founder-1-bio]' },
-  { name: '[MIKE-PENDING: founder-2-name]', role: '[MIKE-PENDING: founder-2-role]', bio: '[MIKE-PENDING: founder-2-bio]' },
+  {
+    name: 'Antonio Delgado',
+    role: 'Founder',
+    bio: 'Builds the platform end-to-end. Sets technical direction, ships the studios, and writes the rules that keep autonomous agents moving while no one is watching.',
+  },
+  {
+    name: 'Michael Gonzalez',
+    role: 'Co-founder, Strategy',
+    bio: 'Owns positioning, brand, and what we put in front of partners. Hard veto on anything that would over-claim or under-deliver.',
+  },
+  {
+    name: 'Giovanni Rosario',
+    role: 'Co-founder, Growth',
+    bio: 'Owns marketing, sales, and revenue. Translates the platform into language partners and customers actually use — and the path from first impression to signed deal.',
+  },
 ];
 ---
 
 <Section variant="muted" id="team">
   <Container>
     <div class="max-w-narrow">
-      <Eyebrow>[MIKE-PENDING: team-eyebrow]</Eyebrow>
-      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl">
-        [MIKE-PENDING: team-heading]
+      <Eyebrow>The team</Eyebrow>
+      <h2 class="mt-6 text-3xl font-semibold tracking-tight leading-[1.15] text-ink-100 sm:text-4xl">
+        Built by people who ship
       </h2>
     </div>
 
-    <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+    <div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {founders.map((f) => (
         <article class="rounded-lg border border-rule bg-ink-950 p-6">
           <h3 class="text-base font-semibold text-ink-100">{f.name}</h3>
-          <p class="mt-1 text-xs uppercase tracking-wider text-ink-500">{f.role}</p>
+          <p class="mt-2 text-xs uppercase tracking-wider text-ink-500">{f.role}</p>
           <p class="mt-4 text-sm leading-relaxed text-ink-400">{f.bio}</p>
         </article>
       ))}
     </div>
 
-    <p class="mt-10 max-w-narrow text-sm text-ink-400">
-      [MIKE-PENDING: cohort-line — e.g. "Plus a partner-network cohort of N building across X domains."]
+    <p class="mt-8 max-w-narrow text-sm text-ink-400">
+      Plus a small partner cohort building across domains — with more on the way.
     </p>
   </Container>
 </Section>

@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+
+const lastUpdated = 'April 26, 2026';
+---
+
+<Layout
+  title="Privacy Policy — Zuga Technologies"
+  description="How Zuga Technologies LLC collects, uses, and protects information across its products and websites."
+>
+  <article class="py-section">
+    <Container width="narrow">
+      <h1 class="text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl">Privacy Policy</h1>
+      <p class="mt-2 text-sm text-ink-500">Last updated: {lastUpdated}</p>
+
+      <div class="mt-12 space-y-10 text-ink-300 leading-relaxed">
+        <p>
+          Zuga Technologies LLC ("we", "us", "our") operates ZugaApp, ZugaGamer Overlay, and related products and websites (collectively, "our Products"). This Privacy Policy describes how we collect, use, and protect your information.
+        </p>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">1. Products and Sites Covered</h2>
+          <p class="mt-3">This policy covers all Zuga Technologies products and websites including:</p>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">ZugaApp</strong> (zugabot.ai) — AI workspace platform</li>
+            <li><strong class="text-ink-200">ZugaGamer Overlay</strong> — AI voice gaming assistant</li>
+            <li><strong class="text-ink-200">ZugaLife</strong> — Wellness and journaling</li>
+            <li><strong class="text-ink-200">ZugaTrader</strong> — Trading analytics</li>
+            <li><strong class="text-ink-200">The Box Breather</strong> (theboxbreather.com) — Free breathing exercise timer</li>
+            <li><strong class="text-ink-200">zugatechnologies.com</strong> — Corporate website (informational; no data collection)</li>
+            <li>Any future products or websites released under Zuga Technologies</li>
+          </ul>
+          <p class="mt-3">Product-specific data practices are noted where they differ.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">2. Information We Collect</h2>
+
+          <h3 class="mt-5 text-base font-medium text-ink-200">2.1 Account Data</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">What:</strong> Email address, display name, OAuth provider (Google/GitHub)</li>
+            <li><strong class="text-ink-200">Why:</strong> Authentication, account management, communication</li>
+            <li><strong class="text-ink-200">Storage:</strong> Encrypted on our servers via SuperTokens</li>
+          </ul>
+
+          <h3 class="mt-5 text-base font-medium text-ink-200">2.2 Voice Data (ZugaGamer Overlay)</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">What:</strong> Audio from your microphone when the overlay is listening</li>
+            <li><strong class="text-ink-200">Processing:</strong> Streamed in real-time to Deepgram for speech-to-text</li>
+            <li><strong class="text-ink-200">Storage:</strong> Audio is NOT stored. Processed in real-time and discarded immediately. We do not record or retain any audio data.</li>
+          </ul>
+
+          <h3 class="mt-5 text-base font-medium text-ink-200">2.3 AI Conversations</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">What:</strong> Text queries and AI responses</li>
+            <li><strong class="text-ink-200">Processing:</strong> Sent to AI providers (Anthropic Claude, Moonshot Kimi) for response generation</li>
+            <li><strong class="text-ink-200">Storage:</strong> ZugaApp conversations stored in your account. ZugaGamer conversations held in memory only (cleared on restart, max 20 messages).</li>
+          </ul>
+
+          <h3 class="mt-5 text-base font-medium text-ink-200">2.4 Screenshots (ZugaGamer Overlay)</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">What:</strong> Game screenshots, captured only when you explicitly request</li>
+            <li><strong class="text-ink-200">Processing:</strong> Sent to Anthropic Claude Vision for analysis</li>
+            <li><strong class="text-ink-200">Storage:</strong> Saved screenshots stored locally on your device. Scan images processed in memory and discarded.</li>
+          </ul>
+
+          <h3 class="mt-5 text-base font-medium text-ink-200">2.5 Local Data (Desktop Products)</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li>Game detection data (process names) — processed locally, not transmitted</li>
+            <li>Player memory (class, rank, preferences) — stored as local JSON files</li>
+            <li>Settings and preferences — stored in localStorage</li>
+            <li>Video clips — stored locally, never uploaded</li>
+            <li>Game knowledge cache — stored locally with 7-day TTL</li>
+          </ul>
+
+          <h3 class="mt-5 text-base font-medium text-ink-200">2.6 Analytics Data (All Products)</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">What:</strong> Page views, session duration, button clicks, anonymous usage patterns</li>
+            <li><strong class="text-ink-200">Processing:</strong> Collected via PostHog analytics</li>
+            <li><strong class="text-ink-200">Storage:</strong> Anonymized event data stored by PostHog. No personally identifiable information is collected for users without accounts.</li>
+            <li><strong class="text-ink-200">The Box Breather:</strong> Does not require an account. Only anonymous analytics are collected (pages visited, session length). No personal data, no cookies beyond analytics.</li>
+            <li><strong class="text-ink-200">zugatechnologies.com:</strong> No analytics, cookies, or tracking are deployed on the corporate website at this time.</li>
+          </ul>
+
+          <h3 class="mt-5 text-base font-medium text-ink-200">2.7 Payment Data</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">Processing:</strong> Handled entirely by Stripe (ZugaApp) or Tebex/Overwolf (ZugaGamer)</li>
+            <li><strong class="text-ink-200">Storage:</strong> We do NOT collect, process, or store payment card information</li>
+            <li>We store only subscription status and transaction IDs for billing records</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">3. Data Flow Summary</h2>
+          <div class="mt-3 overflow-x-auto">
+            <table class="w-full border-collapse text-sm">
+              <thead>
+                <tr class="border-b border-rule">
+                  <th class="py-2 pr-4 text-left text-ink-400">Data Type</th>
+                  <th class="py-2 pr-4 text-left text-ink-400">Stored Locally</th>
+                  <th class="py-2 pr-4 text-left text-ink-400">Sent to Third Party</th>
+                  <th class="py-2 text-left text-ink-400">Sent to Our Servers</th>
+                </tr>
+              </thead>
+              <tbody class="text-ink-400">
+                <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Voice audio</td><td>No</td><td>Deepgram (stream, not stored)</td><td>No</td></tr>
+                <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Text queries</td><td>In memory / account</td><td>Anthropic, Moonshot</td><td>ZugaApp only</td></tr>
+                <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Screenshots</td><td>If you save</td><td>Anthropic (on request)</td><td>No</td></tr>
+                <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Player memory</td><td>Yes (JSON files)</td><td>Included in AI context</td><td>No</td></tr>
+                <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Settings</td><td>Yes</td><td>No</td><td>No</td></tr>
+                <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Account info</td><td>No</td><td>SuperTokens (auth)</td><td>Yes</td></tr>
+                <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Payments</td><td>No</td><td>Stripe / Tebex</td><td>Status only</td></tr>
+                <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Video clips</td><td>Yes</td><td>No</td><td>No</td></tr>
+                <tr><td class="py-2 pr-4">Analytics events</td><td>No</td><td>PostHog (anonymous)</td><td>No</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">4. Third-Party Services</h2>
+          <p class="mt-3">Our products integrate with the following services, each with their own privacy policies:</p>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">Anthropic (Claude AI)</strong> — AI reasoning and vision analysis</li>
+            <li><strong class="text-ink-200">Moonshot (Kimi)</strong> — AI coding and research</li>
+            <li><strong class="text-ink-200">Deepgram</strong> — Speech-to-text (ZugaGamer)</li>
+            <li><strong class="text-ink-200">Cartesia</strong> — Text-to-speech (ZugaGamer)</li>
+            <li><strong class="text-ink-200">Tavily</strong> — Web search for game information</li>
+            <li><strong class="text-ink-200">SuperTokens</strong> — Authentication</li>
+            <li><strong class="text-ink-200">Stripe</strong> — Payment processing (ZugaApp)</li>
+            <li><strong class="text-ink-200">Tebex / Overwolf</strong> — Payment processing (ZugaGamer)</li>
+            <li><strong class="text-ink-200">Spotify</strong> — Music playback control (optional, user-initiated)</li>
+            <li><strong class="text-ink-200">PostHog</strong> — Anonymous product analytics (all products including The Box Breather)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">5. BYOK (Bring Your Own Keys)</h2>
+          <p class="mt-3">Some products allow you to provide your own API keys for direct access to AI services:</p>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li>Your API keys are stored locally on your device only</li>
+            <li>Keys are sent directly to the respective services — they do NOT pass through our servers</li>
+            <li>We do not collect, log, or have access to your personal API keys</li>
+            <li>You are responsible for securing your keys and any costs incurred</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">6. Data We Do NOT Collect</h2>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li>We do NOT sell, rent, or share personal data with advertisers</li>
+            <li>We do NOT collect device fingerprints or hardware identifiers</li>
+            <li>We do NOT track browsing activity outside our products</li>
+            <li>We do NOT store voice recordings</li>
+            <li>We do NOT store payment card information</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">7. Data Retention</h2>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">Account data:</strong> Until you delete your account</li>
+            <li><strong class="text-ink-200">Voice audio:</strong> Not retained (real-time only)</li>
+            <li><strong class="text-ink-200">ZugaApp conversations:</strong> Until you delete them</li>
+            <li><strong class="text-ink-200">ZugaGamer conversations:</strong> Until app restart (in memory only)</li>
+            <li><strong class="text-ink-200">Local files (memory, clips, cache):</strong> Until you delete or uninstall</li>
+            <li><strong class="text-ink-200">Subscription cache:</strong> 24 hours (auto-refreshed)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">8. Your Rights</h2>
+          <p class="mt-3">Under GDPR, CCPA, and applicable privacy laws, you have the right to:</p>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">Access:</strong> View all data we hold about you</li>
+            <li><strong class="text-ink-200">Delete:</strong> Request deletion of your account and associated data</li>
+            <li><strong class="text-ink-200">Export:</strong> Download your data in standard formats</li>
+            <li><strong class="text-ink-200">Withdraw consent:</strong> Revoke permissions (mic, data processing) at any time</li>
+            <li><strong class="text-ink-200">Object:</strong> Stop using our products at any time</li>
+          </ul>
+          <p class="mt-3">For data held by third-party services, contact those providers directly. For account data requests, email us at <a href="mailto:buga@zugabot.ai" class="text-accent-500 hover:text-accent-400">buga@zugabot.ai</a>.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">9. Children's Privacy</h2>
+          <p class="mt-3">Our products are not intended for children under 13. We do not knowingly collect data from children under 13. If you believe a child under 13 is using our products, please contact us.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">10. Security</h2>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li>All API communications use HTTPS/WSS encryption</li>
+            <li>Authentication via SuperTokens with secure session management</li>
+            <li>API keys stored locally, not on our servers</li>
+            <li>Desktop apps use Electron context isolation and sandboxing</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">11. Changes</h2>
+          <p class="mt-3">We may update this policy from time to time. We will notify users of material changes through our products or via email. Continued use after changes constitutes acceptance.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">12. Contact</h2>
+          <p class="mt-3">
+            <strong class="text-ink-200">Zuga Technologies LLC</strong>, a New York limited liability company<br>
+            Email: <a href="mailto:buga@zugabot.ai" class="text-accent-500 hover:text-accent-400">buga@zugabot.ai</a><br>
+            Website: <a href="https://zugatechnologies.com" class="text-accent-500 hover:text-accent-400">zugatechnologies.com</a>
+          </p>
+        </section>
+      </div>
+    </Container>
+  </article>
+</Layout>

@@ -1,0 +1,25 @@
+---
+/*
+ * Logomark — vectorized from source PNG via vtracer (poster preset).
+ * Source: ZugaTech_Logo3.png. Stored as /zugabot-mark.svg in public assets
+ * (cached after first load — too heavy for inline embed across pages).
+ *
+ * Aspect ratio of cropped viewBox: 301:290 (~1.04:1, near-square).
+ */
+interface Props {
+  height?: number;
+  class?: string;
+  alt?: string;
+}
+const { height = 28, class: className = '', alt = '' } = Astro.props;
+---
+
+<img
+  src="/zugabot-mark.svg"
+  alt={alt}
+  height={height}
+  width={Math.round(height * (301 / 290))}
+  class={className}
+  loading="eager"
+  decoding="async"
+/>

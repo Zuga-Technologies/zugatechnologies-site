@@ -3,33 +3,40 @@ import Section from '../Section.astro';
 import Container from '../Container.astro';
 import Eyebrow from '../Eyebrow.astro';
 
-/* 4 studio tiles. Mike picks which 4 to feature (current shortlist:
-   Zugabot, ZugaGamerOverlay, ZugaLife, ZugaCode) and how each is described.
-   Studio names are placeholder-tagged because positioning is a Mike
-   decision — he may want code-names, product-names, or roman-numeral framing. */
 const tiles = [
-  { name: '[MIKE-PENDING: studio-1-name]', body: '[MIKE-PENDING: studio-1-blurb]', status: '[MIKE-PENDING: studio-1-status]' },
-  { name: '[MIKE-PENDING: studio-2-name]', body: '[MIKE-PENDING: studio-2-blurb]', status: '[MIKE-PENDING: studio-2-status]' },
-  { name: '[MIKE-PENDING: studio-3-name]', body: '[MIKE-PENDING: studio-3-blurb]', status: '[MIKE-PENDING: studio-3-status]' },
-  { name: '[MIKE-PENDING: studio-4-name]', body: '[MIKE-PENDING: studio-4-blurb]', status: '[MIKE-PENDING: studio-4-status]' },
+  {
+    name: 'ZugaLife',
+    body: 'A wellness companion that tracks habits, mood, and fitness — with an AI coach that actually pays attention.',
+    status: 'Launching',
+  },
+  {
+    name: 'ZugaGamerOverlay',
+    body: 'A real-time overlay for streamers and competitive gamers — AI-driven moments, overlays you don’t have to babysit.',
+    status: 'Launching',
+  },
+  {
+    name: 'More products soon',
+    body: 'A growing pipeline across health, trading, code, and creative tools. Built in the open.',
+    status: 'In build',
+  },
 ];
 ---
 
 <Section variant="muted" id="what">
   <Container>
     <div class="max-w-narrow">
-      <Eyebrow>[MIKE-PENDING: studios-eyebrow]</Eyebrow>
-      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl">
-        [MIKE-PENDING: studios-heading]
+      <Eyebrow>Shipping now</Eyebrow>
+      <h2 class="mt-6 text-3xl font-semibold tracking-tight leading-[1.15] text-ink-100 sm:text-4xl">
+        The product line for the agent era.
       </h2>
-      <p class="mt-5 text-ink-300">
-        [MIKE-PENDING: studios-intro]
+      <p class="mt-6 leading-relaxed text-ink-300">
+        Two live today. Many in the pipeline. Each one an opinionated bet on what software looks like when AI is a first-class participant — not a feature bolted onto something else.
       </p>
     </div>
 
-    <ul class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <ul class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
       {tiles.map((tile) => (
-        <li class="rounded-lg border border-rule bg-ink-950 p-6">
+        <li class="studio-tile rounded-lg border border-rule bg-ink-950 p-6">
           <div class="flex items-start justify-between gap-4">
             <h3 class="text-base font-semibold text-ink-100">{tile.name}</h3>
             <span class="rounded-full border border-rule px-2 py-0.5 text-[10px] uppercase tracking-wider text-ink-400">

@@ -19,12 +19,15 @@
  * pre-T33 corp values (4rem/6rem/9rem, not 3rem/4rem/6rem).
  * -------------------------------------------------------------------------- */
 
-@import "@zuga-technologies/design-tokens/reset.css";
+@import "tailwindcss";
+
+/* Reset rules MUST go in @layer base — otherwise unlayered `* { margin: 0 }`
+   beats every Tailwind `mt-*` / `mb-*` / `gap-*` utility (unlayered always
+   wins over layered, regardless of specificity or source order). */
+@import "@zuga-technologies/design-tokens/reset.css" layer(base);
 @import "@zuga-technologies/design-tokens/tokens.css";
 @import "@zuga-technologies/design-tokens/tokens-dark.css";
 @import "@zuga-technologies/design-tokens/profiles/corp.css";
-
-@import "tailwindcss";
 
 /*
  * Zuga Technologies — corporate identity tokens.
@@ -92,4 +95,89 @@ body {
 ::selection {
   background-color: var(--color-accent-600);
   color: var(--color-ink-50);
+}
+
+/* Smooth anchor scrolling — feels far more polished on nav clicks */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* ----- Hero entrance choreography ----- */
+
+/* Eyebrow fades in immediately (server-rendered, no JS dependency) */
+.hero-eyebrow {
+  opacity: 0;
+  animation: hero-fade-in 0.5s ease 0.05s forwards;
+}
+
+/* Subhead + CTAs wait for the typewriter to finish, then fade up in sequence */
+.hero-subhead,
+.hero-ctas {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+body.hero-typed .hero-subhead {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.15s;
+}
+body.hero-typed .hero-ctas {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.4s;
+}
+
+/* Blinking caret — accent colored so it reads as a brand cue */
+.hero-caret {
+  display: inline-block;
+  margin-left: 0.05em;
+  font-weight: 300;
+  color: var(--color-accent-500);
+  animation: hero-caret-blink 1s steps(1, end) infinite;
+}
+body.hero-typed .hero-caret {
+  /* Caret keeps blinking — it's a cursor metaphor, signals "ready for input" */
+  animation-duration: 1.2s;
+}
+
+@keyframes hero-fade-in {
+  to { opacity: 1; }
+}
+@keyframes hero-caret-blink {
+  0%, 49.99% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Reduced-motion: no caret animation, no fade choreography */
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow,
+  .hero-subhead,
+  .hero-ctas {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+  .hero-caret {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+
+/* ----- Studio tile hover polish ----- */
+.studio-tile {
+  transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+.studio-tile:hover {
+  border-color: var(--color-accent-600);
+  background-color: var(--color-ink-900);
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio-tile { transition: none; }
+  .studio-tile:hover { transform: none; }
 }

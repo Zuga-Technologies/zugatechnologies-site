@@ -1,17 +1,19 @@
 ---
 import Container from './Container.astro';
+import Logomark from './Logomark.astro';
 ---
 
 <header class="border-b border-rule-soft">
   <Container class="flex h-16 items-center justify-between">
-    <a href="/" class="text-sm font-semibold tracking-tight text-ink-100" aria-label="Zuga Technologies home">
-      [MIKE-PENDING: wordmark]
+    <a href="/" class="flex items-center gap-1.5 text-sm font-semibold tracking-tight text-ink-100" aria-label="Zuga Technologies home">
+      <Logomark height={32} />
+      <span>Zuga Technologies</span>
     </a>
     <nav class="hidden items-center gap-8 text-sm text-ink-300 sm:flex" aria-label="Primary">
-      <a href="#what" class="hover:text-ink-100 transition-colors">[MIKE-PENDING: nav-1]</a>
-      <a href="#moat" class="hover:text-ink-100 transition-colors">[MIKE-PENDING: nav-2]</a>
-      <a href="#team" class="hover:text-ink-100 transition-colors">[MIKE-PENDING: nav-3]</a>
-      <a href="#contact" class="hover:text-ink-100 transition-colors">[MIKE-PENDING: nav-4]</a>
+      <a href="#what" class="hover:text-ink-100 transition-colors">Product</a>
+      <a href="#moat" class="hover:text-ink-100 transition-colors">About</a>
+      <a href="#team" class="hover:text-ink-100 transition-colors">Humans</a>
+      <a href="#contact" class="hover:text-ink-100 transition-colors">Contact</a>
     </nav>
   </Container>
 </header>

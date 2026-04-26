@@ -3,27 +3,62 @@ import Section from '../Section.astro';
 import Container from '../Container.astro';
 import Eyebrow from '../Eyebrow.astro';
 import Button from '../Button.astro';
+import ParticleField from '../ParticleField.astro';
+
+const headline = 'Software for the agent era.';
 ---
 
-<Section variant="hero" size="lg" id="hero">
-  <Container width="narrow">
-    <Eyebrow>[MIKE-PENDING: hero-eyebrow]</Eyebrow>
-    <h1 class="mt-5 text-balance text-4xl font-semibold tracking-tight text-ink-100 sm:text-5xl lg:text-6xl">
-      [MIKE-PENDING: hero-headline]
+<Section variant="hero" size="lg" id="hero" class="relative overflow-hidden">
+  <ParticleField count={42} maxSpeed={0.09} baseOpacityMax={0.42} />
+  <Container width="narrow" class="relative z-10">
+    <div class="hero-eyebrow">
+      <Eyebrow>Zuga Technologies</Eyebrow>
+    </div>
+    <h1
+      class="hero-headline mt-8 text-balance text-4xl font-semibold tracking-tight leading-[1.1] text-ink-100 sm:text-5xl lg:text-6xl"
+      data-typewriter={headline}
+    >
+      <span class="hero-headline-text">{headline}</span><span class="hero-caret" aria-hidden="true">|</span>
     </h1>
-    <p class="mt-6 text-pretty text-lg text-ink-300">
-      [MIKE-PENDING: hero-subheadline]
+    <p class="hero-subhead mt-8 text-pretty text-lg leading-relaxed text-ink-300">
+      A growing suite of studios where observability and autonomy ship by default.
     </p>
-    {/* href values intentionally `#` so accidental clicks during Mike review don't 404.
-        Real targets [MIKE-PENDING: hero-primary-cta-href] + [MIKE-PENDING: hero-secondary-cta-href]
-        are still tracked here for audit grep. */}
-    <div class="mt-10 flex flex-wrap items-center gap-3">
-      <Button variant="primary" href="#">
-        [MIKE-PENDING: hero-primary-cta-label]
+    <div class="hero-ctas mt-12 flex flex-wrap items-center gap-4">
+      <Button variant="primary" href="#what">
+        See what we build
       </Button>
-      <Button variant="secondary" href="#">
-        [MIKE-PENDING: hero-secondary-cta-label]
+      <Button variant="secondary" href="#contact">
+        Get in touch
       </Button>
     </div>
   </Container>
 </Section>
+
+<script>
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const headline = document.querySelector<HTMLElement>('[data-typewriter]');
+  const target = headline?.querySelector<HTMLElement>('.hero-headline-text');
+
+  if (!headline || !target) {
+    document.body.classList.add('hero-typed');
+  } else if (reduceMotion) {
+    document.body.classList.add('hero-typed');
+  } else {
+    const text = headline.dataset.typewriter ?? '';
+    target.textContent = '';
+    let i = 0;
+    const tick = () => {
+      target.textContent = text.slice(0, i);
+      if (i < text.length) {
+        i++;
+        // Slight per-char variation feels less robotic
+        const delay = 55 + Math.random() * 35;
+        setTimeout(tick, delay);
+      } else {
+        document.body.classList.add('hero-typed');
+      }
+    };
+    // Small delay so the eyebrow reads first
+    setTimeout(tick, 250);
+  }
+</script>
