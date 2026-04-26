@@ -1,3 +1,29 @@
+/* ----------------------------------------------------------------------------
+ * Zuga Technologies — global stylesheet
+ *
+ * Layered tokens:
+ *   1. @zuga/design-tokens package — provides Tier 1 primitives (--color-*,
+ *      --space-*, --type-scale-*, etc.), Tier 2 semantics (--surface-*,
+ *      --text-*, --border-*, --accent-*, --feedback-*, --density-*), and
+ *      the `corp` profile's master cyan accent. Used by /design (bible).
+ *   2. Tailwind v4 — generates utility classes from the @theme block below.
+ *   3. Corp @theme block — corp landing's local tokens (oklch ink ramp,
+ *      oklch accent, system fonts, section rhythm). The @theme block comes
+ *      AFTER the package imports so its values win the cascade for any
+ *      overlapping names (--spacing-section-*).
+ *
+ * Visual parity: the corp landing's local tokens (--color-ink-*,
+ * --color-accent-*, --color-rule-*, --font-sans, --font-mono) are NOT
+ * defined in the package — they remain corp-exclusive. The package's
+ * --spacing-section-* values exist but are overridden here to match the
+ * pre-T33 corp values (4rem/6rem/9rem, not 3rem/4rem/6rem).
+ * -------------------------------------------------------------------------- */
+
+@import "@zuga/design-tokens/reset.css";
+@import "@zuga/design-tokens/tokens.css";
+@import "@zuga/design-tokens/tokens-dark.css";
+@import "@zuga/design-tokens/profiles/corp.css";
+
 @import "tailwindcss";
 
 /*
