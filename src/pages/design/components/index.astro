@@ -1,0 +1,24 @@
+---
+import BibleLayout from '../../../layouts/BibleLayout.astro';
+import { getCollection } from 'astro:content';
+const entries = (await getCollection('components')).sort((a, b) => a.data.name.localeCompare(b.data.name));
+---
+<BibleLayout title="Bible Components">
+  <h1 style="font-size: var(--type-scale-5xl); font-weight: var(--font-weight-bold);">Components</h1>
+  <p style="color: var(--text-secondary); font-size: var(--type-scale-lg); margin-bottom: var(--space-8);">
+    {entries.length} components in the Zuga design system.
+  </p>
+  <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2);">
+    {entries.map(c => (
+      <li>
+        <a
+          href={`/design/components/${c.id.replace('.md', '')}`}
+          style="display: flex; align-items: baseline; gap: var(--space-3); padding: var(--space-3) var(--space-4); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--surface-primary); text-decoration: none; color: inherit;"
+        >
+          <span style="font-size: var(--type-scale-base); font-weight: var(--font-weight-semibold); color: var(--text-primary);">{c.data.name}</span>
+          <span style="font-size: var(--type-scale-sm); color: var(--text-secondary);">{c.data.summary}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</BibleLayout>

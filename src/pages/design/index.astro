@@ -1,0 +1,16 @@
+---
+import BibleLayout from '../../layouts/BibleLayout.astro';
+import { getCollection } from 'astro:content';
+const sections = (await getCollection('bibleSection')).sort((a, b) => a.data.section - b.data.section);
+---
+<BibleLayout title="Zuga Design Bible">
+  <h1 style="font-size: var(--type-scale-5xl); font-weight: var(--font-weight-bold);">Zuga Technologies Design Bible</h1>
+  <p style="color: var(--text-secondary); font-size: var(--type-scale-lg);">The master visual language inherited by every Zuga product.</p>
+
+  <h2 style="font-size: var(--type-scale-3xl); margin-top: var(--space-12);">Table of Contents</h2>
+  <ol>
+    {sections.map(s => (
+      <li><a href={`/design/${s.id.replace('.md','')}`}>{s.data.section}. {s.data.title}</a> — {s.data.summary}</li>
+    ))}
+  </ol>
+</BibleLayout>

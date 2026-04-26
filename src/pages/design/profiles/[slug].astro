@@ -1,0 +1,36 @@
+---
+import BibleLayout from '../../../layouts/BibleLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('profiles');
+  return entries.map(entry => ({
+    params: { slug: entry.id.replace('.md', '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<BibleLayout title={entry.data.consumer}>
+  <div style="margin-bottom: var(--space-6); padding-bottom: var(--space-6); border-bottom: 1px solid var(--border-default);">
+    <h1 style="font-size: var(--type-scale-4xl); font-weight: var(--font-weight-bold); margin-bottom: var(--space-2);">
+      {entry.data.consumer}
+    </h1>
+    <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap;">
+      <code style="font-size: var(--type-scale-sm); font-family: var(--font-family-mono); color: var(--text-secondary);">
+        {entry.data.profile}
+      </code>
+      <span style="padding: var(--space-0_5) var(--space-2); background: var(--surface-secondary); border-radius: var(--radius-sm); font-size: var(--type-scale-xs); color: var(--text-tertiary);">
+        {entry.data.family}
+      </span>
+      <span style="font-size: var(--type-scale-xs); color: var(--text-tertiary);">
+        accent: <code style="font-family: var(--font-family-mono);">{entry.data.accentRamp}</code>
+      </span>
+    </div>
+  </div>
+  <article>
+    <Content />
+  </article>
+</BibleLayout>

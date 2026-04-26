@@ -1,0 +1,45 @@
+---
+import BibleLayout from '../../../layouts/BibleLayout.astro';
+import { getCollection } from 'astro:content';
+const entries = (await getCollection('adr')).sort((a, b) => a.data.id - b.data.id);
+
+function statusColors(status: string): { bg: string; text: string } {
+  switch (status) {
+    case 'accepted':    return { bg: 'var(--feedback-success-subtle)', text: 'var(--feedback-success)' };
+    case 'proposed':    return { bg: 'var(--accent-brand-subtle)',      text: 'var(--accent-brand)' };
+    case 'deprecated':  return { bg: 'var(--feedback-danger-subtle)',   text: 'var(--feedback-danger)' };
+    case 'superseded':  return { bg: 'var(--surface-secondary)',        text: 'var(--text-tertiary)' };
+    default:            return { bg: 'var(--surface-secondary)',        text: 'var(--text-secondary)' };
+  }
+}
+---
+<BibleLayout title="Architecture Decision Records">
+  <h1 style="font-size: var(--type-scale-5xl); font-weight: var(--font-weight-bold);">Architecture Decision Records</h1>
+  <p style="color: var(--text-secondary); font-size: var(--type-scale-lg); margin-bottom: var(--space-8);">
+    {entries.length} ADRs documenting design system decisions.
+  </p>
+  <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2);">
+    {entries.map(a => {
+      const colors = statusColors(a.data.status);
+      return (
+        <li>
+          <a
+            href={`/design/adr/${a.id.replace('.md', '')}`}
+            style="display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3) var(--space-4); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--surface-primary); text-decoration: none; color: inherit;"
+          >
+            <code style="font-size: var(--type-scale-sm); font-family: var(--font-family-mono); color: var(--text-tertiary); min-width: 3.5rem;">
+              ADR-{String(a.data.id).padStart(4, '0')}
+            </code>
+            <span style="flex: 1; font-size: var(--type-scale-base); font-weight: var(--font-weight-semibold); color: var(--text-primary);">
+              {a.data.title}
+            </span>
+            <span style={`font-size: var(--type-scale-xs); padding: var(--space-0_5) var(--space-2); border-radius: var(--radius-full); background: ${colors.bg}; color: ${colors.text};`}>
+              {a.data.status}
+            </span>
+            <span style="font-size: var(--type-scale-xs); color: var(--text-tertiary);">{a.data.date}</span>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</BibleLayout>

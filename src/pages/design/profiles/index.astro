@@ -1,0 +1,22 @@
+---
+import BibleLayout from '../../../layouts/BibleLayout.astro';
+import ProfileCard from '../../../components/bible/ProfileCard.astro';
+import { getCollection } from 'astro:content';
+const entries = (await getCollection('profiles')).sort((a, b) => a.data.consumer.localeCompare(b.data.consumer));
+---
+<BibleLayout title="Bible Profiles">
+  <h1 style="font-size: var(--type-scale-5xl); font-weight: var(--font-weight-bold);">Profiles</h1>
+  <p style="color: var(--text-secondary); font-size: var(--type-scale-lg); margin-bottom: var(--space-8);">
+    {entries.length} product profiles inheriting from the Zuga design system.
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: var(--space-4);">
+    {entries.map(p => (
+      <ProfileCard
+        profile={p.data.profile}
+        consumer={p.data.consumer}
+        family={p.data.family}
+        accentRamp={p.data.accentRamp}
+      />
+    ))}
+  </div>
+</BibleLayout>

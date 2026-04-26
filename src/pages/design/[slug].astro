@@ -1,0 +1,17 @@
+---
+import BibleLayout from '../../layouts/BibleLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const sections = await getCollection('bibleSection');
+  return sections.map(entry => ({ params: { slug: entry.id.replace('.md', '') }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<BibleLayout title={entry.data.title} section={entry.data.section}>
+  <article>
+    <Content />
+  </article>
+</BibleLayout>
