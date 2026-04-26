@@ -168,6 +168,30 @@ body.hero-typed .hero-caret {
   }
 }
 
+/* ----- Scroll-reveal: subtle horizontal slide-in for sections -----
+   Sections opt in with data-reveal="left" or "right". An IntersectionObserver
+   in Layout.astro adds .is-visible the first time the element crosses ~15%
+   into the viewport; the transition runs once and is cheap to layer-hint. */
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+[data-reveal="left"]  { transform: translate3d(-32px, 0, 0); }
+[data-reveal="right"] { transform: translate3d(32px, 0, 0); }
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ----- Studio tile hover polish ----- */
 .studio-tile {
   transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
