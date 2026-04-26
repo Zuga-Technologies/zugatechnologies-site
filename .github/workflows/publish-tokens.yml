@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '22'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@zuga'
+          scope: '@zuga-technologies'
       - run: pnpm install --frozen-lockfile
       - run: cd packages/design-tokens && pnpm publish --no-git-checks
         env:

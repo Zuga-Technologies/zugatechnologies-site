@@ -33,7 +33,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import Select from '@zuga/ui/Select.astro';
+      import Select from '@zuga-technologies/ui/Select.astro';
       const countries = [
         { value: 'us', label: 'United States' },
         { value: 'mx', label: 'Mexico' },
@@ -77,7 +77,7 @@ examples:
 
       <script setup>
       import { ref, computed } from 'vue';
-      import Select from '@zuga/ui/Select.vue';
+      import Select from '@zuga-technologies/ui/Select.vue';
 
       const country = ref('');
       const timezone = ref('');
@@ -220,7 +220,7 @@ A 2px border-color change to `--component-select-border-focus` (cyan-500) plus a
 
 ```astro
 ---
-import Select from '@zuga/ui/Select.astro';
+import Select from '@zuga-technologies/ui/Select.astro';
 const countries = [
   { value: 'us', label: 'United States' },
   { value: 'mx', label: 'Mexico' },
@@ -254,7 +254,7 @@ const countries = [
 
 <script setup>
 import { ref, computed } from 'vue';
-import Select from '@zuga/ui/Select.vue';
+import Select from '@zuga-technologies/ui/Select.vue';
 
 const country = ref('');
 const countries = [

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// @zuga/design-tokens — aggregate-mike-review.mjs
+// @zuga-technologies/design-tokens — aggregate-mike-review.mjs
 // Extracts MIKE-CHECKPOINT markers from the design bible markdown corpus,
 // validates that every checkpoint has a populated draft, and emits a bucketed
 // review doc for Mike.

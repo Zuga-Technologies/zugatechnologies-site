@@ -34,7 +34,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import Toast from '@zuga/ui/Toast.astro';
+      import Toast from '@zuga-technologies/ui/Toast.astro';
       ---
       <!-- info: polite announcement -->
       <Toast variant="info" message="Your session was restored." />
@@ -64,8 +64,8 @@ examples:
 
       <script setup>
       import { ref } from 'vue';
-      import Toast from '@zuga/ui/Toast.vue';
-      import ToastStack from '@zuga/ui/ToastStack.vue';
+      import Toast from '@zuga-technologies/ui/Toast.vue';
+      import ToastStack from '@zuga-technologies/ui/ToastStack.vue';
 
       const toasts = ref([]);
 
@@ -211,7 +211,7 @@ Toast appearance does not move focus. The user's focus stays on the element they
 
 ```astro
 ---
-import Toast from '@zuga/ui/Toast.astro';
+import Toast from '@zuga-technologies/ui/Toast.astro';
 ---
 <!-- info: polite, auto-dismisses at 5s -->
 <Toast variant="info" message="Your session was restored." auto-dismiss={5000} />
@@ -242,7 +242,7 @@ import Toast from '@zuga/ui/Toast.astro';
 
 <script setup>
 import { ref } from 'vue';
-import Toast from '@zuga/ui/Toast.vue';
+import Toast from '@zuga-technologies/ui/Toast.vue';
 
 const toasts = ref([]);
 

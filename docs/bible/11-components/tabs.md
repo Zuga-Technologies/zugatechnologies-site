@@ -34,7 +34,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import { Tabs, Tab } from '@zuga/ui/Tabs.astro';
+      import { Tabs, Tab } from '@zuga-technologies/ui/Tabs.astro';
       ---
       <!-- default variant -->
       <Tabs defaultTab="overview" variant="default">
@@ -70,7 +70,7 @@ examples:
 
       <script setup>
       import { ref } from 'vue';
-      import { Tabs, Tab } from '@zuga/ui/Tabs.vue';
+      import { Tabs, Tab } from '@zuga-technologies/ui/Tabs.vue';
 
       const activeTab = ref('overview');
       </script>
@@ -216,7 +216,7 @@ Roving tabindex: the active tab has `tabindex="0"`, all others have `tabindex="-
 
 ```astro
 ---
-import { Tabs, Tab } from '@zuga/ui/Tabs.astro';
+import { Tabs, Tab } from '@zuga-technologies/ui/Tabs.astro';
 ---
 <Tabs defaultTab="overview" variant="underline">
   <Tab id="overview" label="Overview">
@@ -247,7 +247,7 @@ import { Tabs, Tab } from '@zuga/ui/Tabs.astro';
 
 <script setup>
 import { ref } from 'vue';
-import { Tabs, Tab } from '@zuga/ui/Tabs.vue';
+import { Tabs, Tab } from '@zuga-technologies/ui/Tabs.vue';
 const activeTab = ref('overview');
 </script>
 ```

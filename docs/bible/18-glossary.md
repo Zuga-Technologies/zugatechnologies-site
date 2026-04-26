@@ -43,8 +43,8 @@ The brand architecture pattern Zuga uses. A single master brand (Zuga) with sub-
 ### Drift
 
 When a consumer's token usage diverges from what the registry says it should be. Drift has two forms:
-1. **Version drift** — consumer is using an outdated `@zuga/design-tokens` version.
-2. **Usage drift** — consumer is importing or defining tokens outside the `@zuga/design-tokens` package (e.g., copy-pasting `tokens.css` into their repo).
+1. **Version drift** — consumer is using an outdated `@zuga-technologies/design-tokens` version.
+2. **Usage drift** — consumer is importing or defining tokens outside the `@zuga-technologies/design-tokens` package (e.g., copy-pasting `tokens.css` into their repo).
 
 `drift-detect.mjs` catches both automatically on a nightly schedule. The quarterly audit is the human-in-the-loop check. See §17.6.
 

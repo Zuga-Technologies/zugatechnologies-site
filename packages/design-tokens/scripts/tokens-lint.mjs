@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// @zuga/design-tokens — tokens-lint.mjs
+// @zuga-technologies/design-tokens — tokens-lint.mjs
 // Enforces sub-brand contract per spec §15.
 
 import fs from 'node:fs/promises';

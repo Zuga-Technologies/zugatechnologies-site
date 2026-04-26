@@ -17,25 +17,25 @@ This section is the engineer's entry point to the token system. For override rul
 ## 14.1 Package
 
 ```
-@zuga/design-tokens  v0.1.0
+@zuga-technologies/design-tokens  v0.1.0
 ```
 
 Published to the GitHub Package Registry (`npm.pkg.github.com`). Access is restricted — you need a GitHub PAT with `read:packages` scope in your `.npmrc`.
 
 ```
 // .npmrc
-@zuga:registry=https://npm.pkg.github.com
+@zuga-technologies:registry=https://npm.pkg.github.com
 ```
 
 ### Exports
 
 | Export path | What it is |
 |-------------|-----------|
-| `@zuga/design-tokens/tokens.css` | Tier 1 primitives + Tier 2 semantic defaults (light mode) |
-| `@zuga/design-tokens/tokens-dark.css` | Dark mode semantic overrides |
-| `@zuga/design-tokens/reset.css` | Zuga CSS reset (box-sizing, margin zeroing) |
-| `@zuga/design-tokens/profiles/*.css` | Sub-brand profile overrides (e.g., `profiles/studio-life.css`) |
-| `@zuga/design-tokens/components/*.css` | Component-scoped Tier 3 tokens |
+| `@zuga-technologies/design-tokens/tokens.css` | Tier 1 primitives + Tier 2 semantic defaults (light mode) |
+| `@zuga-technologies/design-tokens/tokens-dark.css` | Dark mode semantic overrides |
+| `@zuga-technologies/design-tokens/reset.css` | Zuga CSS reset (box-sizing, margin zeroing) |
+| `@zuga-technologies/design-tokens/profiles/*.css` | Sub-brand profile overrides (e.g., `profiles/studio-life.css`) |
+| `@zuga-technologies/design-tokens/components/*.css` | Component-scoped Tier 3 tokens |
 
 ---
 
@@ -115,12 +115,12 @@ Import the package CSS in your global stylesheet. Token variables are then avail
 
 ```css
 /* src/styles/global.css */
-@import "@zuga/design-tokens/tokens.css";
-@import "@zuga/design-tokens/tokens-dark.css";
-@import "@zuga/design-tokens/reset.css";
+@import "@zuga-technologies/design-tokens/tokens.css";
+@import "@zuga-technologies/design-tokens/tokens-dark.css";
+@import "@zuga-technologies/design-tokens/reset.css";
 
 /* If this consumer uses a sub-brand profile: */
-@import "@zuga/design-tokens/profiles/studio-life.css";
+@import "@zuga-technologies/design-tokens/profiles/studio-life.css";
 ```
 
 Reference tokens in component styles:
@@ -209,7 +209,7 @@ Link the token CSS directly and use variables inline or in a `<style>` block.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/node_modules/@zuga/design-tokens/src/tokens.css" />
+  <link rel="stylesheet" href="/node_modules/@zuga-technologies/design-tokens/src/tokens.css" />
   <style>
     body {
       background-color: var(--surface-canvas);
@@ -243,8 +243,8 @@ Dark mode is a semantic-layer swap — Tier 1 primitives don't change, only Tier
 
 ```css
 /* Apply dark mode at the OS level */
-@import "@zuga/design-tokens/tokens.css";
-@import "@zuga/design-tokens/tokens-dark.css";
+@import "@zuga-technologies/design-tokens/tokens.css";
+@import "@zuga-technologies/design-tokens/tokens-dark.css";
 ```
 
 `tokens-dark.css` overrides `--surface-*` and `--text-*` inside `@media (prefers-color-scheme: dark)`. If you need manual dark-mode toggle, apply a `[data-theme="dark"]` attribute and scope the dark overrides to that selector — do not maintain a separate stylesheet; patch `tokens-dark.css` to support both the media query and the attribute selector.

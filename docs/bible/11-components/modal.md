@@ -31,8 +31,8 @@ examples:
   - framework: astro
     code: |
       ---
-      import Modal from '@zuga/ui/Modal.astro';
-      import Button from '@zuga/ui/Button.astro';
+      import Modal from '@zuga-technologies/ui/Modal.astro';
+      import Button from '@zuga-technologies/ui/Button.astro';
       ---
       <!-- dialog variant (informational, dismissible) -->
       <Modal id="settings-modal" title="Settings" variant="dialog">
@@ -90,8 +90,8 @@ examples:
 
       <script setup>
       import { ref } from 'vue';
-      import Modal from '@zuga/ui/Modal.vue';
-      import Button from '@zuga/ui/Button.vue';
+      import Modal from '@zuga-technologies/ui/Modal.vue';
+      import Button from '@zuga-technologies/ui/Button.vue';
 
       const showSettings = ref(false);
       const showDelete = ref(false);
@@ -242,8 +242,8 @@ Focus trap: when the modal opens, the first focusable element inside the dialog 
 
 ```astro
 ---
-import Modal from '@zuga/ui/Modal.astro';
-import Button from '@zuga/ui/Button.astro';
+import Modal from '@zuga-technologies/ui/Modal.astro';
+import Button from '@zuga-technologies/ui/Button.astro';
 ---
 <!-- dialog -->
 <Modal id="settings-modal" title="Settings" variant="dialog">
@@ -295,8 +295,8 @@ import Button from '@zuga/ui/Button.astro';
 
 <script setup>
 import { ref } from 'vue';
-import Modal from '@zuga/ui/Modal.vue';
-import Button from '@zuga/ui/Button.vue';
+import Modal from '@zuga-technologies/ui/Modal.vue';
+import Button from '@zuga-technologies/ui/Button.vue';
 
 const open = ref(false);
 const showDelete = ref(false);

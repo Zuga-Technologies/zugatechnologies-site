@@ -53,7 +53,7 @@ Additionally, every overridable declaration must be preceded by a `/* WHY: ... *
 
 ### 2. `tokens-lint.mjs` runs on every PR via CI
 
-The lint runs as a `pnpm lint` script on the `@zuga/design-tokens` package and as a consumer check via `zuga-tokens-lint` binary. T34 wires CI; the lint is available today as `pnpm --filter @zuga/design-tokens lint`. Any PR that touches a profile file must pass lint before merge.
+The lint runs as a `pnpm lint` script on the `@zuga-technologies/design-tokens` package and as a consumer check via `zuga-tokens-lint` binary. T34 wires CI; the lint is available today as `pnpm --filter @zuga-technologies/design-tokens lint`. Any PR that touches a profile file must pass lint before merge.
 
 ### 3. Profile schema validation via Astro Zod (`src/content.config.ts`)
 
@@ -74,11 +74,11 @@ schema: z.object({
 
 ### 4. `consuming-repos.json` registry
 
-Every consumer of `@zuga/design-tokens` must register itself in `consuming-repos.json` at the package root. The registry maps consumer repos to their profile choice. The lint tool's `lintConsumerDir()` function checks that the profile named in a consumer's `.zuga-design.json` manifest actually exists in the profiles directory. Unregistered consumers or consumers pointing at nonexistent profiles fail lint.
+Every consumer of `@zuga-technologies/design-tokens` must register itself in `consuming-repos.json` at the package root. The registry maps consumer repos to their profile choice. The lint tool's `lintConsumerDir()` function checks that the profile named in a consumer's `.zuga-design.json` manifest actually exists in the profiles directory. Unregistered consumers or consumers pointing at nonexistent profiles fail lint.
 
 ### 5. `drift-detect.mjs` nightly GH Action
 
-`packages/design-tokens/scripts/drift-detect.mjs` runs nightly via GitHub Actions (T19 implementation). It checks that every registered consumer is using the current published version of `@zuga/design-tokens` and that no consumer has imported token CSS from outside the package (copy-pasting a token file is the failure mode it targets). Consumers failing drift detection are flagged as issues.
+`packages/design-tokens/scripts/drift-detect.mjs` runs nightly via GitHub Actions (T19 implementation). It checks that every registered consumer is using the current published version of `@zuga-technologies/design-tokens` and that no consumer has imported token CSS from outside the package (copy-pasting a token file is the failure mode it targets). Consumers failing drift detection are flagged as issues.
 
 ### 6. `aggregate-mike-review.mjs` checkpoint lint
 
@@ -91,7 +91,7 @@ Every consumer of `@zuga/design-tokens` must register itself in `consuming-repos
 A minimal valid profile (no overrides, consuming defaults as-is):
 
 ```css
-/* @zuga/design-tokens — profiles/overlay-gamer.css
+/* @zuga-technologies/design-tokens — profiles/overlay-gamer.css
  * Used by: ZugaGamerOverlay (in-game HUD)
  * Accent: master cyan (no override)
  */
@@ -102,7 +102,7 @@ A minimal valid profile (no overrides, consuming defaults as-is):
 A profile with a real accent override:
 
 ```css
-/* @zuga/design-tokens — profiles/studio-trader.css
+/* @zuga-technologies/design-tokens — profiles/studio-trader.css
  * Used by: ZugaTrader
  * Accent: emerald (markets family)
  */

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// @zuga/design-tokens — drift-detect.mjs
+// @zuga-technologies/design-tokens — drift-detect.mjs
 // Runs nightly via GH Actions. Reads consuming-repos.json, clones each
 // consumer, builds the CSS, dumps :root vars, diffs Tier 1 against canonical.
 

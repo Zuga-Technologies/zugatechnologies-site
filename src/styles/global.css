@@ -2,7 +2,7 @@
  * Zuga Technologies — global stylesheet
  *
  * Layered tokens:
- *   1. @zuga/design-tokens package — provides Tier 1 primitives (--color-*,
+ *   1. @zuga-technologies/design-tokens package — provides Tier 1 primitives (--color-*,
  *      --space-*, --type-scale-*, etc.), Tier 2 semantics (--surface-*,
  *      --text-*, --border-*, --accent-*, --feedback-*, --density-*), and
  *      the `corp` profile's master cyan accent. Used by /design (bible).
@@ -19,10 +19,10 @@
  * pre-T33 corp values (4rem/6rem/9rem, not 3rem/4rem/6rem).
  * -------------------------------------------------------------------------- */
 
-@import "@zuga/design-tokens/reset.css";
-@import "@zuga/design-tokens/tokens.css";
-@import "@zuga/design-tokens/tokens-dark.css";
-@import "@zuga/design-tokens/profiles/corp.css";
+@import "@zuga-technologies/design-tokens/reset.css";
+@import "@zuga-technologies/design-tokens/tokens.css";
+@import "@zuga-technologies/design-tokens/tokens-dark.css";
+@import "@zuga-technologies/design-tokens/profiles/corp.css";
 
 @import "tailwindcss";
 

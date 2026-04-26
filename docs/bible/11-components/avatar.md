@@ -26,7 +26,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import Avatar from '@zuga/ui/Avatar.astro';
+      import Avatar from '@zuga-technologies/ui/Avatar.astro';
       ---
       <!-- image variant -->
       <Avatar
@@ -71,7 +71,7 @@ examples:
 
       <script setup>
       import { ref, computed } from 'vue';
-      import Avatar from '@zuga/ui/Avatar.vue';
+      import Avatar from '@zuga-technologies/ui/Avatar.vue';
 
       const props = defineProps(['user']);
       const menuOpen = ref(false);
@@ -187,7 +187,7 @@ Non-interactive avatars skip the tab sequence entirely. Interactive avatars use 
 
 ```astro
 ---
-import Avatar from '@zuga/ui/Avatar.astro';
+import Avatar from '@zuga-technologies/ui/Avatar.astro';
 ---
 <!-- static image -->
 <Avatar src="/users/antonio.png" alt="Antonio Delgado" size="md" />
@@ -224,7 +224,7 @@ import Avatar from '@zuga/ui/Avatar.astro';
 
 <script setup>
 import { ref, computed } from 'vue';
-import Avatar from '@zuga/ui/Avatar.vue';
+import Avatar from '@zuga-technologies/ui/Avatar.vue';
 
 const props = defineProps(['user']);
 const menuOpen = ref(false);
