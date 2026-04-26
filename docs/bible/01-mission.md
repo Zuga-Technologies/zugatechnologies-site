@@ -12,7 +12,7 @@ mikeCheckpoint: false
 
 ## 1.1 Mission Statement
 
-Zuga Technologies builds the tooling layer for the next generation of human-AI collaboration — a fleet of purpose-built studios under one identity, compounding toward a future where autonomous agents handle the cognitive load so people can spend time on what actually matters. We ship fast, stay coherent, and earn trust by working visibly in public. The studio fleet is the near-horizon bet; the far-horizon bet is that the autonomous-agent architecture underpinning all of it is a real research category worth proving — not just a product line, and the design system is downstream of that thesis.
+Zuga Technologies builds the tooling layer for the next generation of human-AI collaboration — a fleet of purpose-built studios under one identity, compounding toward a future where autonomous agents handle the cognitive load so people can spend time on what actually matters. We ship fast, stay coherent, and earn trust by working visibly in public. The studio fleet is the near-horizon bet; the far-horizon bet is that the autonomous-agent architecture underpinning all of it is a real research category worth proving, not just a product line.
 
 ## 1.2 Design Principles
 
