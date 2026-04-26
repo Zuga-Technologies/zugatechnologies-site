@@ -118,6 +118,8 @@ Zuga products honor the `prefers-reduced-motion: reduce` media query. This is no
 
 This is a global reset baseline. Individual components should also check `prefers-reduced-motion` at the component level when they have complex choreography (stagger sequences, scroll-driven reveals) that the global reset does not fully suppress.
 
+**Carve-out for essential motion**: animation that communicates ongoing system activity (spinners, progress bars, skeleton-loader pulses) should be *reduced in amplitude*, not killed. A loading spinner that runs at slower speed or a progress bar that updates without a smooth fill is acceptable; an invisible indicator that leaves the user staring at a frozen UI is not. Components implementing essential motion should check `prefers-reduced-motion` themselves and override the global rule with a reduced-amplitude alternative.
+
 **Note:** `prefers-reduced-motion: reduce` does not mean "no motion." It means "less motion" — prioritize respecting the user's system preference over exact animation parity. The full accessibility rationale and WCAG mapping lives in §13. Accessibility (cross-reference when authored in T27). This section states the implementation contract; §13 states the rationale.
 
 ---

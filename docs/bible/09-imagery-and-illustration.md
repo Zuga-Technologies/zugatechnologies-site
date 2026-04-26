@@ -76,8 +76,8 @@ Hero patterns are Phase 1 — elaborate-on-need. The corp landing site currently
 
 ### Don't
 
-- **Don't** use stock photography of people at computers, at whiteboards, or in "team collaboration" poses.
-- **Don't** use stock photos of strangers laughing at laptops.
+- **Don't** use stock photography of people at computers, at whiteboards, or in "team collaboration" poses — especially the trope of strangers laughing at laptops.
+- **Don't** use imagery that implies features or UI states that aren't shipped — no Figma mockups of unreleased flows, no screenshots annotated with speculative data.
 - **Don't** use imagery sourced from generic "AI / technology" stock libraries (glowing neural networks, floating holographic interfaces, futuristic cityscapes).
 - **Don't** use screenshots from competitor products — even as "context" or "comparison."
 - **Don't** use UI mockups (Figma frames, browser chrome templates) in place of real product screenshots. If the product isn't built yet, use illustration or describe it in text.
