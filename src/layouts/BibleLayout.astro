@@ -1,0 +1,36 @@
+---
+// src/layouts/BibleLayout.astro
+import '../styles/global.css';
+import { getCollection } from 'astro:content';
+
+interface Props { title: string; section?: number; }
+const { title, section } = Astro.props;
+
+const sections = await getCollection('bibleSection');
+const sorted = sections.sort((a, b) => a.data.section - b.data.section);
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{title} — Zuga Design Bible</title>
+</head>
+<body>
+  <div style="display: grid; grid-template-columns: 16rem 1fr; min-height: 100vh;">
+    <aside style="border-right: 1px solid var(--border-default); padding: var(--space-6);">
+      <h2 style="font-size: var(--type-scale-base); margin-bottom: var(--space-4);">Zuga Design Bible</h2>
+      <nav>
+        {sorted.map(s => (
+          <a href={`/design/${s.id.replace('.md','')}`} style={`display: block; padding: var(--space-1) 0; color: ${s.data.section === section ? 'var(--accent-brand)' : 'var(--text-secondary)'};`}>
+            {s.data.section}. {s.data.title}
+          </a>
+        ))}
+      </nav>
+    </aside>
+    <main style="padding: var(--space-8); max-width: var(--container-page);">
+      <slot />
+    </main>
+  </div>
+</body>
+</html>
