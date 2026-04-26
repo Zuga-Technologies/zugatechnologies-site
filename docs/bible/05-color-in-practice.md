@@ -499,12 +499,12 @@ All ratios below are measured using the WCAG 2.1 relative-luminance formula. Rat
 | `--text-primary` slate-900 `#0f172a` | `--surface-primary` white `#ffffff` | ≈17.85:1 | AAA |
 | `--text-primary` slate-900 `#0f172a` | `--surface-canvas` slate-50 `#f8fafc` | ≈16.75:1 | AAA |
 | `--text-secondary` slate-700 `#334155` | `--surface-primary` white `#ffffff` | ≈10.65:1 | AAA |
-| `--text-link` cyan-700 `#0e7490` | `--surface-primary` white `#ffffff` | ≈5.74:1 | AA |
-| `--accent-brand` cyan-700 `#0e7490` | white `#ffffff` (button fg) | ≈5.74:1 | AA |
-| `--accent-fg` white `#ffffff` | `--accent-brand` cyan-700 `#0e7490` (button bg) | ≈5.74:1 | AA |
-| `--feedback-success` green-700 `#15803d` | white `#ffffff` | ≈5.93:1 | AA |
+| `--text-link` cyan-700 `#0e7490` | `--surface-primary` white `#ffffff` | ≈5.36:1 | AA |
+| `--accent-brand` cyan-700 `#0e7490` | white `#ffffff` (button fg) | ≈5.36:1 | AA |
+| `--accent-fg` white `#ffffff` | `--accent-brand` cyan-700 `#0e7490` (button bg) | ≈5.36:1 | AA |
+| `--feedback-success` green-700 `#15803d` | white `#ffffff` | ≈5.02:1 | AA |
 | `--feedback-warn` amber-600 `#d97706` | `--surface-primary` white `#ffffff` | ≈3.12:1 | AA large/UI only — warn text uses `--text-primary` (slate-900) as fg, not white |
-| `--feedback-danger` red-600 `#dc2626` | white `#ffffff` | ≈5.25:1 | AA |
+| `--feedback-danger` red-600 `#dc2626` | white `#ffffff` | ≈4.83:1 | AA |
 
 **Known failure:** cyan-500 (`#06b6d4`) against white (`#ffffff`) ≈ 2.43:1 — fails AA for all text sizes. Cyan-500 is a brand reference stop, not a text color. It appears on dark surfaces (marketing hero, wordmark on slate-900) where it clears AAA at ≈7.35:1. Never place cyan-500 text on a white surface.
 
@@ -512,11 +512,11 @@ All ratios below are measured using the WCAG 2.1 relative-luminance formula. Rat
 
 | Foreground | Background | Measured ratio | Clears |
 |---|---|---|---|
-| `--text-primary` slate-50 `#f8fafc` | `--surface-primary` slate-900 `#0f172a` | ≈16.75:1 | AAA |
-| `--text-secondary` slate-300 `#cbd5e1` | `--surface-primary` slate-900 `#0f172a` | ≈9.35:1 | AAA |
-| `--text-link` cyan-400 `#22d3ee` | `--surface-primary` slate-900 `#0f172a` | ≈11.25:1 | AAA |
-| `--accent-brand` cyan-700 `#0e7490` | `--surface-primary` slate-900 `#0f172a` | passes AA large/UI; for body-text use `--text-link` (cyan-400) instead | AA UI |
-| `--accent-fg` white `#ffffff` | `--accent-brand` cyan-700 `#0e7490` | ≈5.74:1 | AA |
+| `--text-primary` slate-50 `#f8fafc` | `--surface-primary` slate-900 `#0f172a` | ≈17.06:1 | AAA |
+| `--text-secondary` slate-300 `#cbd5e1` | `--surface-primary` slate-900 `#0f172a` | ≈12.02:1 | AAA |
+| `--text-link` cyan-400 `#22d3ee` | `--surface-primary` slate-900 `#0f172a` | ≈9.88:1 | AAA |
+| `--accent-brand` cyan-700 `#0e7490` | `--surface-primary` slate-900 `#0f172a` | ≈3.33:1 — passes AA large/UI; for body-text use `--text-link` (cyan-400) instead | AA UI |
+| `--accent-fg` white `#ffffff` | `--accent-brand` cyan-700 `#0e7490` | ≈5.36:1 | AA |
 
 **Dark-mode feedback subtle note (from tokens-dark.css):** Subtle-bg + main-fg pairings like green-700 on green-950 produce approximately 3.2:1 — below AA for normal text. On dark surfaces, subtle alert boxes must pair the deep-stop subtle background with `--text-primary` (slate-50) as foreground, not the `--feedback-*-fg` stop.
 
