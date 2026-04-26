@@ -25,7 +25,7 @@ accessibility:
     Trigger text: --component-select-fg (slate-900 #0f172a) on --component-select-bg (white #ffffff) = 17.85:1 — AAA.
     Placeholder text: --component-select-fg-placeholder (slate-400 #94a3b8) on white = 2.56:1 — below AA; placeholder in select is exempt per WCAG 1.4.3 (same as input).
     Arrow icon: --component-select-arrow-color (slate-700 #334155) on white = 10.35:1 — AAA.
-    Error border (non-text): --component-select-border (slate-300 #cbd5e1) in error state becomes --feedback-danger (red-600 #dc2626) against white = 4.83:1 — clears AA.
+    Error border (non-text): in error state the border becomes --feedback-danger (red-600 #dc2626) against white = 4.83:1 — clears AA. Select has no scoped --component-select-border-error token; error state references --feedback-danger directly.
   focusBehavior: >
     Focus ring on trigger using --border-focus (cyan-500), 2px solid, 2px offset.
     When dropdown is open, the active option is highlighted. Closing returns focus to the trigger.
@@ -176,7 +176,7 @@ Each part:
 
 **default** — Standard single-value selection. White background, slate-300 border, slate-900 text. Focuses on simplicity — use when 3–20 options exist and a selection is optional or can have a reasonable default.
 
-**error** — Validation failure state. Border changes to `--component-input-border-error` (red-600). Add `aria-invalid="true"` on the select control and `aria-describedby` pointing to the error message element.
+**error** — Validation failure state. Border changes to `--feedback-danger` (red-600) — select's error state inherits from the Tier 2 feedback semantic token directly; select has no scoped `--component-select-border-error` token. Add `aria-invalid="true"` on the select control and `aria-describedby` pointing to the error message element.
 
 ## Accessibility
 
@@ -208,6 +208,7 @@ For native `<select>` elements, all of this is handled by the browser — prefer
 - **Arrow icon** (non-text): slate-700 (#334155) on white = **10.35:1** — well above AA.
 - **Error border** (non-text): red-600 (#dc2626) against white = **4.83:1** — clears AA.
 - **Placeholder text:** slate-400 (#94a3b8) on white = **2.56:1** — exempt per WCAG 1.4.3; visible label is required regardless.
+- **Focus border** (non-text): `--border-focus` (cyan-500, #06b6d4) on white = **2.43:1** — below the 3:1 WCAG 1.4.11 non-text contrast threshold. This is the same known design tension as `input.md`; the border-color transition from slate-300 to cyan-500 provides a perceptual cue. Studios with strict compliance requirements should increase focus border weight to 2–3px or add an outer offset ring.
 
 ### Focus behavior
 

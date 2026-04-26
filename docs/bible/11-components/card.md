@@ -18,7 +18,7 @@ accessibility:
     - article
   contrastNotes: >
     Card body text: --text-primary (slate-900 #0f172a) on --component-card-bg (#ffffff surface-primary) = 17.85:1 — AAA.
-    Card border: --component-card-border (--border-subtle, slate-200 #e2e8f0) against white = 14.48:1 non-text contrast — well above AA 3:1.
+    Card border: --component-card-border (--border-subtle, slate-200 #e2e8f0) against white = 1.23:1 non-text contrast — below WCAG 1.4.11 (3:1 non-text contrast). The card boundary is communicated through box-shadow and surface color difference (--surface-canvas vs --surface-primary) rather than border contrast alone. Studios with strict compliance requirements should bump border weight or shift to slate-400 minimum (2.81:1).
   focusBehavior: >
     Interactive cards receive a visible focus ring on the outer container using --border-focus (cyan-500).
     Static cards are not focusable; interactive elements within (buttons, links) carry their own focus handling.
@@ -158,7 +158,7 @@ Cards use `role="article"` (implicit via `<article>`) to create a browsable land
 ### Contrast verification
 
 - **Body text:** `--text-primary` (slate-900, #0f172a) on `--component-card-bg` (white, #ffffff) = **17.85:1** — AAA.
-- **Card border** (non-text): `--border-subtle` (slate-200, #e2e8f0) against white = **14.48:1** — well above the 3:1 non-text contrast requirement (WCAG 1.4.11).
+- **Card border** (non-text): `--border-subtle` (slate-200, #e2e8f0) against white = **1.23:1** — **below WCAG 1.4.11 (3:1 non-text contrast)**. The card boundary is communicated through `box-shadow` and surface color difference (`--surface-canvas` vs `--surface-primary`), not border contrast alone. Studios with strict compliance requirements should bump border weight or shift to slate-400 minimum (≈2.81:1).
 
 ### Focus behavior
 

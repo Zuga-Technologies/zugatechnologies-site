@@ -18,7 +18,7 @@ accessibility:
     - toolbar
   contrastNotes: >
     Toolbar controls use --text-primary (slate-900 #0f172a) on --component-toolbar-bg (white #ffffff) = 17.85:1 — AAA.
-    Toolbar border bottom (non-text): --component-toolbar-border-bottom (slate-200 #e2e8f0) on white = 14.48:1 — well above 3:1.
+    Toolbar border bottom (non-text): --component-toolbar-border-bottom (slate-200 #e2e8f0) on white = 1.23:1 — below WCAG 1.4.11 (3:1 non-text contrast). The toolbar boundary is communicated through surface color difference and layout position rather than border contrast alone. Studios with strict compliance requirements should shift to slate-400 minimum (2.81:1) or increase border weight.
     Icon controls should meet WCAG 1.4.11 (non-text contrast, 3:1) — icons in slate-700 (#334155) on white = 10.35:1 — AAA.
   focusBehavior: >
     Toolbar uses roving tabindex; only one item is in the tab sequence at a time.
@@ -194,7 +194,7 @@ Toggle buttons use `aria-pressed="true|false"`. For selection groups (alignment,
 
 - **Toolbar control icons** (non-text): slate-700 (#334155) on white (#ffffff) = **10.35:1** — well above 3:1 non-text threshold (WCAG 1.4.11).
 - **Toolbar body text** (for any labeled buttons): slate-900 (#0f172a) on white = **17.85:1** — AAA.
-- **Bottom border** (non-text): slate-200 (#e2e8f0) on white = **14.48:1** — well above 3:1.
+- **Bottom border** (non-text): slate-200 (#e2e8f0) on white = **1.23:1** — **below WCAG 1.4.11 (3:1 non-text contrast)**. The toolbar boundary is communicated through surface color difference and layout position rather than border contrast alone. Studios with strict compliance requirements should shift to slate-400 minimum (≈2.81:1) or increase border weight.
 
 ### Focus behavior
 

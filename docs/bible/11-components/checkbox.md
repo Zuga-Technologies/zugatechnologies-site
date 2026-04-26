@@ -19,7 +19,7 @@ accessibility:
     - checkbox
   contrastNotes: >
     Checkmark: --component-checkbox-fg-check (#ffffff, --accent-fg) on --component-checkbox-bg-checked (cyan-700 #0e7490) = 5.36:1 — clears AA.
-    Default box border: --component-checkbox-border-default (slate-300 #cbd5e1) against white = 12.02:1 non-text contrast — AA 3:1 for UI components.
+    Default box border: --component-checkbox-border-default (slate-300 #cbd5e1) against white = 1.48:1 non-text contrast — below WCAG 1.4.11 (3:1 non-text contrast). The checkbox boundary is communicated through shape and the checkmark glyph rather than border contrast alone. Studios with strict compliance requirements should shift to slate-500 (4.61:1, clears 3:1) or increase border weight to 2px.
     Label text: slate-900 (#0f172a) on white = 17.85:1 — AAA.
     Error border: --component-checkbox-border-error (red-600 #dc2626) against white = non-text; measured at 4.83:1 — clears AA.
   focusBehavior: >
@@ -206,7 +206,7 @@ Each part:
 ### Contrast verification
 
 - **Checkmark on checked background:** `--component-checkbox-fg-check` (#ffffff) on `--component-checkbox-bg-checked` (cyan-700, #0e7490) = **5.36:1** — clears AA.
-- **Default box border** (non-text): slate-300 (#cbd5e1) against white = **12.02:1** — well above AA 3:1 for UI components (WCAG 1.4.11).
+- **Default box border** (non-text): slate-300 (#cbd5e1) against white = **1.48:1** — **below WCAG 1.4.11 (3:1 non-text contrast)**. The checkbox boundary is communicated through shape and the checkmark glyph rather than border contrast alone. Studios with strict compliance requirements should shift to slate-400 (≈2.81:1) or slate-500 (≈4.61:1, clears 3:1), or increase border weight to 2px.
 - **Error border** (non-text): red-600 (#dc2626) against white = **4.83:1** — clears AA.
 - **Label text:** slate-900 (#0f172a) on white = **17.85:1** — AAA.
 

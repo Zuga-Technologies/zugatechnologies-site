@@ -22,9 +22,9 @@ accessibility:
   contrastNotes: >
     All variants use --component-toast-fg (slate-900 #0f172a) for message text.
     Info: slate-900 on --component-toast-bg-info (white #ffffff) = 17.85:1 — AAA.
-    Success: slate-900 on --component-toast-bg-success (green-100 #dcfce7) = 17.06:1 — AAA.
-    Warning: slate-900 on --component-toast-bg-warn (amber-100 #fef3c7) = 17.06:1 — AAA.
-    Danger: slate-900 on --component-toast-bg-danger (red-100 #fee2e2) = 14.48:1 — AAA.
+    Success: slate-900 on --component-toast-bg-success (green-100 #dcfce7) = 16.26:1 — AAA.
+    Warning: slate-900 on --component-toast-bg-warn (amber-100 #fef3c7) = 16.03:1 — AAA.
+    Danger: slate-900 on --component-toast-bg-danger (red-100 #fee2e2) = 14.61:1 — AAA.
   focusBehavior: >
     Toasts are not automatically focused on appearance — focus stays with the current element.
     The dismiss button is reachable via Tab. When a toast is dismissed by the button, focus stays
@@ -197,9 +197,9 @@ Both roles require `aria-atomic="true"` to ensure the full message is announced 
 All variants use `--component-toast-fg` (slate-900, #0f172a) for message text:
 
 - **Info:** slate-900 on white (#ffffff) = **17.85:1** — AAA.
-- **Success:** slate-900 on green-100 (#dcfce7) = **17.06:1** — AAA.
-- **Warning:** slate-900 on amber-100 (#fef3c7) = **17.06:1** — AAA.
-- **Danger:** slate-900 on red-100 (#fee2e2) = **14.48:1** — AAA.
+- **Success:** slate-900 on green-100 (#dcfce7) = **16.26:1** — AAA.
+- **Warning:** slate-900 on amber-100 (#fef3c7) = **16.03:1** — AAA.
+- **Danger:** slate-900 on red-100 (#fee2e2) = **14.61:1** — AAA.
 
 ### Focus behavior
 

@@ -21,7 +21,7 @@ accessibility:
   contrastNotes: >
     Modal body text: --component-modal-fg (slate-900 #0f172a) on --component-modal-bg (white #ffffff) = 17.85:1 — AAA.
     Close button icon: slate-700 (#334155) on white = 10.35:1 — AAA.
-    Modal border: slate-300 on white = 12.02:1 non-text contrast — well above AA 3:1.
+    Modal border: slate-300 (#cbd5e1) on white = 1.48:1 non-text contrast — below WCAG 1.4.11 (3:1 non-text contrast). The modal boundary is communicated primarily through box-shadow (shadow-xl) rather than border contrast alone. Studios with strict compliance requirements should increase border weight to 2px and/or shift to slate-500 (4.61:1, clears 3:1).
   focusBehavior: >
     Focus is trapped inside the modal while open. The first focusable element receives focus on open.
     On close, focus returns to the trigger element that opened the modal.
@@ -230,7 +230,7 @@ The outer container carries `role="dialog"` or `role="alertdialog"` plus `aria-m
 
 - **Body text:** slate-900 (#0f172a) on white (#ffffff) = **17.85:1** — AAA.
 - **Close button icon:** slate-700 (#334155) on white = **10.35:1** — AAA.
-- **Modal border** (non-text): slate-300 (#cbd5e1) against white = **12.02:1** — well above 3:1 UI component threshold.
+- **Modal border** (non-text): slate-300 (#cbd5e1) against white = **1.48:1** — **below WCAG 1.4.11 (3:1 non-text contrast)**. The modal boundary is communicated primarily through `box-shadow` (shadow-xl), not border contrast alone. Studios with strict compliance requirements should increase border weight to 2px and/or shift to slate-400 (≈2.81:1) or slate-500 (≈4.61:1, clears 3:1).
 
 ### Focus behavior
 

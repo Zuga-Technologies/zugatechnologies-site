@@ -18,7 +18,7 @@ accessibility:
     Default: --component-badge-fg-default (slate-900 #0f172a) on --component-badge-bg-default (slate-100 #f1f5f9) = 16.30:1 — AAA.
     Brand: --component-badge-fg-brand (cyan-800 #155e75) on --component-badge-bg-brand (cyan-100 #cffafe) = 6.49:1 — AA.
     Success: --component-badge-fg-success (green-700 #15803d) on --component-badge-bg-success (green-100 #dcfce7) = 4.57:1 — AA.
-    Danger: --component-badge-fg-danger (red-600 #dc2626) on --component-badge-bg-danger (red-100 #fee2e2) = 3.95:1 — borderline; badge text is always bold (semibold) + small, so large-text AA (3:1) applies for bold 14px — clears that tier.
+    Danger: --component-badge-fg-danger (red-600 #dc2626) on --component-badge-bg-danger (red-100 #fee2e2) = 3.95:1 — below WCAG AA 4.5:1 normal-text threshold. The 3:1 large-text exception does NOT apply at 12px (WCAG large-text is 18pt normal / 14pt bold, approx 18.67px). Always pair a danger badge with text context so users do not depend on it alone — see the Don'ts section.
   focusBehavior: >
     Decorative badges are removed from the tab sequence. When a badge is placed on an interactive parent (button, nav item),
     its value should be included in the parent's aria-label so screen readers announce it without the badge being separately focusable.

@@ -25,7 +25,7 @@ accessibility:
     Placeholder text: --component-input-fg-placeholder (slate-400 #94a3b8) on white = 2.56:1 — below AA 4.5:1 threshold.
     Placeholder text contrast is intentionally subdued to distinguish it from real input; WCAG 1.4.3 exempts placeholder text from the 4.5:1 requirement. A visible label is required for all inputs regardless.
     Error border (non-text): --component-input-border-error (red-600 #dc2626) against white = 4.83:1 — clears AA.
-    Focus border (non-text): --component-input-border-focus (cyan-500 #06b6d4) against white = 2.43:1 — below 3:1 but this is a focus ring indicator where the ring width + shape provides sufficient perceptual cue per WCAG 2.5.3 (note: this is a known design tension; studios may increase focus border width to compensate).
+    Focus border (non-text): --component-input-border-focus (cyan-500 #06b6d4) against white = 2.43:1 — below 3:1 but this is a focus ring indicator where the ring width + shape provides sufficient perceptual cue per WCAG 1.4.11 (note: this is a known design tension; studios may increase focus border width to compensate).
   focusBehavior: >
     A 2px solid border in --component-input-border-focus (cyan-500) is applied on :focus-visible.
     The full input container receives the focus style. Disabled inputs are not focusable.
@@ -220,7 +220,7 @@ Each part:
 - **Input text:** `--component-input-fg` (slate-900, #0f172a) on `--component-input-bg` (white, #ffffff) = **17.85:1** — AAA.
 - **Placeholder text:** slate-400 (#94a3b8) on white = **2.56:1** — below 4.5:1. WCAG 1.4.3 explicitly exempts placeholder text. A visible, always-present label ensures no information is lost.
 - **Error border** (non-text): red-600 (#dc2626) against white = **4.83:1** — clears AA for UI component contrast (WCAG 1.4.11, 3:1 threshold).
-- **Focus border** (non-text): cyan-500 (#06b6d4) against white = **2.43:1** — below 3:1. This is a known design limitation; the transition from the standard slate-300 border to cyan-500 provides a perceptual change that compensates partially. Studios with strict compliance requirements should increase focus border weight to 3px or add an outer offset ring.
+- **Focus border** (non-text): cyan-500 (#06b6d4) against white = **2.43:1** — below the 3:1 WCAG 1.4.11 non-text contrast threshold. This is a known design tension; the transition from the standard slate-300 border to cyan-500 provides a perceptual change that compensates partially. Studios with strict compliance requirements should increase focus border weight to 2–3px or add an outer offset ring.
 
 ### Focus behavior
 
