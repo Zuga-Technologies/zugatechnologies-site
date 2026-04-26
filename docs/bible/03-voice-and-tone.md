@@ -68,7 +68,7 @@ The error-state tone is [MIKE-CHECKPOINT-voice04].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | Honest and specific, never apologetic theater. State what broke, state what the user can do next, and stop. "Couldn't reach the server. Check your connection and try again." — not "Oops! Something went wrong on our end. We're so sorry for the inconvenience!" Blame should go to the system, not the user; but we don't perform guilt either. |
-> | Alternates considered | Cute/emoji-heavy errors ("🙈 Oops, that didn't work!") — rejected: condescending when something is actually broken; Mike flagged this category as brand risk. Clinical/code-dump errors ("Error 503: upstream connect error") — rejected: not actionable for most users; raw codes belong in developer consoles, not UI copy. |
+> | Alternates considered | Cute/emoji-heavy errors ("🙈 Oops, that didn't work!") — rejected: condescending when something is actually broken; erodes trust for users dealing with a genuine failure. Clinical/code-dump errors ("Error 503: upstream connect error") — rejected: not actionable for most users; raw codes belong in developer consoles, not UI copy. |
 > | Renders on | ZugaApp error banners, ZugaLife form validation, ZugaTrader order rejection messages, ZugaCode hook failure notifications, all 4xx/5xx page copy |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-voice04: YYYY-MM-DD]`
@@ -127,7 +127,7 @@ These entries are binding. Drift from any entry requires a terminology change pr
 
 ### Zugabot vs ZugaChat
 
-[MIKE-CHECKPOINT-voice08]
+The Zugabot vs ZugaChat naming rule is [MIKE-CHECKPOINT-voice08].
 
 > **🛑 MIKE-CHECKPOINT-voice08** — confirm Zugabot vs ZugaChat terminology rule
 >
@@ -142,7 +142,7 @@ These entries are binding. Drift from any entry requires a terminology change pr
 
 ### ZugaTokens vs credits
 
-[MIKE-CHECKPOINT-voice09]
+The ZugaTokens currency-naming rule is [MIKE-CHECKPOINT-voice09].
 
 > **🛑 MIKE-CHECKPOINT-voice09** — confirm ZugaTokens vs credits terminology rule
 >
@@ -157,7 +157,7 @@ These entries are binding. Drift from any entry requires a terminology change pr
 
 ### Studios vs apps
 
-[MIKE-CHECKPOINT-voice10]
+The studios vs apps terminology rule is [MIKE-CHECKPOINT-voice10].
 
 > **🛑 MIKE-CHECKPOINT-voice10** — confirm studios vs apps terminology rule
 >
@@ -172,7 +172,7 @@ These entries are binding. Drift from any entry requires a terminology change pr
 
 ### Food court vs food truck (internal framing)
 
-[MIKE-CHECKPOINT-voice11]
+The food court / food truck framing (internal-only) is [MIKE-CHECKPOINT-voice11].
 
 > **🛑 MIKE-CHECKPOINT-voice11** — confirm food court / food truck internal framing rule
 >

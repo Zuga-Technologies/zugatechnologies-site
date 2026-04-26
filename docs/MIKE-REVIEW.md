@@ -1,6 +1,6 @@
 # Mike Review
 
-Generated: 2026-04-26T00:33:47.490Z
+Generated: 2026-04-26T00:43:46.864Z
 Total checkpoints: 14
 
 ## Bucket — Voice & tone
@@ -60,7 +60,7 @@ Total checkpoints: 14
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | Honest and specific, never apologetic theater. State what broke, state what the user can do next, and stop. "Couldn't reach the server. Check your connection and try again." — not "Oops! Something went wrong on our end. We're so sorry for the inconvenience!" Blame should go to the system, not the user; but we don't perform guilt either. |
-> | Alternates considered | Cute/emoji-heavy errors ("🙈 Oops, that didn't work!") — rejected: condescending when something is actually broken; Mike flagged this category as brand risk. Clinical/code-dump errors ("Error 503: upstream connect error") — rejected: not actionable for most users; raw codes belong in developer consoles, not UI copy. |
+> | Alternates considered | Cute/emoji-heavy errors ("🙈 Oops, that didn't work!") — rejected: condescending when something is actually broken; erodes trust for users dealing with a genuine failure. Clinical/code-dump errors ("Error 503: upstream connect error") — rejected: not actionable for most users; raw codes belong in developer consoles, not UI copy. |
 > | Renders on | ZugaApp error banners, ZugaLife form validation, ZugaTrader order rejection messages, ZugaCode hook failure notifications, all 4xx/5xx page copy |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-voice04: YYYY-MM-DD]`
@@ -221,7 +221,7 @@ Total checkpoints: 14
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `#06b6d4` (Tailwind cyan-500). Passes WCAG AA at 4.5:1 against #0f172a (near-black). Used for: primary CTAs, active nav indicators, focus rings, master wordmark on dark surfaces, hyperlinks in body copy. Never used as a background color behind body text. |
+> | Antonio's draft | `#06b6d4` (Tailwind cyan-500). Passes WCAG AA against #0f172a (near-black surfaces) — measured contrast ≈7.35:1, which exceeds the 4.5:1 AA threshold and clears the 7:1 AAA threshold for normal text. Fails AA against white (#ffffff) — never used as a background color behind body text. Used for: primary CTAs, active nav indicators, focus rings, master wordmark on dark surfaces, hyperlinks in body copy. |
 > | Alternates considered | `#0891b2` (cyan-600) — rejected: too somber for a tech-forward brand, loses energy at small sizes. `#22d3ee` (cyan-400) — rejected: fails WCAG AA on white backgrounds, feels juvenile. `#3b82f6` (blue-500) — rejected: indistinguishable from a dozen SaaS products; cyan is the differentiation. |
 > | Renders on | Corp landing CTAs, ZugaApp primary buttons, ZugaApp navbar active states, ZugaThemes accent pills, focus ring system-wide, master wordmark on dark surfaces |
 >

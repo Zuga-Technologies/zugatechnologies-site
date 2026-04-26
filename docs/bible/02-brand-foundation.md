@@ -73,7 +73,7 @@ The Zuga master accent hue is the single most visible brand signal across all su
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `#06b6d4` (Tailwind cyan-500). Passes WCAG AA at 4.5:1 against #0f172a (near-black). Used for: primary CTAs, active nav indicators, focus rings, master wordmark on dark surfaces, hyperlinks in body copy. Never used as a background color behind body text. |
+> | Antonio's draft | `#06b6d4` (Tailwind cyan-500). Passes WCAG AA against #0f172a (near-black surfaces) — measured contrast ≈7.35:1, which exceeds the 4.5:1 AA threshold and clears the 7:1 AAA threshold for normal text. Fails AA against white (#ffffff) — never used as a background color behind body text. Used for: primary CTAs, active nav indicators, focus rings, master wordmark on dark surfaces, hyperlinks in body copy. |
 > | Alternates considered | `#0891b2` (cyan-600) — rejected: too somber for a tech-forward brand, loses energy at small sizes. `#22d3ee` (cyan-400) — rejected: fails WCAG AA on white backgrounds, feels juvenile. `#3b82f6` (blue-500) — rejected: indistinguishable from a dozen SaaS products; cyan is the differentiation. |
 > | Renders on | Corp landing CTAs, ZugaApp primary buttons, ZugaApp navbar active states, ZugaThemes accent pills, focus ring system-wide, master wordmark on dark surfaces |
 >
