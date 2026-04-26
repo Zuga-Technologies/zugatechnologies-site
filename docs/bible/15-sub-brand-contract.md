@@ -27,9 +27,8 @@ Only three token prefix groups are overridable in a profile CSS file:
 | `--component-*` | Per-component property overrides | `--component-button-radius` |
 
 Everything else is **locked**:
-- `--color-*` (Tier 1 primitives) — no profile may redefine a color ramp stop.
+- `--color-*`, `--space-*`, `--radius-*`, `--shadow-*`, `--motion-*`, `--z-*`, `--container-*`, `--breakpoint-*`, `--type-*`, `--font-*` (Tier 1) — locked. No profile may redefine any Tier 1 primitive. The full set is encoded verbatim in the `TIER1_PREFIXES` constant of `packages/design-tokens/scripts/tokens-lint.mjs`.
 - `--surface-*`, `--text-*`, `--border-*`, `--feedback-*` (locked Tier 2) — no profile may override these. The semantic neutrals are a shared floor all studios stand on.
-- `--space-*`, `--radius-*`, `--motion-*`, `--z-*`, `--font-*`, `--type-scale-*` (Tier 1) — locked.
 
 The rationale: accent identity is a studio's primary personality knob. Density is a layout knob. Component radius and spacing are finishing-touch knobs. The text and surface system is the coherence layer — if studios could override `--text-primary` freely, the bible's contrast guarantees would be unenforceable.
 
@@ -83,7 +82,7 @@ Every consumer of `@zuga/design-tokens` must register itself in `consuming-repos
 
 ### 6. `aggregate-mike-review.mjs` checkpoint lint
 
-`packages/design-tokens/scripts/aggregate-mike-review.mjs` scans all source files for `[MIKE-CHECKPOINT-*]` markers and reports which are pending review. This prevents a profile from shipping a color decision that's still marked as awaiting Mike's approval. A profile that references an unresolved checkpoint stops the review flow — it does not fail CI directly, but it blocks the human sign-off step.
+`packages/design-tokens/scripts/aggregate-mike-review.mjs` scans all design bible markdown files (the `docs/bible/` tree, walked recursively by `walkMd`) for `[MIKE-CHECKPOINT-*]` markers and reports which are pending review. This prevents a profile from shipping a color decision that's still marked as awaiting Mike's approval. A profile that references an unresolved checkpoint stops the review flow — it does not fail CI directly, but it blocks the human sign-off step.
 
 ---
 

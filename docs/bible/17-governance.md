@@ -62,7 +62,7 @@ Removing a token requires a minimum one-calendar-quarter window between deprecat
 - Add an entry to `CHANGELOG.md` in the deprecation section.
 - Notify all registered consumers via the consuming-repos.json registry (manual announcement or automated GH issue).
 
-### Step 2 — Confirm no active consumers (~12 weeks later)
+### Step 2 — Confirm no active consumers (12-week minimum window)
 
 - Run `drift-detect.mjs` to verify no registered consumer is still referencing the deprecated token.
 - If consumers remain, extend the window. Do not remove until all registered consumers have migrated.
@@ -141,7 +141,7 @@ Mike's veto applies to brand decisions in his lanes (wordmark adjacency, hue ass
 
 ## 17.6 Quarterly drift audit cadence
 
-`drift-detect.mjs` runs nightly (GH Actions cron, T19). This catches mechanical drift automatically.
+`packages/design-tokens/scripts/drift-detect.mjs` runs nightly (GH Actions cron, T19). This catches mechanical drift automatically.
 
 The **quarterly audit** (every 12 weeks) is the human-in-the-loop sweep:
 

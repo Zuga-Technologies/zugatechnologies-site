@@ -54,14 +54,17 @@ Raw values. No semantic meaning. Never referenced directly in component code —
 ```
 --color-{ramp}-{stop}         e.g. --color-cyan-500
 --space-{n}                   e.g. --space-4
+--radius-{name}               e.g. --radius-md
+--shadow-{name}               e.g. --shadow-ring
+--motion-duration-{name}      e.g. --motion-duration-fast
+--motion-easing-{name}        e.g. --motion-easing-standard
+--z-{name}                    e.g. --z-modal
+--container-{name}            e.g. --container-prose
+--breakpoint-{name}           e.g. --breakpoint-lg
 --type-scale-{name}           e.g. --type-scale-base
 --font-family-{name}          e.g. --font-family-sans
 --font-weight-{name}          e.g. --font-weight-semibold
 --font-line-height-{name}     e.g. --font-line-height-normal
---radius-{name}               e.g. --radius-md
---motion-duration-{name}      e.g. --motion-duration-fast
---motion-easing-{name}        e.g. --motion-easing-standard
---z-{name}                    e.g. --z-modal
 ```
 
 ### Tier 2 — Semantic

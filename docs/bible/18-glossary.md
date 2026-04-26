@@ -58,7 +58,7 @@ A studio. The integrated unit that plugs into ZugaApp. Each studio is self-conta
 
 ### Master accent
 
-The master Zuga accent hue: `--color-cyan-500` (hex `#06b6d4`) from the cyan ramp. The semantic token that carries this hue in production is `--accent-brand`, which resolves to `--color-cyan-700` (#0e7490) at the default level for AA compliance on white text. "Master accent" = cyan family. Studio sub-brands use different ramps but are all sub-ordinate to this master identity.
+The master Zuga accent hue: `--color-cyan-500` (hex `#06b6d4`) from the cyan ramp. The semantic token that carries this hue in production is `--accent-brand`, which resolves to `--color-cyan-700` (#0e7490) at the default level for AA compliance on white text. The production semantic uses cyan-700 rather than cyan-500 because cyan-700 is the lightest cyan stop that achieves WCAG AA 4.5:1 contrast against `--accent-fg: #ffffff` (per the comment in `tokens.css` at the `--accent-brand` declaration). "Master accent" = cyan family. Studio sub-brands use different ramps but are all sub-ordinate to this master identity.
 
 ### Mike checkpoint
 
@@ -84,7 +84,7 @@ The plug-in app units inside ZugaApp. Each studio is a self-contained product ex
 
 The three-layer token architecture:
 
-- **Tier 1 — Primitives.** Raw values. Brand-agnostic. Color ramps, spacing scale, type scale, radii, motion durations, z-index levels. Locked — no profile can redefine them. Prefix: `--color-*`, `--space-*`, `--type-scale-*`, `--radius-*`, `--motion-*`, `--z-*`, `--font-*`.
+- **Tier 1 — Primitives.** Raw values. Brand-agnostic. Color ramps, spacing scale, type scale, radii, shadows, motion durations, z-index levels, containers, breakpoints. Locked — no profile can redefine them. Prefix: `--color-*`, `--space-*`, `--radius-*`, `--shadow-*`, `--motion-*`, `--z-*`, `--container-*`, `--breakpoint-*`, `--type-*`, `--font-*`.
 
 - **Tier 2 — Semantic.** Carry meaning. Resolved from Tier 1. This is what components use. Divided into locked (`--surface-*`, `--text-*`, `--border-*`, `--feedback-*`) and overridable (`--accent-*`, `--density-*`). Profiles may only override the overridable Tier 2 group.
 
