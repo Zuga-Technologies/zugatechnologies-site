@@ -6,8 +6,19 @@
  */
 
 :root {
+  /* WHY: ZugaShield is the security studio — threat detection, account
+     monitoring, shield events. Red is the universal security-signal color per
+     §5.10 (acc19). It carries the same weight as --feedback-danger intentionally:
+     security alerts ARE danger states and should feel that way. */
   --accent-brand:        var(--color-red-500);
+  /* WHY: Subtle tint for shield-specific chip and badge backgrounds.
+     Red-100 at the same lightness level as cyan-100 in the master profile,
+     used on threat alert surfaces and shield event severity backgrounds. */
   --accent-brand-subtle: var(--color-red-100);
+  /* WHY: Strong shade for hover/focus pressed states on red accent surfaces.
+     Red-600 maintains sufficient contrast against --accent-fg (slate-50). */
   --accent-brand-strong: var(--color-red-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on red-500 backgrounds. */
   --accent-fg:           var(--color-slate-50);
 }

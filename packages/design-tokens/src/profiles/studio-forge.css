@@ -5,8 +5,19 @@
  */
 
 :root {
+  /* WHY: ZugaForge is the creation registry and build-pipeline studio. Orange
+     conveys build heat and fabrication energy per §5.7. Build tools like
+     Buildkite and deploy pipelines use orange as their signal color. Amber
+     was rejected because it is reserved for --feedback-warn. */
   --accent-brand:        var(--color-orange-500);
+  /* WHY: Subtle tint for forge-specific chip and badge backgrounds.
+     Orange-100 at the same lightness level as cyan-100 in the master profile,
+     used on creation registry item cards and build-run indicators. */
   --accent-brand-subtle: var(--color-orange-100);
+  /* WHY: Strong shade for hover/focus pressed states on orange accent surfaces.
+     Orange-600 maintains sufficient contrast against --accent-fg (slate-50). */
   --accent-brand-strong: var(--color-orange-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on orange-500 backgrounds. */
   --accent-fg:           var(--color-slate-50);
 }

@@ -8,8 +8,19 @@
  */
 
 :root {
+  /* WHY: ZugaLife is the wellness studio — habit tracking, meditation, addiction
+     recovery. Mint reads as health, calm, and organic renewal per §5.2. The
+     wellness category earns an override because it is emotionally distinct from
+     the tech-forward master cyan. Green-500 was rejected as --feedback-success. */
   --accent-brand:        var(--color-mint-500);
+  /* WHY: Subtle tint for life-specific chip and badge backgrounds.
+     Mint-100 at the same lightness level as cyan-100 in the master profile,
+     used on habit card highlights and streak indicator surfaces. */
   --accent-brand-subtle: var(--color-mint-100);
+  /* WHY: Strong shade for hover/focus pressed states on mint accent surfaces.
+     Mint-600 maintains sufficient contrast against --accent-fg (slate-50). */
   --accent-brand-strong: var(--color-mint-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on mint-500 backgrounds. */
   --accent-fg:           var(--color-slate-50);
 }

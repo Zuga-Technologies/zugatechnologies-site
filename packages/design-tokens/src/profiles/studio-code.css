@@ -5,8 +5,19 @@
  */
 
 :root {
+  /* WHY: ZugaCode is the developer-tools studio — activity tracking, commit
+     hooks, code review queue. Blue is the canonical dev-tools convention;
+     VS Code, GitHub, and GitLab all operate in this range. Per §5.4, leaning
+     into the convention lowers cognitive load for the developer audience. */
   --accent-brand:        var(--color-blue-500);
+  /* WHY: Subtle tint for code-specific chip and badge backgrounds.
+     Blue-100 at the same lightness level as cyan-100 in the master profile,
+     used on diff viewer chrome and hook status indicators. */
   --accent-brand-subtle: var(--color-blue-100);
+  /* WHY: Strong shade for hover/focus pressed states on blue accent surfaces.
+     Blue-600 maintains sufficient contrast against --accent-fg (slate-50). */
   --accent-brand-strong: var(--color-blue-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on blue-500 backgrounds. */
   --accent-fg:           var(--color-slate-50);
 }

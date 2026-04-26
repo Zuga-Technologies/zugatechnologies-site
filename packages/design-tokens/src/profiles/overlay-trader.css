@@ -1,7 +1,23 @@
-/* @zuga/design-tokens — profiles/overlay-trader.css */
+/* @zuga/design-tokens — profiles/overlay-trader.css
+ * Used by: ZugaTraderOverlay
+ * Family: markets (sibling: studio-trader)
+ * Accent: emerald
+ */
 :root {
+  /* WHY: ZugaTraderOverlay is a financial data HUD — it surfaces the same P&L
+     and position data as ZugaTrader in-game. Emerald is the markets family hue
+     per §5.9; matching studio-trader makes the overlay immediately recognizable
+     as ZugaTrader data without extra visual vocabulary. */
   --accent-brand:        var(--color-emerald-500);
+  /* WHY: Subtle tint for overlay chip and badge backgrounds. Emerald-100 at the
+     same lightness level as cyan-100 in the master profile — keeps overlaid
+     elements readable against dark game surfaces. */
   --accent-brand-subtle: var(--color-emerald-100);
+  /* WHY: Strong shade for hover/focus pressed states on emerald accent surfaces.
+     Emerald-600 maintains sufficient contrast against --accent-fg (#ffffff)
+     while staying in the markets family range. */
   --accent-brand-strong: var(--color-emerald-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     White (#ffffff) ensures legible contrast on emerald-500 in HUD contexts. */
   --accent-fg:           #ffffff;
 }

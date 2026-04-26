@@ -5,8 +5,19 @@
  */
 
 :root {
+  /* WHY: ZugaLearn is the education and curriculum studio. Indigo reads as
+     academic depth and intellectual gravity per §5.8 — the scholarly end of
+     the blue spectrum. It sits perceptually between blue (ZugaCode) and violet
+     (creative family), creating a coherent nav spectrum without collision. */
   --accent-brand:        var(--color-indigo-500);
+  /* WHY: Subtle tint for learn-specific chip and badge backgrounds.
+     Indigo-100 at the same lightness level as cyan-100 in the master profile,
+     used on course progress bars and lesson completion badges. */
   --accent-brand-subtle: var(--color-indigo-100);
+  /* WHY: Strong shade for hover/focus pressed states on indigo accent surfaces.
+     Indigo-600 maintains sufficient contrast against --accent-fg (slate-50). */
   --accent-brand-strong: var(--color-indigo-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on indigo-500 backgrounds. */
   --accent-fg:           var(--color-slate-50);
 }

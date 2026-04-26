@@ -5,8 +5,19 @@
  */
 
 :root {
+  /* WHY: ZugaMotion handles animation and motion design. It completes the
+     creative family triad with ZugaImage and ZugaVideo under violet per §5.3.
+     The shared hue creates navigable product cohesion across all three creative
+     siblings — fragmenting to individual hues removes the family signal. */
   --accent-brand:        var(--color-violet-500);
+  /* WHY: Subtle tint for motion-specific chip and badge backgrounds.
+     Violet-100 at the same lightness level as cyan-100 in the master profile,
+     used on animation timeline and keyframe editor surfaces. */
   --accent-brand-subtle: var(--color-violet-100);
+  /* WHY: Strong shade for hover/focus pressed states on violet accent surfaces.
+     Violet-600 maintains sufficient contrast against --accent-fg (slate-50). */
   --accent-brand-strong: var(--color-violet-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on violet-500 backgrounds. */
   --accent-fg:           var(--color-slate-50);
 }

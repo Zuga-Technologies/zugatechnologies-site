@@ -5,8 +5,19 @@
  */
 
 :root {
+  /* WHY: ZugaVideo is the video generation and wallpaper studio. It shares
+     violet with ZugaImage and ZugaMotion as part of the creative family per
+     §5.3. A user who sees violet in ZugaImage immediately recognizes the
+     creative family context in ZugaVideo — family cohesion is load-bearing. */
   --accent-brand:        var(--color-violet-500);
+  /* WHY: Subtle tint for video-specific chip and badge backgrounds.
+     Violet-100 at the same lightness level as cyan-100 in the master profile,
+     used on video provider cards and wallpaper template browser surfaces. */
   --accent-brand-subtle: var(--color-violet-100);
+  /* WHY: Strong shade for hover/focus pressed states on violet accent surfaces.
+     Violet-600 maintains sufficient contrast against --accent-fg (slate-50). */
   --accent-brand-strong: var(--color-violet-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on violet-500 backgrounds. */
   --accent-fg:           var(--color-slate-50);
 }

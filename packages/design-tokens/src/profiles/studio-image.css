@@ -5,8 +5,19 @@
  */
 
 :root {
+  /* WHY: ZugaImage is the AI image-generation and editing studio. Violet reads
+     as visual creativity and imagination per §5.3; it leads the creative family
+     alongside ZugaVideo and ZugaMotion. Magenta was rejected because it is
+     ZugaAudio's distinct signal. */
   --accent-brand:        var(--color-violet-500);
+  /* WHY: Subtle tint for image-specific chip and badge backgrounds.
+     Violet-100 at the same lightness level as cyan-100 in the master profile,
+     used on gallery headers and composable slot indicators. */
   --accent-brand-subtle: var(--color-violet-100);
+  /* WHY: Strong shade for hover/focus pressed states on violet accent surfaces.
+     Violet-600 maintains sufficient contrast against --accent-fg (slate-50). */
   --accent-brand-strong: var(--color-violet-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on violet-500 backgrounds. */
   --accent-fg:           var(--color-slate-50);
 }

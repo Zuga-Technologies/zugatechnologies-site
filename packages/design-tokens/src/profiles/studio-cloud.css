@@ -5,8 +5,19 @@
  */
 
 :root {
+  /* WHY: ZugaCloud is the file storage and sync studio. Sky reads as
+     "infrastructure and distributed systems" — lighter and more expansive
+     than the IDE-register of blue (ZugaCode). Per §5.5, sky-500 is the
+     reference stop; it distinguishes cloud from code in side-by-side nav. */
   --accent-brand:        var(--color-sky-500);
+  /* WHY: Subtle tint for cloud-specific chip and badge backgrounds.
+     Sky-100 at the same lightness level as cyan-100 in the master profile,
+     used on sync-status chips and storage indicator surfaces. */
   --accent-brand-subtle: var(--color-sky-100);
+  /* WHY: Strong shade for hover/focus pressed states on sky accent surfaces.
+     Sky-600 maintains sufficient contrast against --accent-fg (slate-50). */
   --accent-brand-strong: var(--color-sky-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on sky-500 backgrounds. */
   --accent-fg:           var(--color-slate-50);
 }

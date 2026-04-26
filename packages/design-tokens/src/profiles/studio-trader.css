@@ -9,11 +9,28 @@
  */
 
 :root {
+  /* WHY: ZugaTrader uses emerald as its accent family per the markets color
+     assignment in §5.9. Emerald is distinct from green-500 (--feedback-success)
+     and signals financial/growth context; Bloomberg-family platforms operate
+     in this green-to-emerald range universally. */
   --accent-brand:        var(--color-emerald-500);
+  /* WHY: Subtle tint for trader-specific chip and badge backgrounds.
+     Emerald-100 at the same lightness level as cyan-100 in the master profile,
+     used on P&L row highlights and position card chips. */
   --accent-brand-subtle: var(--color-emerald-100);
+  /* WHY: Strong shade for hover/focus pressed states on accent surfaces.
+     Emerald-600 maintains sufficient contrast against --accent-fg (#ffffff)
+     and stays within the markets family ramp. */
   --accent-brand-strong: var(--color-emerald-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     White (#ffffff) ensures legible contrast on emerald-500 backgrounds. */
   --accent-fg:           #ffffff;
-  /* Density override: ZugaTrader is data-heavy */
+  /* WHY: ZugaTrader is data-heavy — P&L tables, ticker lists, position cards
+     need more rows visible per viewport. Comfortable density at 0.9375 (vs
+     master 1.0) tightens by ~6%. */
   --density-comfortable: 0.9375;
+  /* WHY: Compact density at 0.8125 (vs master 1.0) is the high-density mode
+     for power-user views — 19% tighter. Used in screener tables and
+     portfolio summaries where seeing 30+ rows at once matters. */
   --density-compact:     0.8125;
 }

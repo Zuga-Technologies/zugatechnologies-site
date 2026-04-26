@@ -5,8 +5,19 @@
  */
 
 :root {
+  /* WHY: ZugaAudio is the music and audio production studio. Magenta is the
+     music convention — Ableton, SoundCloud, and waveform editors operate in
+     the pink/magenta range. Per §5.6, magenta-500 is the reference stop;
+     it pops against dark studio surfaces where audio visualization lives. */
   --accent-brand:        var(--color-magenta-500);
+  /* WHY: Subtle tint for audio-specific chip and badge backgrounds.
+     Magenta-100 at the same lightness level as cyan-100 in the master profile,
+     used on track level indicators and session status badges. */
   --accent-brand-subtle: var(--color-magenta-100);
+  /* WHY: Strong shade for hover/focus pressed states on magenta accent surfaces.
+     Magenta-600 maintains sufficient contrast against --accent-fg (slate-50). */
   --accent-brand-strong: var(--color-magenta-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on magenta-500 backgrounds. */
   --accent-fg:           var(--color-slate-50);
 }
