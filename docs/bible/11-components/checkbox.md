@@ -29,7 +29,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import Checkbox from '@zuga/ui/Checkbox.astro';
+      import Checkbox from '@zuga-technologies/ui/Checkbox.astro';
       ---
       <!-- default unchecked -->
       <Checkbox name="terms" label="Accept terms and conditions" />
@@ -71,7 +71,7 @@ examples:
 
       <script setup>
       import { ref, computed } from 'vue';
-      import Checkbox from '@zuga/ui/Checkbox.vue';
+      import Checkbox from '@zuga-technologies/ui/Checkbox.vue';
 
       const accepted = ref(false);
       const marketing = ref(false);
@@ -220,7 +220,7 @@ The 2px focus ring in `--border-focus` (cyan-500) wraps the control box, not the
 
 ```astro
 ---
-import Checkbox from '@zuga/ui/Checkbox.astro';
+import Checkbox from '@zuga-technologies/ui/Checkbox.astro';
 ---
 <!-- default -->
 <Checkbox name="terms" label="Accept terms and conditions" />
@@ -260,7 +260,7 @@ import Checkbox from '@zuga/ui/Checkbox.astro';
 
 <script setup>
 import { ref } from 'vue';
-import Checkbox from '@zuga/ui/Checkbox.vue';
+import Checkbox from '@zuga-technologies/ui/Checkbox.vue';
 
 const accepted = ref(false);
 const marketing = ref(false);

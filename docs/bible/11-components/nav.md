@@ -28,7 +28,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import { Nav, NavItem } from '@zuga/ui/Nav.astro';
+      import { Nav, NavItem } from '@zuga-technologies/ui/Nav.astro';
       const currentPath = Astro.url.pathname;
       ---
       <!-- sidebar nav -->
@@ -73,7 +73,7 @@ examples:
 
       <script setup>
       import { useRoute } from 'vue-router';
-      import { Nav, NavItem } from '@zuga/ui/Nav.vue';
+      import { Nav, NavItem } from '@zuga-technologies/ui/Nav.vue';
 
       const route = useRoute();
       const navItems = [
@@ -201,7 +201,7 @@ Each nav item `<a>` receives a 2px focus ring in `--border-focus` (cyan-500) on 
 
 ```astro
 ---
-import { Nav, NavItem } from '@zuga/ui/Nav.astro';
+import { Nav, NavItem } from '@zuga-technologies/ui/Nav.astro';
 const currentPath = Astro.url.pathname;
 ---
 <Nav variant="sidebar" aria-label="Studio navigation">
@@ -230,7 +230,7 @@ const currentPath = Astro.url.pathname;
 
 <script setup>
 import { useRoute } from 'vue-router';
-import { Nav, NavItem } from '@zuga/ui/Nav.vue';
+import { Nav, NavItem } from '@zuga-technologies/ui/Nav.vue';
 
 const route = useRoute();
 const navItems = [

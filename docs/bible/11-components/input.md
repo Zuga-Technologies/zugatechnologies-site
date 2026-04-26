@@ -33,7 +33,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import Input from '@zuga/ui/Input.astro';
+      import Input from '@zuga-technologies/ui/Input.astro';
       ---
       <!-- text -->
       <Input type="text" name="username" label="Username" placeholder="e.g. antonio" />
@@ -83,7 +83,7 @@ examples:
 
       <script setup>
       import { ref, computed } from 'vue';
-      import Input from '@zuga/ui/Input.vue';
+      import Input from '@zuga-technologies/ui/Input.vue';
 
       const email = ref('');
       const password = ref('');
@@ -232,7 +232,7 @@ A 2px border-color change to `--component-input-border-focus` (cyan-500) trigger
 
 ```astro
 ---
-import Input from '@zuga/ui/Input.astro';
+import Input from '@zuga-technologies/ui/Input.astro';
 ---
 <!-- text -->
 <Input type="text" name="username" label="Username" placeholder="e.g. antonio" />
@@ -275,7 +275,7 @@ import Input from '@zuga/ui/Input.astro';
 
 <script setup>
 import { ref, computed } from 'vue';
-import Input from '@zuga/ui/Input.vue';
+import Input from '@zuga-technologies/ui/Input.vue';
 
 const email = ref('');
 const password = ref('');

@@ -28,7 +28,7 @@ Token names are stable across all platforms. The *delivery format* differs — P
 
 ### Why web and Electron are identical
 
-Electron renders inside Chromium. The renderer process loads the same HTML/CSS as the web build. No translation layer needed — the same `@import "@zuga/design-tokens/tokens.css"` line works in both contexts. The overlay (ZugaGamerOverlay) already ships this way.
+Electron renders inside Chromium. The renderer process loads the same HTML/CSS as the web build. No translation layer needed — the same `@import "@zuga-technologies/design-tokens/tokens.css"` line works in both contexts. The overlay (ZugaGamerOverlay) already ships this way.
 
 ### Why Tauri WebView is also identical
 
@@ -68,7 +68,7 @@ Style Dictionary transform selection, output directory structure, and version pi
 
 ## 16.3 Overlay considerations
 
-ZugaGamerOverlay (Electron) and ZugaTraderOverlay (Electron) are the primary overlay consumers today. Both import `@zuga/design-tokens/tokens.css` via their profile import chain. The overlay-gamer and overlay-trader profile files live in `packages/design-tokens/src/profiles/`.
+ZugaGamerOverlay (Electron) and ZugaTraderOverlay (Electron) are the primary overlay consumers today. Both import `@zuga-technologies/design-tokens/tokens.css` via their profile import chain. The overlay-gamer and overlay-trader profile files live in `packages/design-tokens/src/profiles/`.
 
 Overlays have one additional concern: performance. The full `tokens.css` is ~350 lines; this is negligible for web apps but acceptable to audit in overlay contexts where startup latency is visible. If an overlay requires a stripped token set for startup performance, that is a Phase 2 optimization — add an ADR, don't create a parallel token file.
 

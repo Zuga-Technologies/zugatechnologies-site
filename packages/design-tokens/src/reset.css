@@ -1,4 +1,4 @@
-/* @zuga/design-tokens — reset.css */
+/* @zuga-technologies/design-tokens — reset.css */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
 html, body { height: 100%; }

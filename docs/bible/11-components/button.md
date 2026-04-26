@@ -32,7 +32,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import Button from '@zuga/ui/Button.astro';
+      import Button from '@zuga-technologies/ui/Button.astro';
       ---
       <Button variant="primary" onclick="handleSave()">Save</Button>
       <Button variant="secondary">Cancel</Button>
@@ -52,7 +52,7 @@ examples:
       </template>
 
       <script setup>
-      import Button from '@zuga/ui/Button.vue';
+      import Button from '@zuga-technologies/ui/Button.vue';
       const isSaving = ref(false);
       async function handleSave() {
         isSaving.value = true;
@@ -181,7 +181,7 @@ All variants use a 2px solid outline at 2px offset in `--border-focus` (cyan-500
 
 ```astro
 ---
-import Button from '@zuga/ui/Button.astro';
+import Button from '@zuga-technologies/ui/Button.astro';
 ---
 <Button variant="primary" onclick="handleSave()">Save</Button>
 <Button variant="secondary">Cancel</Button>
@@ -214,7 +214,7 @@ import Button from '@zuga/ui/Button.astro';
 
 <script setup>
 import { ref } from 'vue';
-import Button from '@zuga/ui/Button.vue';
+import Button from '@zuga-technologies/ui/Button.vue';
 
 const isSaving = ref(false);
 

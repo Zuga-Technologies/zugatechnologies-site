@@ -28,7 +28,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import { Toolbar, ToolbarButton, ToolbarDivider } from '@zuga/ui/Toolbar.astro';
+      import { Toolbar, ToolbarButton, ToolbarDivider } from '@zuga-technologies/ui/Toolbar.astro';
       ---
       <Toolbar aria-label="Text formatting">
         <ToolbarButton icon="bold" aria-label="Bold" aria-pressed="false" />
@@ -73,7 +73,7 @@ examples:
 
       <script setup>
       import { ref } from 'vue';
-      import { Toolbar, ToolbarButton, ToolbarDivider } from '@zuga/ui/Toolbar.vue';
+      import { Toolbar, ToolbarButton, ToolbarDivider } from '@zuga-technologies/ui/Toolbar.vue';
 
       const formatButtons = ref([
         { icon: 'bold', label: 'Bold', active: false },
@@ -206,7 +206,7 @@ Roving tabindex: the active toolbar item has `tabindex="0"`, all others have `ta
 
 ```astro
 ---
-import { Toolbar, ToolbarButton, ToolbarDivider } from '@zuga/ui/Toolbar.astro';
+import { Toolbar, ToolbarButton, ToolbarDivider } from '@zuga-technologies/ui/Toolbar.astro';
 ---
 <Toolbar aria-label="Text formatting">
   <ToolbarButton icon="bold" aria-label="Bold" aria-pressed="false" />
@@ -250,7 +250,7 @@ import { Toolbar, ToolbarButton, ToolbarDivider } from '@zuga/ui/Toolbar.astro';
 
 <script setup>
 import { ref } from 'vue';
-import { Toolbar, ToolbarButton, ToolbarDivider } from '@zuga/ui/Toolbar.vue';
+import { Toolbar, ToolbarButton, ToolbarDivider } from '@zuga-technologies/ui/Toolbar.vue';
 
 const bold = ref(false);
 const italic = ref(false);

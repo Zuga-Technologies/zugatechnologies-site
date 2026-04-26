@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// @zuga/design-tokens — propagate-mike-approvals.mjs
+// @zuga-technologies/design-tokens — propagate-mike-approvals.mjs
 // Reads MIKE-REVIEW.md for [MIKE-APPROVED-*] markers, applies them to bible
 // source markdown files, and (for color approvals) writes the new hex value
 // into tokens.css.

@@ -26,7 +26,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import { Card, CardHeader, CardBody, CardFooter } from '@zuga/ui/Card.astro';
+      import { Card, CardHeader, CardBody, CardFooter } from '@zuga-technologies/ui/Card.astro';
       ---
       <!-- static informational card -->
       <Card>
@@ -65,7 +65,7 @@ examples:
       </template>
 
       <script setup>
-      import Card from '@zuga/ui/Card.vue';
+      import Card from '@zuga-technologies/ui/Card.vue';
       defineProps({ studio: Object });
       </script>
   - framework: plain-html
@@ -170,7 +170,7 @@ Interactive cards receive a 2px focus ring in `--border-focus` (cyan-500) at 2px
 
 ```astro
 ---
-import { Card, CardHeader, CardBody, CardFooter } from '@zuga/ui/Card.astro';
+import { Card, CardHeader, CardBody, CardFooter } from '@zuga-technologies/ui/Card.astro';
 ---
 <!-- static -->
 <Card>
@@ -212,7 +212,7 @@ import { Card, CardHeader, CardBody, CardFooter } from '@zuga/ui/Card.astro';
 </template>
 
 <script setup>
-import Card from '@zuga/ui/Card.vue';
+import Card from '@zuga-technologies/ui/Card.vue';
 defineProps({ studio: Object });
 </script>
 ```

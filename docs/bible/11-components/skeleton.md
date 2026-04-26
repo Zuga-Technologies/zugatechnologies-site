@@ -25,7 +25,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import Skeleton from '@zuga/ui/Skeleton.astro';
+      import Skeleton from '@zuga-technologies/ui/Skeleton.astro';
       ---
       <!-- text line skeletons -->
       <div aria-busy="true" aria-label="Loading user profile">
@@ -69,8 +69,8 @@ examples:
 
       <script setup>
       import { ref } from 'vue';
-      import Skeleton from '@zuga/ui/Skeleton.vue';
-      import Avatar from '@zuga/ui/Avatar.vue';
+      import Skeleton from '@zuga-technologies/ui/Skeleton.vue';
+      import Avatar from '@zuga-technologies/ui/Avatar.vue';
 
       const isLoading = ref(true);
       const user = ref(null);
@@ -178,7 +178,7 @@ None. Skeleton elements are decorative and not part of the tab order. No interac
 
 ```astro
 ---
-import Skeleton from '@zuga/ui/Skeleton.astro';
+import Skeleton from '@zuga-technologies/ui/Skeleton.astro';
 ---
 <div aria-busy="true" aria-label="Loading profile">
   <Skeleton variant="circle" size="40px" />
@@ -213,7 +213,7 @@ import Skeleton from '@zuga/ui/Skeleton.astro';
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import Skeleton from '@zuga/ui/Skeleton.vue';
+import Skeleton from '@zuga-technologies/ui/Skeleton.vue';
 
 const isLoading = ref(true);
 const user = ref(null);

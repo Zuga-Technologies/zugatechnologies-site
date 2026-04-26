@@ -1,5 +1,5 @@
 {
-  "name": "@zuga/design-tokens",
+  "name": "@zuga-technologies/design-tokens",
   "version": "1.0.0-rc.1",
   "type": "module",
   "files": ["src/", "scripts/", "README.md", "CHANGELOG.md"],

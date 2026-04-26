@@ -16,7 +16,7 @@ This section owns the decision-making and change-management rules for the design
 
 ## 17.1 Semver — strict definitions
 
-The `@zuga/design-tokens` package follows semantic versioning. The definitions below are intentionally narrower than default semver convention — this is a design system, where "breaking" includes visual breaks, not just compile breaks.
+The `@zuga-technologies/design-tokens` package follows semantic versioning. The definitions below are intentionally narrower than default semver convention — this is a design system, where "breaking" includes visual breaks, not just compile breaks.
 
 ### MAJOR — breaking change
 

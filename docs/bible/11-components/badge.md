@@ -26,7 +26,7 @@ examples:
   - framework: astro
     code: |
       ---
-      import Badge from '@zuga/ui/Badge.astro';
+      import Badge from '@zuga-technologies/ui/Badge.astro';
       ---
       <Badge variant="default">Draft</Badge>
       <Badge variant="brand">New</Badge>
@@ -54,7 +54,7 @@ examples:
       </template>
 
       <script setup>
-      import Badge from '@zuga/ui/Badge.vue';
+      import Badge from '@zuga-technologies/ui/Badge.vue';
       const props = defineProps({ unreadCount: Number });
       </script>
   - framework: plain-html
@@ -154,7 +154,7 @@ Decorative badges are skipped by Tab. When a badge is used as a removable tag wi
 
 ```astro
 ---
-import Badge from '@zuga/ui/Badge.astro';
+import Badge from '@zuga-technologies/ui/Badge.astro';
 ---
 <Badge variant="default">Draft</Badge>
 <Badge variant="brand">New</Badge>
@@ -183,7 +183,7 @@ import Badge from '@zuga/ui/Badge.astro';
 </template>
 
 <script setup>
-import Badge from '@zuga/ui/Badge.vue';
+import Badge from '@zuga-technologies/ui/Badge.vue';
 defineProps({ count: Number });
 </script>
 ```

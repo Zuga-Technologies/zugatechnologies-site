@@ -1,4 +1,4 @@
-# @zuga/design-tokens — Changelog
+# @zuga-technologies/design-tokens — Changelog
 
 ## 1.0.0-rc.1 — 2026-04-26
 
