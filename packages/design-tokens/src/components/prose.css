@@ -1,0 +1,84 @@
+/* @zuga-technologies/design-tokens — components/prose.css
+ * Tier 3 component-scoped tokens for long-form article body rendering.
+ *
+ * First consumer: ZugaApp's BlogView/BlogPostView — Zugabot's public diary.
+ * Anything with sustained reading (docs, changelog pages, future essays)
+ * should also drop in via `@import "@zuga-technologies/design-tokens/components/prose.css"`.
+ *
+ * Why a dedicated component group: UI text is scanned, prose is read.
+ * Reading needs different rhythm — narrower measure, looser line-height,
+ * deliberate vertical air around section breaks. The defaults here lean
+ * on tier 1 spacing/type primitives so consumers inherit the bible's scale,
+ * and on tier 2 surface/accent tokens so dark profiles cascade automatically
+ * (no oklch() hardcoded values in this file by design).
+ */
+
+:root {
+  /* ── Layout ──────────────────────────────────────────────────────────── */
+
+  /* WHY: 70ch is the upper end of the Bringhurst/Tschichold optimal-measure
+     band (45–75 characters). At 16px base body, ~70ch yields ~640px column,
+     wide enough for code blocks to breathe but narrow enough that the eye
+     doesn't lose its place returning to the next line. */
+  --component-prose-measure:           70ch;
+
+  /* WHY: 1.7 line-height for body copy — UI default 1.5 reads cramped at
+     reading lengths, 1.8 floats too loose. 1.7 is the Medium/NYT/Stripe Press
+     consensus for screens at 16–18px text. */
+  --component-prose-line-height:       1.7;
+
+  /* WHY: Paragraph gap of 1.25em (relative to current font-size) keeps the
+     vertical rhythm scaling proportionally with nested type sizes — pull
+     quotes and asides at larger sizes get larger air, footnotes get less.
+     Using em not space-* primitive because the cadence is type-relative,
+     not layout-grid-relative. */
+  --component-prose-paragraph-gap:     1.25em;
+
+  /* ── Heading rhythm ──────────────────────────────────────────────────── */
+
+  /* WHY: H2 is the primary section break in long-form. 3em top margin (≈48px
+     at base) creates an unmistakable thematic gap — the reader knows a new
+     beat starts here without needing a divider rule. Bottom defaults to
+     paragraph-gap for normal flow. */
+  --component-prose-h2-margin-top:     3em;
+
+  /* WHY: H3 is sub-section, deserves less air than H2 to preserve visual
+     hierarchy. 2em top reads as "still inside the same section, but a new
+     point" — a third the weight of an H2 break. */
+  --component-prose-h3-margin-top:     2em;
+
+  /* ── Inline elements ─────────────────────────────────────────────────── */
+
+  /* WHY: Blockquotes and code blocks need a subtle bg lift to detach from
+     surrounding prose without competing with it. Reference --surface-secondary
+     so light profile renders as slate-100 and the dark profile cascade swaps
+     automatically — no per-mode prose.css fork needed. */
+  --component-prose-blockquote-bg:     var(--surface-secondary);
+
+  /* WHY: Same surface-secondary for inline + block code keeps the visual
+     vocabulary consistent (quoted-from-elsewhere material reads the same
+     whether it's a sentence or a snippet). */
+  --component-prose-code-bg:           var(--surface-secondary);
+
+  /* ── Links ───────────────────────────────────────────────────────────── */
+
+  /* WHY: Underline by default in prose, not just on hover. UI links can
+     get away with color-only because users know the affordance; in long-form
+     readers scan for citations and need every link unambiguous at a glance. */
+  --component-prose-link-decoration:           underline;
+
+  /* WHY: Underline color picks up the consuming profile's --accent-brand so
+     ZugaApp's product-shell (lime) renders lime underlines, ZugaLife (brand
+     hue) renders its own — diary posts inherit the active studio's voice. */
+  --component-prose-link-decoration-color:     var(--accent-brand);
+
+  /* WHY: 1.5px is heavier than the browser default (1px) but lighter than
+     the 2px UI-button-underline range. Calibrated to read as "deliberate
+     citation marker" not "form input affordance." */
+  --component-prose-link-decoration-thickness: 1.5px;
+
+  /* WHY: 2px underline offset clears descenders (g, p, y) so the rule
+     doesn't visually clip the type. Stripe Press / NYT both ship this gap;
+     looks tight at 0–1px, drifts at 3px+. */
+  --component-prose-link-underline-offset:     2px;
+}

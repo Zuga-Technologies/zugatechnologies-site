@@ -1,6 +1,6 @@
 {
   "name": "@zuga-technologies/design-tokens",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "type": "module",
   "files": ["src/", "scripts/", "README.md", "CHANGELOG.md"],
   "exports": {
