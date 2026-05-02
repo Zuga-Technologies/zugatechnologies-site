@@ -1,0 +1,100 @@
+/* @zuga-technologies/design-tokens — components/tile.css
+ * Tier 3 component-scoped tokens for the Windows-style "studio tile" pattern.
+ * First consumer: ZugaApp's StudioTile.vue (launcher in DashboardView).
+ *
+ * Tile model: a colorful, pressable launcher button with the studio's icon
+ * centered + name strip below. Visual goal is "more color and vibrance" while
+ * holding professional polish — three tactile cues stack to make the button
+ * feel pressable (top highlight = light from above, edge ring = discrete
+ * object, bottom shadow = grounded weight). See bible §6 (motion + feedback).
+ *
+ * Background gradient for each tile is studio-colored — consumer assigns
+ * it from the studio's own --accent-brand (or for the launcher view,
+ * directly from a Tier 1 ramp like --color-emerald-500 since the launcher
+ * shows ALL studios at once and can't cascade per-studio profiles).
+ */
+
+:root {
+  /* ── Geometry ─────────────────────────────────────────────────────── */
+  --component-tile-radius:           var(--radius-xl);          /* 12px */
+  --component-tile-padding:          var(--space-4);            /* 16px */
+  --component-tile-aspect-ratio:     1.4 / 1;                   /* slightly landscape */
+  --component-tile-aspect-featured:  2.85 / 1;                  /* 2x featured tile */
+  --component-tile-icon-size:        3rem;                      /* 48px */
+  --component-tile-icon-size-featured: 3.5rem;                  /* 56px */
+
+  /* ── Type ─────────────────────────────────────────────────────────── */
+  --component-tile-name-font-size:           var(--type-scale-base);
+  --component-tile-name-font-size-featured:  var(--type-scale-2xl);
+  --component-tile-name-font-weight:         var(--font-weight-bold);
+  --component-tile-meta-font-size:           var(--type-scale-xs);
+  --component-tile-meta-opacity:             0.85;
+
+  /* ── Foreground (text + icon on the tile) ─────────────────────────── */
+  /* WHY-NOTE: most tile gradients hit AA contrast against white only;
+     the consumer pairs this fg with a saturated bg for label+icon clarity. */
+  --component-tile-fg:               #ffffff;
+
+  /* ── Texture / noise overlay ──────────────────────────────────────── */
+  /* Film-grain SVG turbulence at low opacity. Adds tactility, makes the
+     tile feel like a physical surface vs a flat decal (Linear/Vercel/Apple
+     pattern). 0.10 reads as "you can feel it but can't see grain." */
+  --component-tile-noise-opacity:    0.10;
+
+  /* ── Pressable shadow stack — base state ──────────────────────────── *
+   * Four layered cues:
+   *   1. Top highlight rim     (light from above → suggests volume)
+   *   2. Inner edge ring       (button is a discrete object you can grab)
+   *   3. Bottom inner shadow   (button has weight, sits on a surface)
+   *   4. Outer hairline + ambient color glow (lives in space, "warm" before hover)
+   * The currentColor in the outer glow inherits the studio color, so each
+   * tile pre-glows in its own hue at rest. */
+  --component-tile-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.30),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(0, 0, 0, 0.25),
+    0 4px 10px -3px rgba(0, 0, 0, 0.35),
+    0 0 16px -4px currentColor;
+
+  /* ── Pressable shadow stack — hover state ─────────────────────────── *
+   * Top rim brightens (40%), edge ring thickens (1.5px), and the colored
+   * ambient glow explodes to a 60px halo. Reads as "I'm being noticed." */
+  --component-tile-shadow-hover:
+    inset 0 2px 0 rgba(255, 255, 255, 0.40),
+    inset 0 0 0 1.5px rgba(255, 255, 255, 0.28),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(0, 0, 0, 0.25),
+    0 16px 40px -8px currentColor,
+    0 0 60px -10px currentColor;
+
+  /* ── Pressable shadow stack — active (pressed) state ──────────────── *
+   * Inset shadow inverts to deep dark inside; outer glow gone. The button
+   * physically gives under the click. Pair with transform: translateY(0). */
+  --component-tile-shadow-active:
+    inset 0 2px 6px rgba(0, 0, 0, 0.32),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.10),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.30);
+
+  /* ── Hover lift translation ───────────────────────────────────────── */
+  --component-tile-hover-lift:       -4px;
+
+  /* ── Motion ───────────────────────────────────────────────────────── */
+  /* Hover uses subtle overshoot easing for a "snap to attention" feel —
+     the brain reads micro-bounce as physical spring. Active uses a much
+     faster transition (50ms) for the immediacy that makes the press feel
+     mechanical. Both motion tokens fall back to slower if reduced-motion. */
+  --component-tile-easing-hover:     cubic-bezier(0.34, 1.56, 0.64, 1);
+  --component-tile-duration-hover:   var(--motion-duration-fast);    /* 150ms */
+  --component-tile-duration-active:  var(--motion-duration-instant); /* 75ms */
+
+  /* ── Icon hover micro-animation ───────────────────────────────────── */
+  /* Icon rotates -6deg + scales 1.12 on tile hover. Provides a second
+     layer of feedback distinct from the tile lift. The 0.34, 1.56 easing
+     matches the tile so the two motions feel choreographed. */
+  --component-tile-icon-hover-rotate: -6deg;
+  --component-tile-icon-hover-scale:  1.12;
+  --component-tile-icon-duration:     var(--motion-duration-slow);   /* 300ms — slower than tile lift */
+  --component-tile-icon-easing:       cubic-bezier(0.34, 1.56, 0.64, 1);
+}

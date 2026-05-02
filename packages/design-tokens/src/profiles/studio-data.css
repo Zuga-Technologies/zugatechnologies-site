@@ -1,0 +1,45 @@
+/* @zuga-technologies/design-tokens — profiles/studio-data.css
+ * Used by: ZugaData
+ * Family: markets/analysis (sibling: studio-trader)
+ * Accent: emerald (deeper stop)
+ *
+ * WHY: ZugaData is the spreadsheets + data-analysis studio. It belongs to
+ *      the same analytical lineage as ZugaTrader (markets) — Tableau, Hex,
+ *      Observable, Bloomberg-family tooling all live in the green-emerald-teal
+ *      band. Sharing the emerald ramp with Trader signals "analytical
+ *      sibling," but using the deeper -700 stop instead of Trader's -500
+ *      keeps the two visually distinct in the launcher and prevents brand
+ *      confusion when a user moves between them. Green-500 is reserved
+ *      (--feedback-success) so emerald is the only available analytical
+ *      green family.
+ */
+
+:root {
+  /* WHY: ZugaData is the spreadsheets and data-analysis studio. Emerald-700
+     places it in the analytical family alongside ZugaTrader (emerald-500)
+     while staying visually distinguishable in the launcher grid — same hue
+     family, different lightness. Reads as "data lab" vs Trader's "live
+     market." */
+  --accent-brand:        var(--color-emerald-700);
+  /* WHY: Subtle tint for data-specific chip and badge backgrounds.
+     Emerald-100 mirrors the lightness of cyan-100 in the master profile,
+     used on column header chips, formula bar accents, and pivot indicator
+     surfaces. Consistent with Trader's subtle stop for cross-family parity. */
+  --accent-brand-subtle: var(--color-emerald-100);
+  /* WHY: Strong shade for hover/pressed states on data accent surfaces.
+     Emerald-800 deepens further from the -700 base while staying inside
+     the emerald ramp for hue cohesion under interaction states. */
+  --accent-brand-strong: var(--color-emerald-800);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on emerald-700 backgrounds (≥7:1). */
+  --accent-fg:           var(--color-slate-50);
+  /* WHY: ZugaData is data-density-heavy — pivot tables, query results, sheet
+     cells all benefit from tighter row spacing. Comfortable density at 0.9375
+     (vs master 1.0) tightens by ~6%, matching ZugaTrader's data-grid
+     convention. */
+  --density-comfortable: 0.9375;
+  /* WHY: Compact density at 0.8125 is the high-density mode for pivot tables
+     and large datasets where 30+ visible rows is the load-bearing UX
+     requirement. Matches ZugaTrader's compact for analytical-family parity. */
+  --density-compact:     0.8125;
+}

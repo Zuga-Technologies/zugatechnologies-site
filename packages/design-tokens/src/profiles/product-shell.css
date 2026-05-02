@@ -1,6 +1,43 @@
 /* @zuga-technologies/design-tokens — profiles/product-shell.css
  * Used by: ZugaApp/frontend (product shell hosting all studios)
- * Accent: master cyan
+ * Family: product
+ * Accent: acid-lime [MIKE-CHECKPOINT-product-acid-lime]
+ *
+ * WHY (overall): ZugaApp is the consumer product surface (zugabot.ai). Until
+ *    2026-05-02 it consumed the master-cyan default, making it visually
+ *    indistinguishable from the corp marketing site. Color-theory research +
+ *    AI-brand competitive audit (see ../scroll-reveal.js notes + Phase 1
+ *    metaprompt) recommends acid-lime: unclaimed in AI brand space,
+ *    glows hardest on dark, distinct from sister-brand cyan. This profile
+ *    overrides the accent triple + foreground accordingly.
+ *    Pending Mike's HITL review — see [MIKE-CHECKPOINT-product-acid-lime].
  */
 
-/* No overrides — product shell consumes Tier 2 defaults as-is */
+:root {
+  /* WHY: ZugaApp's shell accent. Lime-400 (#a3e635) sits in the unclaimed
+     100-135° hue band — no major AI competitor (Anthropic, OpenAI, Linear,
+     Cursor, Replit, Cohere, Mistral, Vercel) operates here. On slate-950
+     surfaces (the product's dark canvas), lime-400 hits ~10:1 contrast =
+     WCAG AAA. Glows convincingly because human eye sensitivity peaks in
+     the green band, making the halo on dark feel "alive" without effort. */
+  --accent-brand:        var(--color-lime-400);
+
+  /* WHY: Subtle tint for product chip and badge backgrounds — token
+     pills in the credits panel, accent-tinted card chips, focus rings on
+     password inputs. Lime-100 mirrors the lightness of cyan-100 in the
+     master profile so subtle-bg components keep visual weight parity. */
+  --accent-brand-subtle: var(--color-lime-100);
+
+  /* WHY: Strong shade for hover and pressed states on accent surfaces.
+     Lime-500 darkens just enough to read as "depressed" against the
+     -400 base, while staying inside the lime ramp for hue cohesion. */
+  --accent-brand-strong: var(--color-lime-500);
+
+  /* WHY: Foreground color for content on --accent-brand. Lime-400 is
+     too bright for white text — white-on-lime-400 = 1.4:1, fails AA.
+     Slate-950 on lime-400 = ~10:1, passes AAA. ZugaApp is the first
+     profile to require dark-text-on-accent (corp/studios all use white)
+     because lime sits at high luminance by design. CTA buttons must
+     pair this fg color with the accent bg. */
+  --accent-fg:           var(--color-slate-950);
+}

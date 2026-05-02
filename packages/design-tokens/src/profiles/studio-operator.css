@@ -1,0 +1,37 @@
+/* @zuga-technologies/design-tokens — profiles/studio-operator.css
+ * Used by: ZugaOperator
+ * Family: observability/system (sibling: studio-overseer)
+ * Accent: slate-500 (system-neutral)
+ *
+ * WHY: ZugaOperator is the autonomous-AI observability surface — it shows
+ *      live agent thoughts, decisions, tool calls, cost ledger. The
+ *      visual register is "system internals," not user-facing brand. A
+ *      saturated accent here would compete with the *content* (cognitive
+ *      stream events, agent state) which IS the colorful payload. Slate
+ *      reads as quiet system context — the chrome stays out of the way so
+ *      the live stream pops. Distinct from ZugaOverseer (admin, slate-700)
+ *      by being lighter — observability < admin authority.
+ */
+
+:root {
+  /* WHY: ZugaOperator's chrome should NOT compete with the live cognitive
+     stream content (agent thoughts, decisions, tool events) which carries
+     its own per-event color signal. Slate-500 is the lightest of the
+     observability slate stops, signaling "system context" without claiming
+     visual attention. Matches the lineage of dev-tool observability UIs
+     (Sentry, DataDog, Honeycomb) which use neutral chrome to elevate event
+     content. */
+  --accent-brand:        var(--color-slate-500);
+  /* WHY: Subtle tint for operator-specific chip and badge backgrounds.
+     Slate-100 mirrors cyan-100's lightness for cross-family parity, used
+     on agent-status chips and cost-counter pills. */
+  --accent-brand-subtle: var(--color-slate-100);
+  /* WHY: Strong shade for hover/pressed states on operator accent surfaces.
+     Slate-600 deepens just enough for "depressed" feedback while staying
+     in the slate ramp for hue cohesion. */
+  --accent-brand-strong: var(--color-slate-600);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on slate-500 backgrounds (≥4.5:1
+     AA-compliant). */
+  --accent-fg:           var(--color-slate-50);
+}

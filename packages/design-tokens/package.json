@@ -1,14 +1,17 @@
 {
   "name": "@zuga-technologies/design-tokens",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "type": "module",
   "files": ["src/", "scripts/", "README.md", "CHANGELOG.md"],
   "exports": {
     "./tokens.css": "./src/tokens.css",
     "./tokens-dark.css": "./src/tokens-dark.css",
     "./reset.css": "./src/reset.css",
+    "./reveal.css": "./src/reveal.css",
+    "./scroll-reveal": "./src/scroll-reveal.js",
     "./profiles/*.css": "./src/profiles/*.css",
-    "./components/*.css": "./src/components/*.css"
+    "./components/*.css": "./src/components/*.css",
+    "./brand/*": "./src/brand/*"
   },
   "bin": {
     "zuga-tokens-lint": "./scripts/tokens-lint.mjs"

@@ -1,0 +1,46 @@
+/* @zuga-technologies/design-tokens — reveal.css
+ * Scroll-reveal pattern: tag elements with [data-reveal] (optionally
+ * [data-reveal="left"|"right"]); the companion observer in scroll-reveal.js
+ * adds .is-visible the first time the element crosses ~15% into the viewport.
+ * Cheap to layer-hint, one-shot per element, no repeat triggers.
+ *
+ * Falls back to immediately-visible under prefers-reduced-motion or when
+ * IntersectionObserver isn't available — no JS guard required in callers.
+ *
+ * First consumers: zugatechnologies-site (already inlined in Layout.astro,
+ * to be replaced with this import in a follow-up cleanup), and ZugaApp's
+ * LandingView/DashboardView during the Phase 2 sweep.
+ */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  transition:
+    opacity   var(--motion-duration-slower, 500ms) var(--motion-easing-decel, cubic-bezier(0, 0, 0, 1)),
+    transform var(--motion-duration-slower, 500ms) var(--motion-easing-decel, cubic-bezier(0, 0, 0, 1));
+  will-change: opacity, transform;
+}
+
+/* Variant: slide in from the left */
+[data-reveal="left"]  { transform: translate3d(-32px, 0, 0); }
+
+/* Variant: slide in from the right */
+[data-reveal="right"] { transform: translate3d(32px, 0, 0); }
+
+/* Variant: fade up (default if no direction specified) */
+[data-reveal="up"]    { transform: translate3d(0, 24px, 0); }
+
+/* Once observed: settle to natural position + full opacity */
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Reduced motion: no movement, no fade — content is just there. */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

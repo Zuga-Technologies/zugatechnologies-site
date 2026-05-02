@@ -1,0 +1,33 @@
+/* @zuga-technologies/design-tokens — profiles/studio-overseer.css
+ * Used by: ZugaOverseer
+ * Family: observability/admin (sibling: studio-operator)
+ * Accent: slate-700 (admin-authoritative)
+ *
+ * WHY: ZugaOverseer is the admin control plane — fleet management, cross-
+ *      studio policy, role/permission editing, system-wide kill switches.
+ *      Like Operator it stays in the slate ramp (system register, not user
+ *      brand), but uses the deeper -700 stop to signal "control authority"
+ *      vs Operator's lighter -500 ("observability"). The two slate
+ *      siblings let users instantly read the privilege gradient: lighter
+ *      slate = read-only / quieter, deeper slate = administrative weight.
+ */
+
+:root {
+  /* WHY: ZugaOverseer's chrome should signal admin authority — heavier than
+     Operator's observability tone but still in the system-neutral slate
+     family (saturated accents are reserved for studios users *enjoy* using;
+     admin tools are utilitarian). Slate-700 deepens from Operator's -500
+     to convey "this surface has consequences when you click." */
+  --accent-brand:        var(--color-slate-700);
+  /* WHY: Subtle tint for overseer-specific chip and badge backgrounds.
+     Slate-200 (slightly darker than Operator's -100) mirrors the chrome
+     gradient — admin chips read as denser without losing legibility. */
+  --accent-brand-subtle: var(--color-slate-200);
+  /* WHY: Strong shade for hover/pressed states on overseer accent surfaces.
+     Slate-800 deepens further from the -700 base; sufficient contrast
+     against --accent-fg (slate-50) for AAA on interaction. */
+  --accent-brand-strong: var(--color-slate-800);
+  /* WHY: Foreground color for content placed on --accent-brand surfaces.
+     Slate-50 ensures legible contrast on slate-700 backgrounds (≥7:1 AAA). */
+  --accent-fg:           var(--color-slate-50);
+}
