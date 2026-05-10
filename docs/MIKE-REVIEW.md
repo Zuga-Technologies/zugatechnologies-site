@@ -5,6 +5,118 @@ Total checkpoints: 45
 
 ## Bucket — Color hues
 
+---
+
+## TL;DR — bulk approval grid (added 2026-05-10)
+
+> All 45 checkpoints in one scannable view. Each row is `<key> · <one-line summary> · <proposed value>`. Full rationale, alternates, and render targets remain below — drill into any row you want to interrogate.
+>
+> **Bulk-approve template** at the bottom of this section. Default expectation: silence = approve. List `[VETO]` for any you want changed.
+
+### Foundation (wordmark + master accent)
+
+| key | what it sets | proposal |
+|---|---|---|
+| `wm01` | Wordmark direction | All-caps "ZUGA", geometric sans (Inter-like) 700/+20 tracking |
+| `wm02` | Logo mark / glyph | Geometric "Z", two horizontals + diagonal, rounded terminals, square container 22% radius, cyan bg / white fg |
+| `wm03` | Master accent hue (foundation) | `#06b6d4` cyan-500 (AA on near-black 7.35:1) |
+
+### Color hues (9 family references)
+
+| key | hue family | reference | use |
+|---|---|---|---|
+| `h01` | Master | `#06b6d4` cyan-500 | brand default; cascades to acc01/02/13/15/16/17/20 |
+| `h02` | Wellness | `#14b8a6` mint-500 | ZugaLife + ZugaHealth |
+| `h03` | Creative | `#8b5cf6` violet-500 | Image + Video + Motion |
+| `h04` | ZugaCode | `#3b82f6` blue-500 | dev-tools convention |
+| `h05` | ZugaCloud | `#0ea5e9` sky-500 | infra convention |
+| `h06` | ZugaAudio | `#d946ef` magenta-500 | music/audio convention |
+| `h07` | ZugaForge | `#f97316` orange-500 | build/forge metaphor |
+| `h08` | ZugaLearn | `#6366f1` indigo-500 | academic register |
+| `h09` | Markets | `#10b981` emerald-500 | ZugaTrader + ZugaTraderOverlay |
+
+### Typography (1)
+
+| key | proposal |
+|---|---|
+| `typ01` | **DEFER to Phase 2** — system font stack for now; evaluate Inter Display / Geist / custom variable when v0 seals |
+
+### Voice & tone (11)
+
+| key | summary | proposal core |
+|---|---|---|
+| `voice01` | Master tone | Direct, technical, occasionally dry — never corporate. Founder explaining to a smart friend. |
+| `voice02` | Marketing | Energetic but earned. Lead with what the product does. No "AI-powered" hand-waving. |
+| `voice03` | Product UI | Terse, imperative verbs: "Run", "Connect". One question per tooltip. |
+| `voice04` | Errors | Honest + specific, no apologetic theater. Blame system, not user. |
+| `voice05` | Empty states | Forward-leaning, "Add your first X to start tracking." Carry real info. |
+| `voice06` | Onboarding | Confident + tutorial-paced. Inline jargon definitions. No condescension. |
+| `voice07` | **Style laws** | "you" / "we"; contractions OK; **Oxford comma mandatory**; sentence case UI labels, title case section headers |
+| `voice08` | Zugabot vs ZugaChat | Zugabot = agent core; ZugaChat = chat surface. Never conflate. |
+| `voice09` | ZugaTokens | Always "ZugaTokens" capital Z+T, never credits/coins/points/tokens lowercase in UI |
+| `voice10` | Studios vs apps | Always "studios" in user-facing; food-truck metaphor is internal-only |
+| `voice11` | Food court framing | Internal only. ZugaApp=food court, studio=food truck. Governs architecture decisions. |
+
+### Per-studio accent assignments (21)
+
+| key | studio | accent | category |
+|---|---|---|---|
+| `acc01` | Corp landing | cyan | master |
+| `acc02` | ZugaApp shell | cyan | master (food court) |
+| `acc03` | ZugaLife | mint | wellness |
+| `acc04` | ZugaHealth | mint | wellness sibling |
+| `acc05` | ZugaTrader | emerald | markets |
+| `acc06` | ZugaImage | violet | creative |
+| `acc07` | ZugaVideo | violet | creative sibling |
+| `acc08` | ZugaMotion | violet | creative sibling |
+| `acc09` | ZugaCode | blue | dev-tools |
+| `acc10` | ZugaCloud | sky | infra |
+| `acc11` | ZugaAudio | magenta | audio |
+| `acc12` | ZugaForge | orange | build |
+| `acc13` | ZugaThemes | cyan | master (meta-product) |
+| `acc14` | ZugaLearn | indigo | education |
+| `acc15` | ZugaCraft | cyan | master (category TBD) |
+| `acc16` | ZugaNews | cyan | master (news = neutral) |
+| `acc17` | ZugaGamerOverlay | cyan | master (HUD neutral) |
+| `acc18` | ZugaTraderOverlay | emerald | markets sibling |
+| `acc19` | **ZugaShield** | **red** | **security ⚠️ flag — overlaps `--feedback-danger`. Intentional per draft.** |
+| `acc20` | ZugaClaw | cyan | master (internal infra) |
+
+> Note: acc21 was reserved but does not appear in the source doc as a checkpoint — verify before approval.
+
+### Items worth Mike's extra scrutiny (4)
+
+These have higher blast radius — flagging for second-pass attention even within the bulk approval:
+
+1. `wm03` / `h01` — Master cyan `#06b6d4` cascades to 7 sub-brand defaults. Veto here invalidates a lot below.
+2. `voice09` — "ZugaTokens" naming is product-wide; rename here triggers a sweep across every studio's copy.
+3. `voice10` — "studios" terminology is also product-wide and already shipped in copy.
+4. `acc19` — ZugaShield red == feedback-danger red. Defensible (security IS danger) but creates a class of UI where the entire studio reads as "alarm." Consider amber-red or deep-red variant.
+
+---
+
+## Fast-approve template
+
+Copy this block as a PR comment or issue comment. Mark approvals/vetos in bulk:
+
+```
+APPROVE: h01 h02 h03 h04 h05 h06 h07 h08 h09
+APPROVE: wm01 wm02 wm03
+APPROVE: typ01
+APPROVE: voice01 voice02 voice03 voice04 voice05 voice06 voice07 voice08 voice09 voice10 voice11
+APPROVE: acc01 acc02 acc03 acc04 acc05 acc06 acc07 acc08 acc09 acc10
+APPROVE: acc11 acc12 acc13 acc14 acc15 acc16 acc17 acc18 acc19 acc20
+
+VETO:
+  <key>: <your alternative or "request rationale">
+```
+
+Silence = approve. Next session converts your block into `[MIKE-APPROVED-<key>: <date>]` tags inline + splices into the actual bible source files. Phase 1 unblocks 90 sec after the splice.
+
+---
+
+## Bucket — Color hues
+
 ### MIKE-CHECKPOINT-h01 (from docs\bible\05-color-in-practice.md)
 
 > **🛑 MIKE-CHECKPOINT-h01** — confirm master accent hue
