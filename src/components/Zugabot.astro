@@ -1,0 +1,129 @@
+---
+/*
+ * Zugabot — full-body character mark.
+ *
+ * Head: faithful to source PNG (lime fill, soft dark outline, two pure-dark
+ * eyes, small cyan sticker upper-left, diagonal antenna, small chin).
+ * Body extends the same flat-color / soft-outline / no-extras language.
+ *
+ * Outline uses currentColor so the character inherits surface text color.
+ */
+interface Props {
+  size?: number;
+  class?: string;
+}
+const { size = 160, class: className = '' } = Astro.props;
+---
+
+<svg
+  width={size}
+  height={size * (160 / 120)}
+  viewBox="0 0 120 160"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  class={className}
+>
+  <!-- ============== HEAD (faithful to source) ============== -->
+
+  <!-- Antenna — diagonal up-right -->
+  <path d="M 78 28 L 90 14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+  <circle cx="90" cy="14" r="3" fill="currentColor" />
+
+  <!-- Head body -->
+  <rect
+    x="22" y="28" width="76" height="56" rx="11"
+    fill="#c8e84a"
+    stroke="currentColor"
+    stroke-width="2.4"
+    stroke-linejoin="round"
+  />
+
+  <!-- Cyan sticker — upper-left of face -->
+  <rect
+    x="30" y="36" width="12" height="12" rx="2.4"
+    fill="#5cc4d4"
+    stroke="currentColor"
+    stroke-width="1.6"
+    stroke-linejoin="round"
+  />
+
+  <!-- Eyes — large, pure dark -->
+  <circle cx="50" cy="58" r="7.5" fill="#1a1a1a" />
+  <circle cx="72" cy="58" r="7.5" fill="#1a1a1a" />
+
+  <!-- Chin -->
+  <rect
+    x="52" y="84" width="16" height="8" rx="1.5"
+    fill="#c8e84a"
+    stroke="currentColor"
+    stroke-width="2.2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+
+  <!-- ============== BODY (extends source language) ============== -->
+
+  <!-- Neck connector -->
+  <rect
+    x="54" y="92" width="12" height="4"
+    fill="#c8e84a"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+
+  <!-- Torso — same flat lime, rounded -->
+  <rect
+    x="24" y="96" width="72" height="48" rx="9"
+    fill="#c8e84a"
+    stroke="currentColor"
+    stroke-width="2.4"
+    stroke-linejoin="round"
+  />
+
+  <!-- Cyan chest sticker — same shape language as the face sticker -->
+  <rect
+    x="48" y="108" width="24" height="24" rx="3"
+    fill="#5cc4d4"
+    stroke="currentColor"
+    stroke-width="1.8"
+    stroke-linejoin="round"
+  />
+
+  <!-- ============== ARMS ============== -->
+
+  <!-- Left arm -->
+  <rect
+    x="10" y="102" width="12" height="34" rx="6"
+    fill="#c8e84a"
+    stroke="currentColor"
+    stroke-width="2.2"
+    stroke-linejoin="round"
+  />
+  <!-- Right arm -->
+  <rect
+    x="98" y="102" width="12" height="34" rx="6"
+    fill="#c8e84a"
+    stroke="currentColor"
+    stroke-width="2.2"
+    stroke-linejoin="round"
+  />
+
+  <!-- ============== BASE — small lime feet, soft ============== -->
+
+  <rect
+    x="36" y="144" width="16" height="8" rx="2"
+    fill="#c8e84a"
+    stroke="currentColor"
+    stroke-width="2.2"
+    stroke-linejoin="round"
+  />
+  <rect
+    x="68" y="144" width="16" height="8" rx="2"
+    fill="#c8e84a"
+    stroke="currentColor"
+    stroke-width="2.2"
+    stroke-linejoin="round"
+  />
+</svg>

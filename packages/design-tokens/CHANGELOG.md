@@ -1,5 +1,13 @@
 # @zuga-technologies/design-tokens — Changelog
 
+## 1.0.0-rc.3 — 2026-05-02
+
+Long-form prose typography for blog/diary surfaces.
+
+### Added
+
+- **`components/prose.css`** (NEW Tier 3) — token group for sustained-reading article body: 70ch measure, 1.7 line-height, type-relative paragraph gap, deliberate H2/H3 top margins, underlined links with accent-brand decoration color and 2px underline offset. References tier 2 `--surface-secondary` for blockquote + code bg so dark profiles cascade automatically with no fork. First consumer: ZugaApp `/blog` (Zugabot's public diary). Lint-clean (every declaration carries a substantive WHY).
+
 ## 1.0.0-rc.2 — 2026-05-02
 
 ZugaApp product-shell visual identity + Windows-tile launcher pattern.
