@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+import Zugabot from '../components/Zugabot.astro';
+import ZugabotLife from '../components/ZugabotLife.astro';
+import Logomark from '../components/Logomark.astro';
+---
+
+<Layout title="Zugabot character preview" description="Internal preview — character mark exploration">
+  <Container>
+    <div class="py-16">
+      <p class="text-xs uppercase tracking-[0.18em] text-accent-500">Preview · internal</p>
+      <h1 class="mt-3 text-3xl font-semibold tracking-tight text-ink-100">Zugabot — character premise</h1>
+      <p class="mt-4 max-w-prose text-ink-300">
+        Three sizes, dark + light surfaces. Outline uses currentColor so the mark inherits surface text.
+      </p>
+
+      <!-- Dark surface row -->
+      <section class="mt-12 rounded-lg border border-rule bg-ink-950 p-10">
+        <p class="text-xs uppercase tracking-[0.18em] text-ink-400">On dark (default)</p>
+        <div class="mt-8 flex items-end gap-12 text-ink-100">
+          <div class="text-center">
+            <Zugabot size={80} />
+            <p class="mt-3 text-xs text-ink-400">80px</p>
+          </div>
+          <div class="text-center">
+            <Zugabot size={160} />
+            <p class="mt-3 text-xs text-ink-400">160px</p>
+          </div>
+          <div class="text-center">
+            <Zugabot size={240} />
+            <p class="mt-3 text-xs text-ink-400">240px</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Light surface row -->
+      <section class="mt-8 rounded-lg border border-rule bg-ink-100 p-10">
+        <p class="text-xs uppercase tracking-[0.18em] text-ink-700">On light</p>
+        <div class="mt-8 flex items-end gap-12 text-ink-950">
+          <div class="text-center">
+            <Zugabot size={80} />
+            <p class="mt-3 text-xs text-ink-700">80px</p>
+          </div>
+          <div class="text-center">
+            <Zugabot size={160} />
+            <p class="mt-3 text-xs text-ink-700">160px</p>
+          </div>
+          <div class="text-center">
+            <Zugabot size={240} />
+            <p class="mt-3 text-xs text-ink-700">240px</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ZugabotLife — meditating variant -->
+      <section class="mt-8 rounded-lg border border-rule bg-ink-950 p-10">
+        <p class="text-xs uppercase tracking-[0.18em] text-ink-400">ZugabotLife — meditating (default · hover)</p>
+        <div class="mt-8 flex items-end gap-12 text-ink-100">
+          <div class="text-center">
+            <ZugabotLife size={80} />
+            <p class="mt-3 text-xs text-ink-400">80px default</p>
+          </div>
+          <div class="text-center">
+            <ZugabotLife size={80} hover />
+            <p class="mt-3 text-xs text-ink-400">80px hover</p>
+          </div>
+          <div class="text-center">
+            <ZugabotLife size={160} />
+            <p class="mt-3 text-xs text-ink-400">160px default</p>
+          </div>
+          <div class="text-center">
+            <ZugabotLife size={160} hover />
+            <p class="mt-3 text-xs text-ink-400">160px hover</p>
+          </div>
+          <div class="text-center">
+            <ZugabotLife size={240} />
+            <p class="mt-3 text-xs text-ink-400">240px default</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Logomark (head only) sizes -->
+      <section class="mt-8 rounded-lg border border-rule bg-ink-950 p-10">
+        <p class="text-xs uppercase tracking-[0.18em] text-ink-400">Logomark — head only (header use)</p>
+        <div class="mt-8 flex items-center gap-10 text-ink-100">
+          <div class="text-center">
+            <Logomark height={20} />
+            <p class="mt-3 text-xs text-ink-400">20px tall</p>
+          </div>
+          <div class="text-center">
+            <Logomark height={32} />
+            <p class="mt-3 text-xs text-ink-400">32px tall (header)</p>
+          </div>
+          <div class="text-center">
+            <Logomark height={64} />
+            <p class="mt-3 text-xs text-ink-400">64px tall</p>
+          </div>
+          <div class="text-center">
+            <Logomark height={128} />
+            <p class="mt-3 text-xs text-ink-400">128px tall</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </Container>
+</Layout>

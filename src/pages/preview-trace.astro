@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+---
+
+<Layout title="Trace preview" description="Internal — vtracer output comparison">
+  <Container>
+    <div class="py-16">
+      <p class="text-xs uppercase tracking-[0.18em] text-accent-500">Preview · vtracer output</p>
+      <h1 class="mt-3 text-3xl font-semibold tracking-tight text-ink-100">Three trace presets</h1>
+      <p class="mt-4 max-w-prose text-ink-300">
+        Same source PNG, three vtracer parameter sets. Pick the one that looks closest to the original.
+      </p>
+
+      <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div class="rounded-lg border border-rule bg-ink-100 p-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-ink-700">Clean (30 paths · 45KB)</p>
+          <img src="/_trace/clean.svg" alt="" class="mt-4 w-full" />
+        </div>
+        <div class="rounded-lg border border-rule bg-ink-100 p-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-ink-700">Default (244 paths · 138KB)</p>
+          <img src="/_trace/default.svg" alt="" class="mt-4 w-full" />
+        </div>
+        <div class="rounded-lg border border-rule bg-ink-100 p-6">
+          <p class="text-xs uppercase tracking-[0.18em] text-ink-700">Poster (441 paths · 274KB)</p>
+          <img src="/_trace/poster.svg" alt="" class="mt-4 w-full" />
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

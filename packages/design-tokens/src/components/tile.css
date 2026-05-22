@@ -47,26 +47,27 @@
    *   2. Inner edge ring       (button is a discrete object you can grab)
    *   3. Bottom inner shadow   (button has weight, sits on a surface)
    *   4. Outer hairline + ambient color glow (lives in space, "warm" before hover)
-   * The currentColor in the outer glow inherits the studio color, so each
-   * tile pre-glows in its own hue at rest. */
+   * Outer drops + halo are pure black — gives the tile depth + grounded weight
+   * against the dark canvas without competing with the bright tile color. */
   --component-tile-shadow:
     inset 0 1.5px 0 rgba(255, 255, 255, 0.30),
     inset 0 0 0 1px rgba(255, 255, 255, 0.18),
     inset 0 -2px 0 rgba(0, 0, 0, 0.22),
     0 0 0 1px rgba(0, 0, 0, 0.25),
-    0 4px 10px -3px rgba(0, 0, 0, 0.35),
-    0 0 16px -4px currentColor;
+    0 4px 12px -2px rgba(0, 0, 0, 0.45),
+    0 0 16px -4px rgba(0, 0, 0, 0.35);
 
   /* ── Pressable shadow stack — hover state ─────────────────────────── *
-   * Top rim brightens (40%), edge ring thickens (1.5px), and the colored
-   * ambient glow explodes to a 60px halo. Reads as "I'm being noticed." */
+   * Top rim brightens (40%), edge ring thickens (1.5px), and the drop +
+   * black halo deepen so the tile reads as lifted off a darker abyss
+   * (premium "weight" feel, not a glow). */
   --component-tile-shadow-hover:
     inset 0 2px 0 rgba(255, 255, 255, 0.40),
     inset 0 0 0 1.5px rgba(255, 255, 255, 0.28),
     inset 0 -2px 0 rgba(0, 0, 0, 0.22),
     0 0 0 1px rgba(0, 0, 0, 0.25),
-    0 16px 40px -8px currentColor,
-    0 0 60px -10px currentColor;
+    0 18px 44px -8px rgba(0, 0, 0, 0.65),
+    0 0 60px -10px rgba(0, 0, 0, 0.45);
 
   /* ── Pressable shadow stack — active (pressed) state ──────────────── *
    * Inset shadow inverts to deep dark inside; outer glow gone. The button

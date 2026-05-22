@@ -26,8 +26,8 @@ const {
   baseOpacityMin = 0.22,
   baseOpacityMax = 0.52,
   mouseRadius = 220,
-  mouseAttraction = 0.025,
-  hoverGlow = 0.7,
+  mouseAttraction = 0.012,
+  hoverGlow = 0.5,
   color = '78,162,192',
 } = Astro.props;
 ---
@@ -79,20 +79,36 @@ const {
       baseOpacityMin: Number(canvas.dataset.baseOpacityMin) || 0.22,
       baseOpacityMax: Number(canvas.dataset.baseOpacityMax) || 0.52,
       mouseRadius: Number(canvas.dataset.mouseRadius) || 220,
-      mouseAttraction: Number(canvas.dataset.mouseAttraction) || 0.025,
-      hoverGlow: Number(canvas.dataset.hoverGlow) || 0.7,
+      mouseAttraction: Number(canvas.dataset.mouseAttraction) || 0.012,
+      hoverGlow: Number(canvas.dataset.hoverGlow) || 0.5,
       color: canvas.dataset.color || '78,162,192',
     };
 
     let particles: Particle[] = [];
     const mouse = { x: -9999, y: -9999, active: false };
-    let dpr = window.devicePixelRatio || 1;
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
     let width = 0, height = 0;
     let raf = 0;
     let visible = false;
+    const mouseRadiusSq = cfg.mouseRadius * cfg.mouseRadius;
+
+    // Cached host rect — invalidated on resize/scroll. Avoids layout
+    // thrash on every mousemove (was calling getBoundingClientRect()).
+    let hostRect: DOMRect | null = null;
+    function invalidateRect() { hostRect = null; }
+
+    let resizeRaf = 0;
+    function scheduleResize() {
+      if (resizeRaf) return;
+      resizeRaf = requestAnimationFrame(() => {
+        resizeRaf = 0;
+        resize();
+      });
+    }
 
     function resize() {
       const r = host!.getBoundingClientRect();
+      hostRect = r;
       width = r.width; height = r.height;
       canvas.width = Math.max(1, Math.floor(width * dpr));
       canvas.height = Math.max(1, Math.floor(height * dpr));
@@ -126,8 +142,9 @@ const {
         if (mouse.active) {
           const dx = mouse.x - p.x;
           const dy = mouse.y - p.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist > 0 && dist < cfg.mouseRadius) {
+          const distSq = dx * dx + dy * dy;
+          if (distSq > 0 && distSq < mouseRadiusSq) {
+            const dist = Math.sqrt(distSq);
             const force = (cfg.mouseRadius - dist) / cfg.mouseRadius;
             p.vx += (dx / dist) * force * cfg.mouseAttraction;
             p.vy += (dy / dist) * force * cfg.mouseAttraction;
@@ -163,16 +180,21 @@ const {
       raf = requestAnimationFrame(step);
     }
 
-    const ro = new ResizeObserver(() => resize());
+    const ro = new ResizeObserver(() => { invalidateRect(); scheduleResize(); });
     ro.observe(host);
-    window.addEventListener('resize', () => { dpr = window.devicePixelRatio || 1; resize(); });
+    window.addEventListener('resize', () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      invalidateRect();
+      scheduleResize();
+    });
+    window.addEventListener('scroll', invalidateRect, { passive: true });
 
     host.addEventListener('mousemove', (e) => {
-      const r = host.getBoundingClientRect();
-      mouse.x = e.clientX - r.left;
-      mouse.y = e.clientY - r.top;
+      if (!hostRect) hostRect = host.getBoundingClientRect();
+      mouse.x = e.clientX - hostRect.left;
+      mouse.y = e.clientY - hostRect.top;
       mouse.active = true;
-    });
+    }, { passive: true });
     host.addEventListener('mouseleave', () => { mouse.active = false; });
 
     const io = new IntersectionObserver((entries) => {
