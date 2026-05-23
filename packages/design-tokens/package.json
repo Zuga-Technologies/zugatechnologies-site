@@ -6,6 +6,7 @@
   "exports": {
     "./tokens.css": "./src/tokens.css",
     "./tokens-dark.css": "./src/tokens-dark.css",
+    "./delight.css": "./src/delight.css",
     "./reset.css": "./src/reset.css",
     "./reveal.css": "./src/reveal.css",
     "./scroll-reveal": "./src/scroll-reveal.js",

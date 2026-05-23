@@ -5,6 +5,7 @@ family: wellness
 accentRamp: mint
 rationale: "ZugaLife is the wellness studio. Master cyan reads clinical; mint reinforces calm and clean for a softer mental state."
 deviations: []
+emotionTier: delight
 ---
 
 # studio-life Profile
@@ -24,3 +25,9 @@ No deviations. This profile overrides only `--accent-*` (mint ramp).
 ## Density posture
 
 Comfortable density. No override.
+
+## Emotional posture (§19)
+
+Tier: **`delight`**. Spiritus (the ZugaLife product) is a habit engine — journaling, mood check-ins, meditation, streaks. It is the textbook Duolingo case: repeated behavior whose adherence depends on the user *feeling good* about showing up. The full Delight Kit is in scope — companion expression, celebration, progress/streak motion, identity-affirming copy.
+
+**Honesty constraint (§19.5).** This is a mental-health product. Celebration must reinforce a real, named benefit, never manufacture compulsion. Variable-reward mechanics with no genuine user payoff are a prohibited dark pattern here. The existing `useCelebration` composable is the reference standard — its identity language and intrinsic-benefit messaging exist specifically to counter overjustification.

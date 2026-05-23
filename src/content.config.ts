@@ -5,7 +5,7 @@ import { glob } from 'astro/loaders';
 const bibleSection = defineCollection({
   loader: glob({ pattern: '[0-9]*.md', base: './docs/bible' }),
   schema: z.object({
-    section: z.number().int().min(1).max(18),
+    section: z.number().int().min(1).max(19),
     title: z.string(),
     summary: z.string(),
     mikeCheckpoint: z.boolean().default(false),
@@ -69,6 +69,10 @@ const profiles = defineCollection({
     accentRamp: z.string(),
     rationale: z.string().min(40),
     deviations: z.array(z.string()).default([]),
+    // §19 Emotional Design — baseline (chrome) emotion tier for the surface.
+    // Default 'restraint': a surface earns a higher tier deliberately, it is
+    // never granted by omission. Per-surface elevations live in the body.
+    emotionTier: z.enum(['restraint', 'trust', 'premium', 'delight']).default('restraint'),
   }),
 });
 
