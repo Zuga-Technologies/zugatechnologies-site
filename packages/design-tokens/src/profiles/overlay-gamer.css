@@ -1,6 +1,25 @@
 /* @zuga-technologies/design-tokens — profiles/overlay-gamer.css
- * Used by: ZugaGamerOverlay (in-game HUD)
- * Accent: master cyan (no override)
+ * Used by: ZugaGamerOverlay (Ludus — in-game voice HUD)
+ * Accent: gaming purple [MIKE-CHECKPOINT-overlay-gamer-purple]
+ *
+ * WHY (overall): Ludus is the gaming surface. Consuming master cyan made it
+ *    indistinguishable from corp Zuga; per the Branded-House model each studio
+ *    owns one accent hue (bible 2.1). Purple is the gaming-coded color (Twitch/
+ *    Discord/RGB culture), glows on dark overlays, and is unclaimed by siblings
+ *    (creative=violet, audio=magenta, markets=emerald, product=lime). Pending
+ *    Mike HITL review — see [MIKE-CHECKPOINT-overlay-gamer-purple].
  */
 
-/* No overrides — consumes Tier 2 defaults as-is */
+:root {
+  /* WHY: Ludus shell accent. Purple-500 (#a855f7) is the gaming-culture hue;
+     on slate-950 overlay surfaces it clears WCAG AA and reads neon on dark. */
+  --accent-brand:        var(--color-purple-500);
+
+  /* WHY: Subtle tint for gamer chips/badges (budget pills, mode chips).
+     Purple-100 mirrors cyan-100 lightness for subtle-bg weight parity. */
+  --accent-brand-subtle: var(--color-purple-100);
+
+  /* WHY: Strong shade for hover/pressed on accent surfaces; purple-600
+     darkens against the -500 base while staying in-ramp. */
+  --accent-brand-strong: var(--color-purple-600);
+}
