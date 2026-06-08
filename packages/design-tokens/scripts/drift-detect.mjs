@@ -15,6 +15,7 @@ async function main() {
   const registry = JSON.parse(await fs.readFile(REGISTRY, 'utf8'));
   const canonical = await readCanonicalTier1();
   const driftReports = [];
+  const skipped = [];
 
   for (const consumer of registry.consumers) {
     const tmpDir = path.join(os.tmpdir(), `drift-${consumer.repo.replace('/', '_')}-${Date.now()}`);
@@ -27,10 +28,17 @@ async function main() {
         driftReports.push({ consumer: consumer.repo, drift });
       }
     } catch (err) {
-      driftReports.push({ consumer: consumer.repo, error: err.message });
+      // Clone/install failures are INFRASTRUCTURE errors (private repo with no
+      // cross-repo token, removed repo, transient network), NOT token drift.
+      // They must never file an issue — that was the source of the daily noise.
+      skipped.push({ consumer: consumer.repo, error: err.message });
     } finally {
       // cleanup tmpDir
     }
+  }
+
+  if (skipped.length > 0) {
+    console.error('SKIPPED (unreachable consumers, not drift):', JSON.stringify(skipped, null, 2));
   }
 
   if (driftReports.length > 0) {
