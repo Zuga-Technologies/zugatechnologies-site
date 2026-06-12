@@ -20,7 +20,7 @@ node gen-social.js
 | Instagram / Threads | `instagram-profile-1080.png` | — |
 | TikTok | `tiktok-profile-1080.png` | — |
 | LinkedIn | `linkedin-logo-400.png` | `linkedin-cover-1128x191.png` |
-| Discord | `discord-server-512.png` | — |
+| Discord | already set — Zugabot robot (`../public/zugabot-discord-512.png`); `discord-server-512.png` is a spare Z version | — |
 | Twitch | `twitch-profile-800.png` | `twitch-banner-1200x480.png` |
 | GitHub org | `github-org-500.png` | — |
 | Bluesky | `bluesky-avatar-1000.png` | — |
