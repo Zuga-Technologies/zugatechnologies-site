@@ -32,6 +32,8 @@ Everything else is **locked**:
 
 The rationale: accent identity is a studio's primary personality knob. Density is a layout knob. Component radius and spacing are finishing-touch knobs. The text and surface system is the coherence layer — if studios could override `--text-primary` freely, the bible's contrast guarantees would be unenforceable.
 
+**Bounded font carve-out.** The one exception inside the locked `--font-*` group: `--font-family-display` (display scale only) may be overridden to a face on the sanctioned allow-list in §6.7. `--font-family-sans` (body) and `--font-family-mono` stay hard-locked — body is always Inter. A display override must (a) name a face that exists in the §6.7 table, (b) carry the standard `/* WHY: ... */` comment, and (c) be loaded only on that studio's own surfaces, never the shared bundle. A `--font-family-display` value not present in §6.7 is a lint violation. This keeps the body/coherence layer invariant while letting a studio whose emotional register diverges hard from master (e.g. Spiritus wellness → Fraunces) express that at display scale. `tokens-lint.mjs` enforces the allow-list; the carve-out is registered there, not a blanket unlock of the `font` prefix.
+
 ---
 
 ## 15.2 The six enforcement mechanisms

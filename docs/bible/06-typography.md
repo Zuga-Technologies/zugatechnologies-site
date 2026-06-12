@@ -168,3 +168,21 @@ Common surface-to-token pairings for reference. These are not exhaustive — the
 - Apply `--font-family-display` (Sora) to body or UI copy — it is display-scale only; below `--type-scale-2xl` use the sans (Inter) stack.
 - Use `--type-scale-xs` for body text — 12px body fails WCAG SC 1.4.4 (Resize Text) at default zoom on some platforms.
 - Set body text weight above 500 — medium body text reads as stressed copy, not normal reading state.
+
+---
+
+## 6.7 Sub-brand display faces
+
+Body (**Inter**) and the master display (**Sora**) are locked Tier-1 defaults for every studio — see §15. Differentiation runs through accent color, density, and components, *not* type. There is one bounded exception: a studio whose emotional register diverges hard from the master may adopt a **sanctioned display face**, documented here and registered as a `--font-family-display` override in its profile (see §15.1 carve-out). Body always stays Inter. This is a documented allow-list, not a free-for-all — a face not in the table below is a lint violation.
+
+| Studio / theme | Display face | Body | Rationale |
+|---|---|---|---|
+| **Master** (all studios default) | Sora | Inter | Geometric, technical, distinctive. |
+| **Spiritus** (ZugaLife — wellness default) | **Fraunces** (soft optical serif, wght 500–700, `opsz` auto) | Inter | Geometric Sora reads clinical/techy; wellness needs warmth. Fraunces' soft old-style forms read "care," not "dashboard." Applies to the Wisp greeting hero + wellness headings. |
+| Spiritus — devotional preset (`data-theme="biblical"`) | EB Garamond (kept) | EB Garamond | Warm, readable book serif; correct for scripture reading. Cormorant Garamond is the sanctioned ceremonial alternate; Cardo if polytonic Greek/Hebrew glyphs are needed. |
+| Spiritus — mystical preset (`data-theme="expressive"`) | Cormorant Garamond *italic* (recommended over Cinzel) | Inter | Cinzel is monumental Roman caps — title-only, weak as body. Cormorant italic is ethereal and scales to running text. |
+| **Ludus** (ZugaGamerOverlay) | **Sora** (no sub-brand face) | Inter | In-game HUD runs at frame budget over live games (restraint, §19.4); a heavy bespoke webfont is the wrong call. Identity is the purple accent. A gaming display (Chakra Petch) is reserved for *non-gameplay* delight surfaces only (recap / onboarding) and is **not** adopted at this time. |
+
+**Spiritus wordmark note:** the Zugabot brand wordmark stays Sora everywhere (§6.1) — the Fraunces decision governs Spiritus *content* display (hero, headings), not the corporate lockup.
+
+**Load discipline:** Fraunces is loaded only on Spiritus surfaces (ZugaLife `index.html`), never globally — it must not enter the shared bundle for studios that don't use it.

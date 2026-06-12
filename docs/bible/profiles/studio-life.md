@@ -4,7 +4,8 @@ consumer: ZugaLife
 family: wellness
 accentRamp: mint
 rationale: "ZugaLife is the wellness studio. Master cyan reads clinical; mint reinforces calm and clean for a softer mental state."
-deviations: []
+deviations:
+  - "--font-family-display = Fraunces (sanctioned sub-brand display face, §6.7) — body stays Inter"
 emotionTier: delight
 ---
 
@@ -20,7 +21,7 @@ ZugaLife is in the wellness family and mints over master cyan. Mint is calmer an
 
 ## Deviations from §15 whitelist
 
-No deviations. This profile overrides only `--accent-*` (mint ramp).
+One deviation: `--font-family-display` is overridden to **Fraunces** (soft optical serif), a sanctioned sub-brand display face per §6.7. Body text stays Inter; Sora is replaced only at display scale (Wisp greeting hero, wellness headings). Geometric Sora reads clinical for a wellness register; Fraunces' warm old-style forms fit the calm, encouraging posture. Loaded only on Spiritus surfaces, never in the shared bundle. The mint accent ramp (`--accent-*`) is the only other override.
 
 ## Density posture
 
