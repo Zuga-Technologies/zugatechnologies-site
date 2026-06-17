@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Ludus product landing. The waitlist backend lives in ZugaApp (zugabot.ai), so
+// the form + scarcity counter call it cross-origin (CORS allow-listed for this
+// origin on /api/ludus/waitlist). Ludus is NOT publicly available yet — this is
+// the early-access capture page, not a download.
+const API = 'https://zugabot.ai';
+---
+
+<Layout
+  title="Ludus — the AI buddy in your headset"
+  description="Sees your screen, answers in a second, never makes you alt-tab. Runs on any GPU. Join the early-access wave."
+>
+  <div class="ludus">
+    <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="scanlines" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <!-- Ludus himself — the main draw, animated -->
+        <div class="hero-face">
+          <div class="face-wrap">
+            <div class="glow" aria-hidden="true"></div>
+            <svg id="ludus-face" class="face" width="220" height="230" viewBox="-3 -7 22 23" shape-rendering="crispEdges" aria-label="Ludus">
+              <g class="body">
+                <rect x="11" y="0" width="1" height="1" fill="#ffd76e"></rect><rect x="11" y="1" width="1" height="2" fill="#1a0a2e"></rect><rect x="10" y="3" width="1" height="1" fill="#1a0a2e"></rect>
+                <rect x="4" y="1" width="8" height="1" fill="#7c3aed"></rect><rect x="3" y="2" width="1" height="1" fill="#7c3aed"></rect><rect x="12" y="2" width="1" height="1" fill="#7c3aed"></rect>
+                <rect x="2" y="3" width="1" height="3" fill="#7c3aed"></rect><rect x="13" y="3" width="1" height="3" fill="#7c3aed"></rect>
+                <rect x="4" y="2" width="8" height="1" fill="#1a0a2e"></rect><rect x="3" y="3" width="1" height="10" fill="#1a0a2e"></rect><rect x="12" y="3" width="1" height="10" fill="#1a0a2e"></rect><rect x="4" y="13" width="8" height="1" fill="#1a0a2e"></rect>
+                <rect x="4" y="3" width="8" height="10" fill="#a855f7"></rect><rect x="4" y="3" width="3" height="1" fill="#c084fc"></rect><rect x="4" y="3" width="1" height="3" fill="#c084fc"></rect>
+                <rect x="1" y="6" width="2" height="3" fill="#c084fc"></rect><rect x="13" y="6" width="2" height="3" fill="#c084fc"></rect>
+                <rect x="1" y="6" width="2" height="1" fill="#1a0a2e" opacity="0.35"></rect><rect x="13" y="6" width="2" height="1" fill="#1a0a2e" opacity="0.35"></rect>
+                <rect x="4" y="5" width="8" height="4" fill="#1a0a2e"></rect>
+                <g class="eyes"><rect x="5" y="6" width="2" height="2" fill="#ffffff"></rect><rect x="9" y="6" width="2" height="2" fill="#ffffff"></rect></g>
+                <rect class="lid" x="4" y="5" width="8" height="3" fill="#1a0a2e"></rect>
+                <rect class="m-idle" x="6" y="10" width="4" height="1" fill="#1a0a2e"></rect>
+                <rect class="m-speak" x="6" y="10" width="4" height="2" fill="#ffd76e"></rect>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div id="pill" class="pill">▸ Limited spots this wave</div>
+        <h1 class="headline">Your headset finally has someone in it.</h1>
+        <p class="subhead">Sees your screen. Answers in a second. Never makes you alt-tab.</p>
+
+        <div id="join" class="cta-row">
+          <form id="join-form" class="join-form">
+            <input id="join-email" type="email" inputmode="email" autocomplete="email" class="join-input" placeholder="you@email.com" aria-label="Email" required />
+            <button id="join-btn" type="submit" class="rpg-btn">★ GET EARLY ACCESS</button>
+          </form>
+          <div id="joined" class="joined window" hidden>
+            <p class="joined-title" id="joined-title">★ You're in</p>
+            <p class="joined-body">Jump the line: every friend who joins with your link moves you up.</p>
+            <div class="ref-row">
+              <code id="ref-code" class="ref-code"></code>
+              <button id="ref-copy" type="button" class="rpg-btn small">COPY</button>
+            </div>
+          </div>
+          <p id="join-error" class="join-error" hidden></p>
+        </div>
+        <p class="hint">Free to install · Founders get a permanent exclusive cosmetic</p>
+
+        <div class="fairplay">🛡 FAIR-PLAY ON — reads your HUD only, never the enemy. It literally can't see them.</div>
+      </div>
+    </section>
+
+    <!-- ── Personas ─────────────────────────────────────────────────────── -->
+    <section class="section">
+      <p class="eyebrow">PICK YOUR PARTY MEMBER</p>
+      <h2 class="h2">Four buddies. One headset.</h2>
+      <div class="persona-grid">
+        <div class="window persona"><div class="persona-emoji">🕯️</div><p class="persona-name">Witness</p><p class="persona-vibe">Calm, precise resident expert. Never swears.</p><p class="persona-mains">Elden Ring · Dark Souls · Hollow Knight</p></div>
+        <div class="window persona"><div class="persona-emoji">🥊</div><p class="persona-name">Coach</p><p class="persona-vibe">Grizzled trainer. Tough love, off-meta tips.</p><p class="persona-mains">Valorant · CS2 · LoL · Marvel Rivals</p></div>
+        <div class="window persona"><div class="persona-emoji">📣</div><p class="persona-name">Hype</p><p class="persona-vibe">Golden-retriever sportscaster. Loses it on clutches.</p><p class="persona-mains">Fortnite · Apex · CoD · Rocket League</p></div>
+        <div class="window persona"><div class="persona-emoji">💀</div><p class="persona-name">Friend</p><p class="persona-vibe">Deadpan terminally-online menace. Roasts your deaths.</p><p class="persona-mains">Fortnite · GTA · Warzone · Helldivers</p></div>
+      </div>
+    </section>
+
+    <!-- ── Why it's different ───────────────────────────────────────────── -->
+    <section class="section">
+      <p class="eyebrow">EVERY CONTENDER IS A SLICE</p>
+      <h2 class="h2">This is the whole stack.</h2>
+      <div class="cap-grid">
+        <div class="window cap"><div class="cap-icon">🎮</div><div><p class="cap-title">Your whole library</p><p class="cap-body">Steam, Epic, Blizzard, Xbox — plus 20+ emulators (RetroArch, Dolphin, RPCS3, Yuzu).</p></div></div>
+        <div class="window cap"><div class="cap-icon">🖥️</div><div><p class="cap-title">Any GPU</p><p class="cap-body">Runs on whatever card you have — AMD, Intel or NVIDIA. Not RTX-locked.</p></div></div>
+        <div class="window cap"><div class="cap-icon">📖</div><div><p class="cap-title">Knows your game</p><p class="cap-body">Builds a per-game knowledge base on launch — real answers, not generic chat.</p></div></div>
+        <div class="window cap"><div class="cap-icon">🎙️</div><div><p class="cap-title">Hands-free</p><p class="cap-body">Say "Ludus" and talk mid-fight. Voice in, voice out, never alt-tab.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ── Founder magnet ───────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="window founder">
+        <div class="founder-badge">★ FOUNDER ★</div>
+        <h2 class="h2">Be one of the first in.</h2>
+        <p class="founder-body">The first wave become <b>Founders</b> — a permanent, genuinely exclusive cosmetic + badge that never gets minted again. Equip it once, keep it forever.</p>
+        <a href="#join" class="rpg-btn">CLAIM A FOUNDER SPOT</a>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+  .ludus {
+    --gold: #ffd76e; --navy-bg: #0a1024; --navy-fill-top: #16235e; --navy-fill-bot: #0a1234;
+    --royal: #2747c9; --bone: #dfe9ff; --parchment: #eef2ff; --ink: #0c1646;
+    background: radial-gradient(ellipse at 50% -10%, #1a2a6e 0%, var(--navy-bg) 60%);
+    color: var(--parchment); font-family: 'VT323', ui-monospace, monospace; font-size: 20px; line-height: 1.4; overflow-x: hidden;
+  }
+  .scanlines { position: absolute; inset: 0; pointer-events: none; opacity: .35; background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0,0,0,.25) 2px 4px); }
+
+  .hero { position: relative; padding: 4rem 1.25rem 3.5rem; text-align: center; }
+  .hero-inner { position: relative; max-width: 46rem; margin: 0 auto; }
+
+  .hero-face { display: flex; justify-content: center; margin: 0 auto 1.75rem; }
+  .face-wrap { position: relative; display: grid; place-items: center; }
+  .glow { position: absolute; inset: -22%; background: radial-gradient(circle at 50% 45%, rgba(168,85,247,.45) 0%, rgba(124,58,237,.18) 38%, transparent 68%); filter: blur(2px); animation: glow 3.6s ease-in-out infinite; }
+  @keyframes glow { 0%,100% { opacity:.65; transform:scale(1); } 50% { opacity:1; transform:scale(1.06); } }
+  .face { position: relative; display: block; image-rendering: pixelated; overflow: visible; }
+  .body { animation: bob 1.5s steps(2) infinite; }
+  @keyframes bob { 50% { transform: translateY(-1px); } }
+  .lid { transform: translateY(-4px); animation: blink 4.5s steps(1) infinite; }
+  @keyframes blink { 0%,92% { transform: translateY(-4px); } 93%,97% { transform: translateY(0); } 98%,100% { transform: translateY(-4px); } }
+  .m-speak { display: none; }
+  .is-speaking .m-idle { display: none; }
+  .is-speaking .m-speak { display: block; transform-box: fill-box; transform-origin: center 100%; animation: chatter .6s steps(6, jump-none) infinite; }
+  @keyframes chatter { 0%{transform:scaleY(.25);}16%{transform:scaleY(1);}33%{transform:scaleY(.5);}50%{transform:scaleY(1.4);}66%{transform:scaleY(.4);}83%{transform:scaleY(1.1);}100%{transform:scaleY(.25);} }
+
+  .pill { display: inline-block; font-family: 'Press Start 2P', monospace; font-size: 9px; color: var(--gold); border: 2px solid var(--gold); border-radius: 2px; padding: .5rem .75rem; margin-bottom: 1.75rem; letter-spacing: .05em; box-shadow: 0 0 12px rgba(255,215,110,.25); }
+  .headline { font-family: 'Press Start 2P', monospace; font-size: clamp(1.4rem, 4.5vw, 2.6rem); color: var(--gold); line-height: 1.35; margin: 0 0 1.5rem; text-shadow: 0 3px 0 #7a4a00, 0 0 24px rgba(255,215,110,.3); }
+  .subhead { font-size: 1.5rem; color: var(--bone); max-width: 32rem; margin: 0 auto 2rem; }
+
+  .cta-row { margin-bottom: .75rem; }
+  .join-form { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+  .join-input { font-family: 'VT323', monospace; font-size: 1.25rem; color: var(--parchment); background: rgba(10,18,52,.85); border: 3px solid var(--bone); border-radius: 2px; padding: .85rem 1rem; min-width: 16rem; outline: none; }
+  .join-input::placeholder { color: #7e8fc0; }
+  .join-input:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(255,215,110,.35); }
+  .hint { font-size: 1.15rem; color: #9fb0e0; }
+  .join-error { color: #ff9b9b; font-size: 1.15rem; margin: .8rem 0 0; }
+
+  .rpg-btn { display: inline-block; font-family: 'Press Start 2P', monospace; font-size: 12px; text-decoration: none; cursor: pointer; color: var(--ink); background: linear-gradient(#ffe19a, var(--gold)); border: 3px solid #0c1646; border-radius: 2px; padding: 1rem 1.5rem; letter-spacing: .03em; box-shadow: 0 4px 0 #b9821c, 0 0 18px rgba(255,215,110,.35); transition: transform .08s ease, box-shadow .08s ease; }
+  .rpg-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 #b9821c, 0 0 26px rgba(255,215,110,.55); }
+  .rpg-btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #b9821c; }
+  .rpg-btn:disabled { opacity: .65; cursor: default; transform: none; }
+  .rpg-btn.small { font-size: 9px; padding: .7rem .9rem; }
+
+  .fairplay { margin: 2.5rem auto 0; max-width: 34rem; font-size: 1.15rem; color: #bfe6c8; border: 2px solid rgba(124,252,154,.4); border-radius: 4px; padding: .65rem 1rem; background: rgba(124,252,154,.06); }
+
+  .section { max-width: 60rem; margin: 0 auto; padding: 3rem 1.25rem; text-align: center; }
+  .eyebrow { font-family: 'Press Start 2P', monospace; font-size: 9px; letter-spacing: .12em; color: var(--gold); margin: 0 0 .9rem; }
+  .h2 { font-family: 'Press Start 2P', monospace; font-size: clamp(1rem, 2.6vw, 1.5rem); color: var(--parchment); line-height: 1.4; margin: 0 0 2rem; }
+
+  .window { background: linear-gradient(var(--navy-fill-top), var(--navy-fill-bot)); border: 3px solid var(--bone); box-shadow: inset 0 0 0 3px var(--royal), 0 6px 0 #060a26; border-radius: 3px; padding: 1.5rem; text-align: left; }
+
+  .persona-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  @media (max-width: 820px) { .persona-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 460px) { .persona-grid { grid-template-columns: 1fr; } }
+  .persona { text-align: center; }
+  .persona-emoji { font-size: 2rem; margin-bottom: .5rem; }
+  .persona-name { font-family: 'Press Start 2P', monospace; font-size: 11px; color: var(--gold); margin: 0 0 .6rem; }
+  .persona-vibe { font-size: 1.15rem; color: var(--bone); margin: 0 0 .6rem; line-height: 1.3; }
+  .persona-mains { font-size: 1rem; color: #8aa0d8; margin: 0; }
+
+  .cap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (max-width: 640px) { .cap-grid { grid-template-columns: 1fr; } }
+  .cap { display: flex; gap: .9rem; align-items: flex-start; }
+  .cap-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .cap-title { font-family: 'Press Start 2P', monospace; font-size: 10px; color: var(--gold); margin: .2rem 0 .5rem; }
+  .cap-body { font-size: 1.2rem; color: var(--bone); margin: 0; line-height: 1.35; }
+
+  .founder { text-align: center; border-color: var(--gold); box-shadow: inset 0 0 0 3px #b9821c, 0 6px 0 #060a26, 0 0 30px rgba(255,215,110,.2); }
+  .founder-badge { font-family: 'Press Start 2P', monospace; font-size: 11px; color: var(--gold); margin-bottom: 1rem; letter-spacing: .1em; }
+  .founder-body { font-size: 1.25rem; color: var(--bone); max-width: 34rem; margin: 0 auto 1.5rem; }
+
+  .joined { max-width: 32rem; margin: 0 auto; text-align: center; border-color: var(--gold); }
+  .joined-title { font-family: 'Press Start 2P', monospace; font-size: 12px; color: var(--gold); margin: 0 0 .8rem; }
+  .joined-body { font-size: 1.2rem; color: var(--bone); margin: 0 0 1rem; }
+  .ref-row { display: flex; gap: .5rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+  .ref-code { font-family: 'VT323', monospace; font-size: 1.1rem; color: var(--gold); background: rgba(0,0,0,.3); padding: .5rem .7rem; border-radius: 2px; word-break: break-all; }
+
+  @media (prefers-reduced-motion: reduce) { .glow, .body, .lid, .is-speaking .body { animation: none; } }
+</style>
+
+<script>
+  const API = 'https://zugabot.ai';
+  const ref = new URLSearchParams(location.search).get('ref') || '';
+
+  // Auto-greet so the face feels alive (no audio on the page to drive the mouth).
+  const face = document.getElementById('ludus-face');
+  if (face && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setInterval(() => { face.classList.add('is-speaking'); setTimeout(() => face.classList.remove('is-speaking'), 1400); }, 5200);
+  }
+
+  // Scarcity counter — real number from the backend; silent on failure.
+  const pill = document.getElementById('pill');
+  fetch(`${API}/api/ludus/waitlist/stats`).then(r => r.ok ? r.json() : null).then(d => {
+    if (d && typeof d.spots_left === 'number' && pill) pill.textContent = `▸ ${d.spots_left} spots left this wave`;
+  }).catch(() => {});
+
+  // Waitlist signup.
+  const form = document.getElementById('join-form') as HTMLFormElement | null;
+  const emailEl = document.getElementById('join-email') as HTMLInputElement | null;
+  const btn = document.getElementById('join-btn') as HTMLButtonElement | null;
+  const errEl = document.getElementById('join-error');
+  const joinedEl = document.getElementById('joined');
+  const joinedTitle = document.getElementById('joined-title');
+  const refCode = document.getElementById('ref-code');
+  const refCopy = document.getElementById('ref-copy');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = (emailEl?.value || '').trim();
+    if (!email.includes('@')) { if (errEl) { errEl.textContent = 'Enter a valid email'; errEl.hidden = false; } return; }
+    if (btn) { btn.disabled = true; btn.textContent = 'JOINING…'; }
+    if (errEl) errEl.hidden = true;
+    try {
+      const res = await fetch(`${API}/api/ludus/waitlist`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, referral_code: ref || undefined }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) { if (errEl) { errEl.textContent = data.detail || 'Something went wrong — try again.'; errEl.hidden = false; } return; }
+      if (form) form.hidden = true;
+      if (joinedTitle) joinedTitle.textContent = `★ You're in — spot #${data.position}`;
+      const url = `${location.origin}/ludus?ref=${data.referral_code}`;
+      if (refCode) refCode.textContent = url;
+      if (joinedEl) joinedEl.hidden = false;
+      refCopy?.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(url); if (refCopy) { refCopy.textContent = 'COPIED'; setTimeout(() => { refCopy.textContent = 'COPY'; }, 1600); } } catch {}
+      });
+    } catch {
+      if (errEl) { errEl.textContent = 'Network error — try again.'; errEl.hidden = false; }
+    } finally {
+      if (btn) { btn.disabled = false; btn.textContent = '★ GET EARLY ACCESS'; }
+    }
+  });
+</script>

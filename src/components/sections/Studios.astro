@@ -3,51 +3,156 @@ import Section from '../Section.astro';
 import Container from '../Container.astro';
 import Eyebrow from '../Eyebrow.astro';
 
-const tiles = [
-  {
-    name: 'Spiritus',
-    body: 'A wellness companion that tracks habits, mood, and fitness — with an AI coach that actually pays attention.',
-    status: 'Launching',
-  },
-  {
-    name: 'Ludus — Gaming Companion',
-    body: 'A real-time overlay for streamers and competitive gamers — AI-driven moments, overlays you don’t have to babysit.',
-    status: 'Launching',
-  },
-  {
-    name: 'More products soon',
-    body: 'A growing pipeline across health, trading, code, and creative tools. Built in the open.',
-    status: 'In build',
-  },
-];
+// Product line. Ludus is the featured product (large card, links to /ludus);
+// Spiritus is the second. Each card shows its mascot (self-contained SVG/CSS
+// ports of the real app mascots) and the mascot ANIMATES ON HOVER.
 ---
 
 <Section variant="muted" id="what">
   <Container>
     <div data-reveal="left">
-    <div class="max-w-narrow">
-      <Eyebrow>Shipping now</Eyebrow>
-      <h2 class="mt-6 text-3xl font-semibold tracking-tight leading-[1.15] text-ink-100 sm:text-4xl">
-        The product line for the agent era.
-      </h2>
-      <p class="mt-6 leading-relaxed text-ink-300">
-        Two live today. Many in the pipeline. Each one an opinionated bet on what software looks like when AI is a first-class participant — not a feature bolted onto something else.
-      </p>
-    </div>
+      <div class="max-w-narrow">
+        <Eyebrow>Shipping now</Eyebrow>
+        <h2 class="mt-6 text-3xl font-semibold tracking-tight leading-[1.15] text-ink-100 sm:text-4xl">
+          The product line for the agent era.
+        </h2>
+        <p class="mt-6 leading-relaxed text-ink-300">
+          Two live today, many in the pipeline. Each one an opinionated bet on what software looks like when AI is a first-class participant — not a feature bolted onto something else.
+        </p>
+      </div>
 
-    <ul class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {tiles.map((tile) => (
-        <li class="studio-tile rounded-lg border border-rule bg-ink-950 p-6">
-          <div class="flex items-start justify-between gap-4">
-            <h3 class="text-base font-semibold text-ink-100">{tile.name}</h3>
-            <span class="rounded-full border border-rule px-2 py-0.5 text-[10px] uppercase tracking-wider text-ink-400">
-              {tile.status}
-            </span>
+      <div class="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <!-- ── Ludus — featured (spans 2 cols) ───────────────────────────── -->
+        <a href="/ludus" class="product-card product-card--ludus group lg:col-span-2" aria-label="Ludus — the AI buddy in your headset">
+          <div class="product-mascot">
+            <div class="ludus-face-wrap">
+              <div class="ludus-glow" aria-hidden="true"></div>
+              <svg class="ludus-face" width="120" height="126" viewBox="-3 -7 22 23" shape-rendering="crispEdges" aria-hidden="true">
+                <g class="lf-body">
+                  <rect x="11" y="0" width="1" height="1" fill="#ffd76e"></rect><rect x="11" y="1" width="1" height="2" fill="#1a0a2e"></rect><rect x="10" y="3" width="1" height="1" fill="#1a0a2e"></rect>
+                  <rect x="4" y="1" width="8" height="1" fill="#7c3aed"></rect><rect x="3" y="2" width="1" height="1" fill="#7c3aed"></rect><rect x="12" y="2" width="1" height="1" fill="#7c3aed"></rect>
+                  <rect x="2" y="3" width="1" height="3" fill="#7c3aed"></rect><rect x="13" y="3" width="1" height="3" fill="#7c3aed"></rect>
+                  <rect x="4" y="2" width="8" height="1" fill="#1a0a2e"></rect><rect x="3" y="3" width="1" height="10" fill="#1a0a2e"></rect><rect x="12" y="3" width="1" height="10" fill="#1a0a2e"></rect><rect x="4" y="13" width="8" height="1" fill="#1a0a2e"></rect>
+                  <rect x="4" y="3" width="8" height="10" fill="#a855f7"></rect><rect x="4" y="3" width="3" height="1" fill="#c084fc"></rect><rect x="4" y="3" width="1" height="3" fill="#c084fc"></rect>
+                  <rect x="1" y="6" width="2" height="3" fill="#c084fc"></rect><rect x="13" y="6" width="2" height="3" fill="#c084fc"></rect>
+                  <rect x="4" y="5" width="8" height="4" fill="#1a0a2e"></rect>
+                  <rect x="5" y="6" width="2" height="2" fill="#ffffff"></rect><rect x="9" y="6" width="2" height="2" fill="#ffffff"></rect>
+                  <rect class="lf-lid" x="4" y="5" width="8" height="3" fill="#1a0a2e"></rect>
+                  <rect class="lf-idle" x="6" y="10" width="4" height="1" fill="#1a0a2e"></rect>
+                  <rect class="lf-speak" x="6" y="10" width="4" height="2" fill="#ffd76e"></rect>
+                </g>
+              </svg>
+            </div>
           </div>
-          <p class="mt-3 text-sm text-ink-400">{tile.body}</p>
-        </li>
-      ))}
-    </ul>
+          <div class="product-body">
+            <div class="product-head">
+              <h3 class="product-name">Ludus</h3>
+              <span class="product-status">Launching</span>
+            </div>
+            <p class="product-tag">The AI buddy in your headset — sees your screen, answers in a second, never makes you alt-tab. Runs on any GPU.</p>
+            <span class="product-cta">Join early access →</span>
+          </div>
+        </a>
+
+        <!-- ── Spiritus ──────────────────────────────────────────────────── -->
+        <div class="product-card product-card--spiritus group">
+          <div class="product-mascot">
+            <div class="wisp" aria-hidden="true">
+              <div class="wisp-aura"></div>
+              <div class="wisp-core">
+                <svg class="wisp-face" viewBox="-24 -16 48 32" fill="none">
+                  <g stroke="rgb(26 18 22 / .88)" stroke-width="3" stroke-linecap="round" fill="none">
+                    <path d="M -11 0 Q -8 4 -5 0" />
+                    <path d="M 5 0 Q 8 4 11 0" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="product-body">
+            <div class="product-head">
+              <h3 class="product-name">Spiritus</h3>
+              <span class="product-status">Launching</span>
+            </div>
+            <p class="product-tag">A wellness companion that tracks habits, mood, and fitness — with an AI coach that actually pays attention.</p>
+            <span class="product-cta product-cta--soon">Coming soon</span>
+          </div>
+        </div>
+
+        <!-- ── More soon ─────────────────────────────────────────────────── -->
+        <div class="product-card product-card--more">
+          <div class="product-body">
+            <div class="product-head">
+              <h3 class="product-name">More products soon</h3>
+              <span class="product-status">In build</span>
+            </div>
+            <p class="product-tag">A growing pipeline across health, trading, code, and creative tools. Built in the open.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </Container>
 </Section>
+
+<style>
+  .product-card {
+    display: flex; flex-direction: column; gap: 1.25rem;
+    border: 1px solid var(--color-rule, rgb(255 255 255 / .08));
+    border-radius: 0.6rem;
+    background: var(--color-ink-950, #0a0a0b);
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+  }
+  a.product-card:hover { border-color: rgb(168 85 247 / .55); transform: translateY(-2px); box-shadow: 0 12px 32px rgb(0 0 0 / .35); }
+
+  .product-card--ludus { background: radial-gradient(ellipse at 18% 0%, rgb(124 58 237 / .14), transparent 60%), var(--color-ink-950, #0a0a0b); flex-direction: row; align-items: center; gap: 1.75rem; }
+  .product-card--spiritus { background: radial-gradient(ellipse at 18% 0%, rgb(251 113 133 / .12), transparent 60%), var(--color-ink-950, #0a0a0b); }
+  @media (max-width: 880px) { .product-card--ludus { flex-direction: column; align-items: stretch; } }
+
+  .product-mascot { display: grid; place-items: center; flex-shrink: 0; min-height: 132px; }
+  .product-card--ludus .product-mascot { width: 150px; }
+
+  .product-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .product-name { font-size: 1.05rem; font-weight: 600; color: var(--color-ink-100, #f4f4f5); margin: 0; }
+  .product-card--ludus .product-name { font-size: 1.3rem; }
+  .product-status { border: 1px solid var(--color-rule, rgb(255 255 255 / .12)); border-radius: 999px; padding: .1rem .55rem; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--color-ink-400, #a1a1aa); }
+  .product-tag { margin: .75rem 0 0; font-size: .9rem; line-height: 1.5; color: var(--color-ink-400, #a1a1aa); }
+  .product-cta { display: inline-block; margin-top: 1rem; font-size: .85rem; font-weight: 600; color: #c084fc; }
+  .product-cta--soon { color: var(--color-ink-400, #a1a1aa); }
+
+  /* ── Ludus pixel face mascot ──────────────────────────────────────── */
+  .ludus-face-wrap { position: relative; display: grid; place-items: center; }
+  .ludus-glow { position: absolute; inset: -28%; background: radial-gradient(circle at 50% 45%, rgb(168 85 247 / .4) 0%, rgb(124 58 237 / .15) 40%, transparent 70%); opacity: .55; transition: opacity .25s ease; }
+  .ludus-face { display: block; image-rendering: pixelated; overflow: visible; }
+  .lf-lid { transform: translateY(-4px); }
+  .lf-speak { display: none; }
+  /* idle = calm; HOVER brings him to life: bob + blink + greet chatter + glow */
+  .group:hover .ludus-glow { opacity: 1; }
+  .group:hover .lf-body { animation: lf-bob 1.5s steps(2) infinite; }
+  .group:hover .lf-lid { animation: lf-blink 2.6s steps(1) infinite; }
+  .group:hover .lf-idle { display: none; }
+  .group:hover .lf-speak { display: block; transform-box: fill-box; transform-origin: center 100%; animation: lf-chatter .6s steps(6, jump-none) infinite; }
+  @keyframes lf-bob { 50% { transform: translateY(-1px); } }
+  @keyframes lf-blink { 0%, 88% { transform: translateY(-4px); } 90%, 95% { transform: translateY(0); } 97%, 100% { transform: translateY(-4px); } }
+  @keyframes lf-chatter { 0%{transform:scaleY(.25);}16%{transform:scaleY(1);}33%{transform:scaleY(.5);}50%{transform:scaleY(1.4);}66%{transform:scaleY(.4);}83%{transform:scaleY(1.1);}100%{transform:scaleY(.25);} }
+
+  /* ── Spiritus wisp mascot (simplified static port) ────────────────── */
+  .wisp { position: relative; width: 92px; height: 92px; display: grid; place-items: center; }
+  .wisp-aura { position: absolute; inset: -55%; border-radius: 50%; background: radial-gradient(circle at 50% 50%, rgb(251 113 133 / .35) 0%, rgb(251 113 133 / .08) 40%, transparent 72%); opacity: .8; transition: opacity .25s ease; }
+  .wisp-core { position: relative; width: 92px; height: 92px; border-radius: 50%; display: grid; place-items: center;
+    background: radial-gradient(circle at 38% 32%, #fff 0%, rgb(255 255 255 / .85) 14%, transparent 34%), radial-gradient(circle at 50% 50%, #fda4af 0%, #fb7185 46%, #e11d48 100%);
+    box-shadow: 0 0 28px rgb(251 113 133 / .5), inset 0 0 22px rgb(255 255 255 / .25); }
+  .wisp-face { width: 64%; height: 44%; overflow: visible; }
+  /* idle = gentle float; HOVER = brighter aura breathe + livelier bob */
+  .wisp { animation: wisp-float 5.5s ease-in-out infinite; }
+  .group:hover .wisp-aura { opacity: 1; animation: wisp-breathe 2.6s ease-in-out infinite; }
+  .group:hover .wisp { animation: wisp-bounce 1.4s ease-in-out infinite; }
+  @keyframes wisp-float { 0%,100% { transform: translateY(-3%); } 50% { transform: translateY(4%); } }
+  @keyframes wisp-bounce { 0%,100% { transform: translateY(5%); } 45% { transform: translateY(-8%); } 62% { transform: translateY(-4%); } }
+  @keyframes wisp-breathe { 0%,100% { opacity: .8; } 50% { opacity: 1; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wisp, .group:hover .lf-body, .group:hover .lf-lid, .group:hover .lf-speak, .group:hover .wisp, .group:hover .wisp-aura { animation: none; }
+  }
+</style>
