@@ -52,12 +52,13 @@
   --color-ink-100: oklch(0.96 0.002 280);
   --color-ink-50:  oklch(0.99 0.001 280);
 
-  /* Single accent — cool steel-cyan, AI-adjacent without being cliché.
-     Picked to contrast against ZugaApp amber so the two brands read as
-     distinct identities. [MIKE-PENDING: confirm or pick a different hue] */
-  --color-accent-400: oklch(0.78 0.08 220);
-  --color-accent-500: oklch(0.68 0.10 220);
-  --color-accent-600: oklch(0.58 0.12 220);
+  /* Single accent — acid lime. Unified 2026-06-30: corp landing now shares
+     the zugabot.ai product identity (one Zuga green) instead of the old
+     cyan/lime split. Base = lime-400 #a3e635; foreground on lime MUST be
+     dark (--color-ink-950) for WCAG contrast. */
+  --color-accent-400: #bef264;
+  --color-accent-500: #a3e635;
+  --color-accent-600: #84cc16;
 
   /* Borders */
   --color-rule-strong: oklch(0.28 0.008 280);
@@ -94,7 +95,7 @@ body {
 /* Selection color — small detail, reads as "considered" */
 ::selection {
   background-color: var(--color-accent-600);
-  color: var(--color-ink-50);
+  color: var(--color-ink-950);
 }
 
 /* Smooth anchor scrolling — feels far more polished on nav clicks */
