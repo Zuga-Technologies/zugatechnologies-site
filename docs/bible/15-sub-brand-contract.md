@@ -93,7 +93,7 @@ A minimal valid profile (no overrides, consuming defaults as-is):
 ```css
 /* @zuga-technologies/design-tokens — profiles/overlay-gamer.css
  * Used by: ZugaGamerOverlay (in-game HUD)
- * Accent: master cyan (no override)
+ * Accent: master lime (no override)
  */
 
 /* No overrides — consumes Tier 2 defaults as-is */
@@ -108,12 +108,12 @@ A profile with a real accent override:
  */
 
 /* WHY: ZugaTrader uses emerald as its accent family per the markets color assignment
-   in the design bible §4. Emerald is distinct from master cyan and communicates
+   in the design bible §4. Emerald is distinct from master lime and communicates
    the financial/growth context of a trading product. */
 --accent-brand:        var(--color-emerald-700);
 
 /* WHY: Subtle tint for trader-specific chip and badge backgrounds.
-   Emerald-100 at the same lightness level as cyan-100 in the master profile. */
+   Emerald-100 at the same lightness level as lime-100 in the master profile. */
 --accent-brand-subtle: var(--color-emerald-100);
 
 /* WHY: Strong shade used for hover/focus pressed state on accent surfaces.

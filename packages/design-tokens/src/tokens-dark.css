@@ -3,8 +3,9 @@
  * Tier 1 primitives are unchanged (raw values stay constant).
  * Apply via: <html data-theme="dark"> OR @media (prefers-color-scheme: dark)
  *
- * After P0-T09 contrast fixes: accent-brand is cyan-700 (AA-safe on white).
- * On dark surfaces, accent-brand stays cyan-700 — sufficient contrast on slate-900.
+ * Master accent unified to lime 2026-06-30 (ADR-0004): accent-brand is lime-400
+ * #a3e635 with a DARK foreground (#0a0a0a) — clears AAA on both light and dark.
+ * Links go bright lime (lime-400) on dark; cyan is retained only for feedback-info.
  */
 
 [data-theme="dark"], html.dark {
@@ -15,7 +16,7 @@
   --surface-tertiary:  var(--color-slate-700);
   --surface-inverse:   var(--color-slate-50);
   --surface-overlay:   rgba(2, 6, 23, 0.7);
-  --surface-brand:     var(--color-cyan-950);
+  --surface-brand:     var(--color-lime-950);
 
   /* TEXT — invert primary/secondary/tertiary; link uses lighter stop for AA on dark */
   --text-primary:    var(--color-slate-50);
@@ -23,8 +24,8 @@
   --text-tertiary:   var(--color-slate-400);
   --text-muted:      var(--color-slate-500);
   --text-inverse:    var(--color-slate-900);
-  --text-link:       var(--color-cyan-400);
-  --text-link-hover: var(--color-cyan-300);
+  --text-link:       var(--color-lime-400);
+  --text-link-hover: var(--color-lime-300);
 
   /* BORDER — flip subtle/default/strong scale */
   --border-subtle:  var(--color-slate-800);
@@ -54,15 +55,15 @@
     --surface-tertiary:  var(--color-slate-700);
     --surface-inverse:   var(--color-slate-50);
     --surface-overlay:   rgba(2, 6, 23, 0.7);
-    --surface-brand:     var(--color-cyan-950);
+    --surface-brand:     var(--color-lime-950);
 
     --text-primary:    var(--color-slate-50);
     --text-secondary:  var(--color-slate-300);
     --text-tertiary:   var(--color-slate-400);
     --text-muted:      var(--color-slate-500);
     --text-inverse:    var(--color-slate-900);
-    --text-link:       var(--color-cyan-400);
-    --text-link-hover: var(--color-cyan-300);
+    --text-link:       var(--color-lime-400);
+    --text-link-hover: var(--color-lime-300);
 
     --border-subtle:  var(--color-slate-800);
     --border-default: var(--color-slate-700);

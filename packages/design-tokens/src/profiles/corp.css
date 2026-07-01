@@ -1,6 +1,7 @@
 /* @zuga-technologies/design-tokens — profiles/corp.css
  * Used by: zugatechnologies-site (corp marketing landing + bible)
- * Accent: master cyan (no override — corp identity uses master directly)
+ * Accent: master lime #a3e635 (no override — corp identity uses master directly;
+ *         master unified cyan->lime 2026-06-30, see ADR-0004)
  *
  * Even though there are no token overrides, this file exists so consumers
  * importing this profile can declare intent ("I am the corp surface") for

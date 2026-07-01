@@ -38,9 +38,29 @@ Status: Antonio-final. No hue checkpoint — slate is the system neutral, not a 
 
 ---
 
-## 4.2 Cyan — master Zuga accent
+## 4.2 Lime — master Zuga accent
 
-Role: primary brand accent. Hue confirm in §5 (checkpoint h01). Default semantic stop is cyan-700 (`#0e7490`) for WCAG AA compliance on white surfaces; cyan-500 (`#06b6d4`) is the visual identity reference stop used in wordmarks and marketing on dark surfaces.
+Role: **the master Zuga brand accent** (unified 2026-06-30; see ADR-0004). Lime is light-forward — the identity stop lime-400 (`#a3e635`) is ALSO the functional stop, always paired with a DARK foreground (`#0a0a0a`). A filled lime element with dark text clears WCAG AAA on both light and dark surfaces. Do NOT use lime-400 as text on a light surface; use lime-700 (`#4d7c0f`) for accent text on light. Renders on: corp landing + zugabot.ai product CTAs, wordmark on dark, primary buttons, focus rings, links.
+
+| Stop | Hex |
+|------|-----|
+| 50   | `#f7fee7` |
+| 100  | `#ecfccb` |
+| 200  | `#d9f99d` |
+| 300  | `#bef264` |
+| 400  | `#a3e635` |
+| 500  | `#84cc16` |
+| 600  | `#65a30d` |
+| 700  | `#4d7c0f` |
+| 800  | `#3f6212` |
+| 900  | `#365314` |
+| 950  | `#1a2e05` |
+
+Status: Antonio-final (master accent, 2026-06-30). Supersedes the former cyan master (§4.2.1; ADR-0002 → ADR-0004).
+
+### 4.2.1 Cyan — feedback / info hue (former master)
+
+Role: `--feedback-info` only. Cyan was the master Zuga accent until 2026-06-30, when the brand unified to lime to match the zugabot.ai product identity. The cyan ramp is retained as a Tier-1 primitive for the info/feedback state; it is no longer a brand accent. cyan-500 (`#06b6d4`) still must not be used as text on white (fails AA — a raw-ramp contrast fact independent of role).
 
 | Stop | Hex |
 |------|-----|
@@ -56,7 +76,7 @@ Role: primary brand accent. Hue confirm in §5 (checkpoint h01). Default semanti
 | 900  | `#164e63` |
 | 950  | `#083344` |
 
-Status: hue family Antonio-final; specific accent-stop confirmed in §5 h01.
+Status: retained primitive; feedback-info role Antonio-final.
 
 ---
 
@@ -314,14 +334,14 @@ Light mode                     Dark mode
 --surface-secondary slate-100  slate-800
 --surface-tertiary  slate-200  slate-700
 --surface-inverse   slate-900  slate-50
---surface-brand     cyan-50    cyan-950
+--surface-brand     lime-50    lime-950
 ─────────────────────────────────────────────────────
 --text-primary     slate-900   slate-50
 --text-secondary   slate-700   slate-300
 --text-tertiary    slate-500   slate-400
 --text-muted       slate-400   slate-500
---text-link        cyan-700    cyan-400
---text-link-hover  cyan-800    cyan-300
+--text-link        lime-700    lime-400
+--text-link-hover  lime-800    lime-300
 ─────────────────────────────────────────────────────
 --border-subtle    slate-200   slate-800
 --border-default   slate-300   slate-700

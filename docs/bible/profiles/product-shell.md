@@ -2,8 +2,8 @@
 profile: product-shell
 consumer: ZugaApp
 family: master
-accentRamp: cyan
-rationale: "ZugaApp is the product shell that hosts all studios; master cyan provides neutral brand continuity across all studio contexts."
+accentRamp: lime
+rationale: "ZugaApp is the product shell that hosts all studios; master lime provides neutral brand continuity across all studio contexts."
 deviations: []
 ---
 
@@ -15,7 +15,7 @@ ZugaApp is the product shell — the navigation frame, auth layer, sidebar, and 
 
 ## Accent rationale
 
-The shell earns no accent override — it inherits master cyan directly. Because the shell hosts wildly different studio accents (mint, emerald, violet, blue, sky, magenta, orange, red), its own accent must not compete. Master cyan is the one hue that is neither a studio-specific signal nor a feedback-reserved color. It reads as "home base." See `acc02` in §5.
+The shell earns no accent override — it inherits master lime directly. Because the shell hosts wildly different studio accents (mint, emerald, violet, blue, sky, magenta, orange, red), its own accent must not compete. Master lime is the one hue that is neither a studio-specific signal nor a feedback-reserved color. It reads as "home base." See `acc02` in §5.
 
 ## Deviations from §15 whitelist
 

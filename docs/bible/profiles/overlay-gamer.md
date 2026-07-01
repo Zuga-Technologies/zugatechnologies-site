@@ -2,8 +2,8 @@
 profile: overlay-gamer
 consumer: ZugaGamerOverlay
 family: master
-accentRamp: cyan
-rationale: "ZugaGamerOverlay is the gaming HUD; master cyan keeps it neutral so it doesn't fight game UI accents which vary by title."
+accentRamp: lime
+rationale: "ZugaGamerOverlay is the gaming HUD; master lime keeps it neutral so it doesn't fight game UI accents which vary by title."
 deviations: []
 ---
 
@@ -15,7 +15,7 @@ ZugaGamerOverlay users are active gamers with the overlay running on top of a li
 
 ## Accent rationale
 
-ZugaGamerOverlay inherits master cyan — it earns no override. Game UI accents vary dramatically by title: a shooter uses red and black; a fantasy RPG might use gold and purple. Any strong Zuga accent would risk clashing with the game's own palette. Master cyan is the least opinionated anchor and the most likely to read as "overlay chrome" rather than "game element." See `acc17` in §5.
+ZugaGamerOverlay inherits master lime — it earns no override. Game UI accents vary dramatically by title: a shooter uses red and black; a fantasy RPG might use gold and purple. Any strong Zuga accent would risk clashing with the game's own palette. Master lime is the least opinionated anchor and the most likely to read as "overlay chrome" rather than "game element." See `acc17` in §5.
 
 ## Deviations from §15 whitelist
 

@@ -2,8 +2,8 @@
 profile: corp
 consumer: zugatechnologies-site
 family: master
-accentRamp: cyan
-rationale: "Corp marketing surface uses the master cyan directly — no override; the master accent IS the corp identity."
+accentRamp: lime
+rationale: "Corp marketing surface uses the master lime directly — no override; the master accent IS the corp identity."
 deviations: []
 ---
 
@@ -15,7 +15,7 @@ The corp surface is zugatechnologies-site — the marketing landing, the design 
 
 ## Accent rationale
 
-Corp earns no accent override — the master cyan IS the corp identity. Zuga Technologies' top-level brand color is master cyan, so the corp surface is the one place where using the default is not a fallback; it is the correct answer. Every sub-brand accent descends from or departs from this. See `acc01` in §5.
+Corp earns no accent override — the master lime IS the corp identity. Zuga Technologies' top-level brand color is master lime, so the corp surface is the one place where using the default is not a fallback; it is the correct answer. Every sub-brand accent descends from or departs from this. See `acc01` in §5.
 
 ## Deviations from §15 whitelist
 

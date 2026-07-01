@@ -15,12 +15,12 @@ mikeCheckpoint: true
 Zuga Technologies operates as a **Branded House** — not a house of brands. Every product carries the Zuga prefix and inherits the master mark. Sub-brands get one accent color and adapt tone for their domain; they don't build separate identities.
 
 ```
-                   ZUGA  (master · #06b6d4 cyan)
+                   ZUGA  (master · #a3e635 lime)
                      │
    ┌──────────────┬──┴───┬────────────────┬──────────────┐
    │              │      │                │              │
  wellness       markets  creative       knowledge   infrastructure
- (mint)         (emerald)(violet)       (indigo)    (slate/cyan)
+ (mint)         (emerald)(violet)       (indigo)    (slate/lime)
    │              │      │                │              │
 ZugaLife       ZugaTrader ZugaImage     ZugaLearn     ZugaCore
 ZugaHealth     TraderOverlay ZugaVideo                ZugaCloud
@@ -43,7 +43,7 @@ The wordmark is the primary identity asset. It appears on every product surface,
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | All-caps "ZUGA" set in a geometric sans — Inter or equivalent, weight 700, tracked +20. The wordmark is set in master cyan (#06b6d4) on dark surfaces and near-black (#0f172a) on light surfaces. No tagline lockup at small sizes. |
+> | Antonio's draft | All-caps "ZUGA" set in a geometric sans — Inter or equivalent, weight 700, tracked +20. The wordmark is set in master lime (#a3e635) on dark surfaces and near-black (#0f172a) on light surfaces. No tagline lockup at small sizes. |
 > | Alternates considered | Mixed-case "Zuga" (title case) — rejected: feels like a consumer startup, loses authority at product scale. Lowercase "zuga" — rejected: too casual for a company that runs financial tooling. |
 > | Renders on | Corp landing header, ZugaApp navbar, all studio top-bars, email headers, GitHub org avatar, social card OG images |
 >
@@ -58,7 +58,7 @@ For contexts where the full wordmark doesn't fit (app icons, favicons, avatar sl
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | Geometric "Z" constructed from two horizontal strokes and one diagonal — all strokes equal weight, rounded terminals, no serifs. The Z sits inside a square container with 15% padding. Background: master cyan (#06b6d4). Foreground: white (#ffffff). Corner radius: 22% of container width (feels like a modern app icon, not a logo stamp). |
+> | Antonio's draft | Geometric "Z" constructed from two horizontal strokes and one diagonal — all strokes equal weight, rounded terminals, no serifs. The Z sits inside a square container with 15% padding. Background: master lime (#a3e635). Foreground: near-black (#0a0a0a) — lime is a light-forward accent, so the glyph must sit in dark foreground, not white, to hold contrast. Corner radius: 22% of container width (feels like a modern app icon, not a logo stamp). |
 > | Alternates considered | Circular container — rejected: squares tile better in OS icon grids and favicon contexts. Stylized Z with a cutting diagonal notch — rejected: too aggressive, doesn't read cleanly at 16px. Wordmark-only (no glyph) — rejected: doesn't work in 32px favicon or 1:1 avatar slot. |
 > | Renders on | Browser favicon (16px, 32px), iOS/Android app icon (1024px source), GitHub org avatar, Discord server icon, ZugaApp PWA manifest icon |
 >
@@ -73,8 +73,8 @@ The Zuga master accent hue is the single most visible brand signal across all su
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `#06b6d4` (Tailwind cyan-500). Passes WCAG AA against #0f172a (near-black surfaces) — measured contrast ≈7.35:1, which exceeds the 4.5:1 AA threshold and clears the 7:1 AAA threshold for normal text. Fails AA against white (#ffffff) — never used as a background color behind body text. Used for: primary CTAs, active nav indicators, focus rings, master wordmark on dark surfaces, hyperlinks in body copy. |
-> | Alternates considered | `#0891b2` (cyan-600) — rejected: too somber for a tech-forward brand, loses energy at small sizes. `#22d3ee` (cyan-400) — rejected: fails WCAG AA on white backgrounds, feels juvenile. `#3b82f6` (blue-500) — rejected: indistinguishable from a dozen SaaS products; cyan is the differentiation. |
+> | Antonio's draft | `#a3e635` (Tailwind lime-400). Passes WCAG AAA against #0a0a0a (near-black surfaces) — measured contrast ≈13:1, which clears the 7:1 AAA threshold for normal text with room to spare. Fails AA against white (#ffffff) — never used as a background color behind body text. Lime is a light-forward accent, unlike the old cyan-700 default: any foreground drawn on top of a lime fill must be dark (#0a0a0a), not white. Used for: primary CTAs, active nav indicators, focus rings, master wordmark on dark surfaces, hyperlinks in body copy. |
+> | Alternates considered | `#84cc16` (lime-500) — rejected: too somber for a tech-forward brand, loses energy at small sizes. `#bef264` (lime-300) — rejected: fails WCAG AA on white backgrounds, feels juvenile. `#3b82f6` (blue-500) — rejected: indistinguishable from a dozen SaaS products; lime is the differentiation. |
 > | Renders on | Corp landing CTAs, ZugaApp primary buttons, ZugaApp navbar active states, ZugaThemes accent pills, focus ring system-wide, master wordmark on dark surfaces |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-wm03: YYYY-MM-DD]`

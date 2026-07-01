@@ -58,7 +58,7 @@ A studio. The integrated unit that plugs into ZugaApp. Each studio is self-conta
 
 ### Master accent
 
-The master Zuga accent hue: `--color-cyan-500` (hex `#06b6d4`) from the cyan ramp. The semantic token that carries this hue in production is `--accent-brand`, which resolves to `--color-cyan-700` (#0e7490) at the default level for AA compliance on white text. The production semantic uses cyan-700 rather than cyan-500 because cyan-700 is the lightest cyan stop that achieves WCAG AA 4.5:1 contrast against `--accent-fg: #ffffff` (per the comment in `tokens.css` at the `--accent-brand` declaration). "Master accent" = cyan family. Studio sub-brands use different ramps but are all sub-ordinate to this master identity.
+The master Zuga accent hue: `--color-lime-400` (hex `#a3e635`) from the lime ramp. The semantic token that carries it in production is `--accent-brand`, which resolves to `--color-lime-400` paired with a DARK foreground `--accent-fg: #0a0a0a`. Lime is light-forward, so — unlike the former cyan master (ADR-0002) — the identity stop is also the functional stop: a filled lime element with dark text clears WCAG AAA on both light and dark surfaces. For accent TEXT on a light surface, use lime-700 (`#4d7c0f`). "Master accent" = lime family (unified 2026-06-30, ADR-0004; cyan was the master until then and is now the feedback-info hue). Studio sub-brands use different ramps but are all sub-ordinate to this master identity.
 
 ### Mike checkpoint
 

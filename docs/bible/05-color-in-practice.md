@@ -22,11 +22,11 @@ The master Zuga accent hue is [MIKE-CHECKPOINT-h01].
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `#06b6d4` (cyan-500) as the brand-identity reference stop. The semantic token `--accent-brand` uses cyan-700 (`#0e7490`) for WCAG AA compliance on white surfaces; cyan-500 is the visual identity reference used in wordmarks and marketing on dark canvases. The hue family — cyan — is the master brand accent for all surfaces that do not earn a sub-brand override. |
-> | Alternates considered | `#0891b2` (cyan-600) — rejected: too somber; loses energy at small sizes and in pill-shaped elements. `#22d3ee` (cyan-400) — rejected: fails AA on white, reads as juvenile against slate neutrals. `#3b82f6` (blue-500) — rejected: maps to ZugaCode convention; using it for master brand creates collision with studio identity. |
+> | Antonio's draft | `#a3e635` (lime-400) as the brand-identity reference stop AND the semantic `--accent-brand` functional stop. Lime is a light-forward accent — unlike the old cyan-700 default, there is no separate darker semantic shade; lime-400 is used as a filled background with dark (`#0a0a0a`) foreground on our near-black corp/product surfaces, where it clears AAA. The hue family — lime — is the master brand accent for all surfaces that do not earn a sub-brand override. |
+> | Alternates considered | `#65a30d` (lime-600) — rejected: too somber; loses energy at small sizes and in pill-shaped elements. `#bef264` (lime-300) — rejected: fails AA on white, reads as juvenile against slate neutrals. `#3b82f6` (blue-500) — rejected: maps to ZugaCode convention; using it for master brand creates collision with studio identity. |
 > | Renders on | Corp landing CTAs, ZugaApp primary buttons, ZugaApp navbar active states, focus rings system-wide, ZugaThemes accent pills, master wordmark on dark surfaces |
 >
-> ✅ Approve → flip to `[MIKE-APPROVED-h01: YYYY-MM-DD] hex=#06b6d4`
+> ✅ Approve → flip to `[MIKE-APPROVED-h01: YYYY-MM-DD] hex=#a3e635`
 > ✏️ Modify  → edit "Antonio's draft" field
 
 ---
@@ -39,8 +39,8 @@ The wellness family accent hue is [MIKE-CHECKPOINT-h02].
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `#14b8a6` (mint-500) as the reference stop for ZugaLife and ZugaHealth. Semantic `--accent-brand` in wellness profiles uses mint-700 (`#0f766e`) for AA on white. Mint reads as health, calm, and organic renewal — distinct from cyan (brand) and green (success signal). ZugaHealth shares this hue as a sibling to ZugaLife under the wellness family convention. |
-> | Alternates considered | `#22c55e` (green-500) — rejected: green is reserved for `--feedback-success`; using it for wellness accent creates signal collision. `#06b6d4` (cyan, master) — rejected: wellness studios earn a category override precisely because health is a distinct product category; defaulting to master cyan loses studio identity. |
+> | Antonio's draft | `#14b8a6` (mint-500) as the reference stop for ZugaLife and ZugaHealth. Semantic `--accent-brand` in wellness profiles uses mint-700 (`#0f766e`) for AA on white. Mint reads as health, calm, and organic renewal — distinct from lime (brand) and green (success signal). ZugaHealth shares this hue as a sibling to ZugaLife under the wellness family convention. |
+> | Alternates considered | `#22c55e` (green-500) — rejected: green is reserved for `--feedback-success`; using it for wellness accent creates signal collision. `#a3e635` (lime, master) — rejected: wellness studios earn a category override precisely because health is a distinct product category; defaulting to master lime loses studio identity. |
 > | Renders on | ZugaLife habit cards, streak indicators, goal progress bars, ZugaHealth metric displays, wellness onboarding UI |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-h02: YYYY-MM-DD] hex=#14b8a6`
@@ -91,7 +91,7 @@ The ZugaCloud accent hue is [MIKE-CHECKPOINT-h05].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `#0ea5e9` (sky-500) as the reference stop for ZugaCloud. Semantic `--accent-brand` in the ZugaCloud profile uses sky-700 (`#0369a1`) for AA on white. Sky is lighter and airier than blue — it reads "cloud, infrastructure, distributed" rather than "IDE, terminal, code." The perceptual distance from blue-500 is enough to distinguish siblings in the nav at a glance. |
-> | Alternates considered | `#06b6d4` (cyan, master) — rejected: ZugaCloud would be visually indistinguishable from the master brand, losing studio identity in mixed navigation. `#3b82f6` (blue, ZugaCode) — rejected: both studios would appear identical; cloud and code are different product categories. |
+> | Alternates considered | `#a3e635` (lime, master) — rejected: ZugaCloud would be visually indistinguishable from the master brand, losing studio identity in mixed navigation. `#3b82f6` (blue, ZugaCode) — rejected: both studios would appear identical; cloud and code are different product categories. |
 > | Renders on | ZugaCloud storage indicators, sync-status chips, infrastructure health panels, ZugaCloud nav active state |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-h05: YYYY-MM-DD] hex=#0ea5e9`
@@ -159,7 +159,7 @@ The markets family accent hue is [MIKE-CHECKPOINT-h09].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `#10b981` (emerald-500) as the reference stop for ZugaTrader and ZugaTraderOverlay. Semantic `--accent-brand` in the markets profile uses emerald-700 (`#047857`) for AA on white. Emerald reads as "money and markets" — distinct from green-500 (which is `--feedback-success`). Bloomberg terminals, trading platforms, and financial dashboards universally operate in this green-to-emerald range. ZugaTraderOverlay inherits this as a sibling because it surfaces the same data in-game. |
-> | Alternates considered | `#22c55e` (green-500) — rejected: green-500 is `--feedback-success`; markets accent on the same stop causes the entire ZugaTrader UI to read as a permanent success state. `#06b6d4` (cyan, master) — rejected: markets is a high-conviction category that earns its own override; defaulting to master cyan loses the financial-platform signal. |
+> | Alternates considered | `#22c55e` (green-500) — rejected: green-500 is `--feedback-success`; markets accent on the same stop causes the entire ZugaTrader UI to read as a permanent success state. `#a3e635` (lime, master) — rejected: markets is a high-conviction category that earns its own override; defaulting to master lime loses the financial-platform signal. |
 > | Renders on | ZugaTrader P&L indicators, position cards, watchlist rows, order execution buttons, ZugaTraderOverlay ticker displays |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-h09: YYYY-MM-DD] hex=#10b981`
@@ -169,7 +169,7 @@ The markets family accent hue is [MIKE-CHECKPOINT-h09].
 
 ## 5.10 Sub-brand accent assignments
 
-The table below maps every consumer, product surface, and internal tool to its accent ramp. Family logic: wellness siblings share mint; creative siblings share violet; markets siblings share emerald. Surfaces that do not earn a category convention default to master cyan. All rows are tagged for Mike confirmation.
+The table below maps every consumer, product surface, and internal tool to its accent ramp. Family logic: wellness siblings share mint; creative siblings share violet; markets siblings share emerald. Surfaces that do not earn a category convention default to master lime. All rows are tagged for Mike confirmation.
 
 ### acc01 — zugatechnologies-site (corp)
 
@@ -179,8 +179,8 @@ The zugatechnologies.com corporate site accent assignment is [MIKE-CHECKPOINT-ac
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `cyan.*` (master). The corporate landing page is brand identity, not a studio. It does not represent a product category, so it does not earn a category override. Master cyan is correct — it IS the brand. |
-> | Alternates considered | Own distinct hue — rejected: the corporate site is the brand home; it should be the fullest expression of master cyan, not a sub-brand variant. `#0891b2` (cyan-600) as a "more serious corporate" choice — rejected: the semantic `--accent-brand` already uses cyan-700 for AA compliance; the system handles the stop adjustment. |
+> | Antonio's draft | `lime.*` (master). The corporate landing page is brand identity, not a studio. It does not represent a product category, so it does not earn a category override. Master lime is correct — it IS the brand. |
+> | Alternates considered | Own distinct hue — rejected: the corporate site is the brand home; it should be the fullest expression of master lime, not a sub-brand variant. `#65a30d` (lime-600) as a "more serious corporate" choice — rejected: lime-400 already serves as both the identity reference and the functional `--accent-brand` stop; the system doesn't need a separate darker corporate shade. |
 > | Renders on | zugatechnologies.com CTAs, nav active states, hover states, link color |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc01: YYYY-MM-DD]`
@@ -194,7 +194,7 @@ The ZugaApp product shell accent assignment is [MIKE-CHECKPOINT-acc02].
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `cyan.*` (master). The ZugaApp shell is the food court — the host surface that aggregates all studios. Its accent should read as "home base," which is master cyan. Studio-specific accents appear inside each studio's context; the shell frame stays on brand. |
+> | Antonio's draft | `lime.*` (master). The ZugaApp shell is the food court — the host surface that aggregates all studios. Its accent should read as "home base," which is master lime. Studio-specific accents appear inside each studio's context; the shell frame stays on brand. |
 > | Alternates considered | Own distinct hue to differentiate "product" from "corp" — rejected: the shell and the corp site are different surfaces but the same brand; splitting them creates inconsistency at the identity level. Studio-rotating accent (changes based on which studio is active) — rejected: introduces unpredictable chrome shifts that confuse spatial navigation. |
 > | Renders on | ZugaApp global nav active states, sidebar indicators, primary action buttons in the shell layer, ZugaApp token wallet display |
 >
@@ -209,8 +209,8 @@ The ZugaLife accent assignment is [MIKE-CHECKPOINT-acc03].
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `mint.*` (mint-500 reference, mint-700 semantic stop). ZugaLife is the wellness studio — habit tracking, meditation, addiction recovery. Mint reads as health, calm, and organic renewal. The wellness category earns an override because it is perceptually and emotionally distinct from the tech-forward master cyan. |
-> | Alternates considered | Master cyan — rejected: wellness surfaces should feel softer and more biologically grounded than the sharp electric of brand cyan; the category earns the distinction. Green-500 — rejected: green is `--feedback-success`, not a studio accent; signal collision would make all ZugaLife UI feel like a constant success state. |
+> | Antonio's draft | `mint.*` (mint-500 reference, mint-700 semantic stop). ZugaLife is the wellness studio — habit tracking, meditation, addiction recovery. Mint reads as health, calm, and organic renewal. The wellness category earns an override because it is perceptually and emotionally distinct from the tech-forward master lime. |
+> | Alternates considered | Master lime — rejected: wellness surfaces should feel softer and more biologically grounded than the bright acid punch of brand lime; the category earns the distinction. Green-500 — rejected: green is `--feedback-success`, not a studio accent; signal collision would make all ZugaLife UI feel like a constant success state. |
 > | Renders on | ZugaLife habit cards, streak fire indicators, goal rings, meditation session UI, addiction tracker progress |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc03: YYYY-MM-DD]`
@@ -225,7 +225,7 @@ The ZugaHealth accent assignment is [MIKE-CHECKPOINT-acc04].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `mint.*` (sibling to ZugaLife, same stop references). ZugaHealth is the clinical/biometric sibling — Fitbit sync, health metrics, body data. It shares mint because both studios are in the wellness family; a user moving between them should not experience a color jump. Same hue, same semantic stops as acc03. |
-> | Alternates considered | Distinct wellness-adjacent hue — rejected: we defined the wellness family to mean exactly this: siblings share a hue. Splitting ZugaHealth to a different color breaks the family grouping that makes the product map navigable. Master cyan — rejected: same rationale as acc03 above. |
+> | Alternates considered | Distinct wellness-adjacent hue — rejected: we defined the wellness family to mean exactly this: siblings share a hue. Splitting ZugaHealth to a different color breaks the family grouping that makes the product map navigable. Master lime — rejected: same rationale as acc03 above. |
 > | Renders on | ZugaHealth metric charts, Fitbit sync status, heart rate displays, health dashboard nav active state |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc04: YYYY-MM-DD]`
@@ -240,7 +240,7 @@ The ZugaTrader accent assignment is [MIKE-CHECKPOINT-acc05].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `emerald.*` (emerald-500 reference, emerald-700 semantic stop). ZugaTrader is the markets/financial studio. Emerald is the financial-platform convention; it signals money and markets without confusing with `--feedback-success` (green). The markets category earns an override because financial data visualization lives in a different emotional register than the brand. |
-> | Alternates considered | Master cyan — rejected: the markets override is high-conviction; cyan reads as "tech brand," not "financial terminal." Green-500 — rejected: same feedback-collision problem as described in h09 above. |
+> | Alternates considered | Master lime — rejected: the markets override is high-conviction; lime reads as the Zuga house color, not "financial terminal." Green-500 — rejected: same feedback-collision problem as described in h09 above. |
 > | Renders on | ZugaTrader P&L rows, position cards, order execution primary button, watchlist active indicators, TA signal badges |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc05: YYYY-MM-DD]`
@@ -255,7 +255,7 @@ The ZugaImage accent assignment is [MIKE-CHECKPOINT-acc06].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `violet.*` (violet-500 reference, violet-700 semantic stop). ZugaImage is an AI image-generation and editing studio. Violet reads as creativity and visual imagination. It leads the creative family — ZugaVideo and ZugaMotion are siblings under violet. |
-> | Alternates considered | Master cyan — rejected: creative studios earn an override; cyan is brand identity, not creative-tools identity. Magenta — rejected: magenta is ZugaAudio's signal; image and audio are distinct creative disciplines that need distinct signals. |
+> | Alternates considered | Master lime — rejected: creative studios earn an override; lime is brand identity, not creative-tools identity. Magenta — rejected: magenta is ZugaAudio's signal; image and audio are distinct creative disciplines that need distinct signals. |
 > | Renders on | ZugaImage gallery headers, generation prompt controls, image editing toolbar, composable slot indicators |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc06: YYYY-MM-DD]`
@@ -270,7 +270,7 @@ The ZugaVideo accent assignment is [MIKE-CHECKPOINT-acc07].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `violet.*` (sibling to ZugaImage, same stop references). ZugaVideo is the video generation and wallpaper studio. It shares violet because it is in the creative family — a user who sees violet in ZugaImage will immediately recognize the creative family context in ZugaVideo. |
-> | Alternates considered | Distinct creative-adjacent hue per studio — rejected: the creative family is defined to have a shared hue; per-studio splits would make the color system feel arbitrary rather than principled. Master cyan — rejected: creative studios earn the override. |
+> | Alternates considered | Distinct creative-adjacent hue per studio — rejected: the creative family is defined to have a shared hue; per-studio splits would make the color system feel arbitrary rather than principled. Master lime — rejected: creative studios earn the override. |
 > | Renders on | ZugaVideo provider cards, video generation controls, wallpaper template browser, video pipeline status |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc07: YYYY-MM-DD]`
@@ -300,7 +300,7 @@ The ZugaCode accent assignment is [MIKE-CHECKPOINT-acc09].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `blue.*` (blue-500 reference, blue-700 semantic stop). ZugaCode is the developer-tools studio — activity tracking, commit hooks, code review queue. Blue is the canonical dev-tools convention; leaning into it reduces cognitive load for the developer audience and signals "this is where code happens." |
-> | Alternates considered | Master cyan — rejected: the dev-tools convention is blue; using cyan here would mean ZugaCode looks like a generic Zuga surface rather than a purpose-built code studio. Indigo — rejected: indigo is ZugaLearn; code and education are distinct. |
+> | Alternates considered | Master lime — rejected: the dev-tools convention is blue; using lime here would mean ZugaCode looks like a generic Zuga surface rather than a purpose-built code studio. Indigo — rejected: indigo is ZugaLearn; code and education are distinct. |
 > | Renders on | ZugaCode activity feed, diff viewer chrome, commit panel status, hook failure notifications, review queue badges |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc09: YYYY-MM-DD]`
@@ -315,7 +315,7 @@ The ZugaCloud accent assignment is [MIKE-CHECKPOINT-acc10].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `sky.*` (sky-500 reference, sky-700 semantic stop). ZugaCloud is the file storage and sync studio. Sky reads as "infrastructure and distributed systems" — lighter and more expansive than the IDE-register of blue. The sky/blue sibling pair mirrors the cloud/code conceptual pair in the product. |
-> | Alternates considered | Blue — rejected: ZugaCloud and ZugaCode would be visually indistinguishable; cloud infrastructure and code tooling are different product categories. Master cyan — rejected: sky earns the override because cloud is a distinct category with an established color convention. |
+> | Alternates considered | Blue — rejected: ZugaCloud and ZugaCode would be visually indistinguishable; cloud infrastructure and code tooling are different product categories. Master lime — rejected: sky earns the override because cloud is a distinct category with an established color convention. |
 > | Renders on | ZugaCloud storage bars, sync-status chips, infrastructure health panels, cloud nav active state |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc10: YYYY-MM-DD]`
@@ -330,7 +330,7 @@ The ZugaAudio accent assignment is [MIKE-CHECKPOINT-acc11].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `magenta.*` (magenta-500 reference, magenta-700 semantic stop). ZugaAudio is the music and audio production studio. Magenta is the music convention — waveform editors and production tools from Ableton to SoundCloud operate in the pink/magenta range. It pops against dark studio surfaces where audio visualization lives. |
-> | Alternates considered | Violet — rejected: violet is the creative family (visual media); audio is a distinct discipline with its own established color convention. Master cyan — rejected: audio earns the override; the music convention is magenta, not cyan. |
+> | Alternates considered | Violet — rejected: violet is the creative family (visual media); audio is a distinct discipline with its own established color convention. Master lime — rejected: audio earns the override; the music convention is magenta, not lime. |
 > | Renders on | ZugaAudio waveform highlights, track level indicators, studio recording session status, audio nav active state |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc11: YYYY-MM-DD]`
@@ -359,7 +359,7 @@ The ZugaThemes accent assignment is [MIKE-CHECKPOINT-acc13].
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `cyan.*` (master). ZugaThemes is the design-token marketplace — it sells visual customization to other studios. Its own UI should be on master cyan to signal "this is a ZugaApp-layer product, not a studio with its own personality." Theming other studios is its function; it should not impose its own color identity. |
+> | Antonio's draft | `lime.*` (master). ZugaThemes is the design-token marketplace — it sells visual customization to other studios. Its own UI should be on master lime to signal "this is a ZugaApp-layer product, not a studio with its own personality." Theming other studios is its function; it should not impose its own color identity. |
 > | Alternates considered | Own distinct hue (e.g., coral or gold) — rejected: ZugaThemes does not have a product category convention; it is a marketplace layer that does not earn an override. Rotating to reflect the active theme for sale — rejected: the chrome of the marketplace should be stable; previewed themes render in contained preview slots, not in the chrome. |
 > | Renders on | ZugaThemes marketplace shell, theme card accent pills, purchase CTA buttons, marketplace nav active state |
 >
@@ -389,9 +389,9 @@ The ZugaCraft accent assignment is [MIKE-CHECKPOINT-acc15].
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `cyan.*` (master) — pending Antonio personality input before Phase 0 seal. ZugaCraft's product category is not yet defined precisely enough to earn a category-convention override. Master cyan is the correct default under spec rule: "defaults to master per spec rule." If Antonio identifies a clear product category for ZugaCraft (e.g., handmade goods marketplace, crafting game overlay) before Phase 0 closes, this checkpoint should be revisited and may earn its own hue. |
+> | Antonio's draft | `lime.*` (master) — pending Antonio personality input before Phase 0 seal. ZugaCraft's product category is not yet defined precisely enough to earn a category-convention override. Master lime is the correct default under spec rule: "defaults to master per spec rule." If Antonio identifies a clear product category for ZugaCraft (e.g., handmade goods marketplace, crafting game overlay) before Phase 0 closes, this checkpoint should be revisited and may earn its own hue. |
 > | Alternates considered | Own distinct hue — rejected at this time: ZugaCraft does not yet have a defined product category strong enough to justify pulling a new convention from thin air; conventions are earned by product identity, not invented. Violet (creative family) — considered: if ZugaCraft ends up being a digital-creation tool, violet is a candidate; Antonio to confirm. |
-> | Renders on | ZugaCraft studio UI — TBD pending product definition; assumes standard master-cyan chrome until category is specified |
+> | Renders on | ZugaCraft studio UI — TBD pending product definition; assumes standard master-lime chrome until category is specified |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc15: YYYY-MM-DD]`
 > ✏️ Modify  → edit "Antonio's draft" field
@@ -404,7 +404,7 @@ The ZugaNews accent assignment is [MIKE-CHECKPOINT-acc16].
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `cyan.*` (master). ZugaNews is the news and intelligence studio. Journalism and news platforms historically use neutral color systems — black, white, and a single accent; the accent is rarely a "hot" color. Master cyan is the appropriate default because it reads as informational and credible without the emotional charge of amber (warn) or red (danger). ZugaNews does not have a proprietary product-category convention. |
+> | Antonio's draft | `lime.*` (master). ZugaNews is the news and intelligence studio. Journalism and news platforms historically use neutral color systems — black, white, and a single accent; the accent is rarely a "hot" color. Master lime is the appropriate default because it reads as informational and credible without the emotional charge of amber (warn) or red (danger). ZugaNews does not have a proprietary product-category convention. |
 > | Alternates considered | Own distinct hue — rejected: news/journalism does not have a universal studio-accent convention strong enough to override; defaulting to master keeps the brand coherent without an arbitrary color decision. Slate-900 (near-black, very journalistic) — rejected: the design system does not support monochrome studio identities; the neutral-slate story is handled by the surface system. |
 > | Renders on | ZugaNews article headers, source badges, intelligence summary cards, news nav active state |
 >
@@ -419,8 +419,8 @@ The ZugaGamerOverlay accent assignment is [MIKE-CHECKPOINT-acc17].
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `cyan.*` (master). The gaming overlay is a neutral surface — it surfaces data and voice commands, but does not advocate for a game genre or platform color convention. Cyan on dark overlay backgrounds gives a clean "HUD" read without the aggression of red/orange overlays that feel like threat indicators. Gaming HUDs commonly use cyan/blue as neutral data-display colors. |
-> | Alternates considered | Aggressive gaming palette (neon green or hot red) — rejected: neon green reads as "RGB gaming peripheral" not "intelligent assistant overlay"; hot red conflicts with danger/threat signals in games. Master cyan is the neutral choice here, and neutral is right for an information-display layer. |
+> | Antonio's draft | `lime.*` (master). The gaming overlay is a neutral surface — it surfaces data and voice commands, but does not advocate for a game genre or platform color convention. Lime on dark overlay backgrounds gives a clean "HUD" read without the aggression of red/orange overlays that feel like threat indicators. Gaming HUDs commonly use bright greens as neutral data-display colors. |
+> | Alternates considered | Aggressive gaming palette (neon green or hot red) — rejected: neon green reads as "RGB gaming peripheral" not "intelligent assistant overlay"; hot red conflicts with danger/threat signals in games. Master lime is the neutral choice here, and neutral is right for an information-display layer. |
 > | Renders on | ZugaGamerOverlay HUD panel borders, wake-word indicator, TTS display, stat readouts, dismiss controls |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc17: YYYY-MM-DD]`
@@ -435,7 +435,7 @@ The ZugaTraderOverlay accent assignment is [MIKE-CHECKPOINT-acc18].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `emerald.*` (sibling to ZugaTrader, same stop references). ZugaTraderOverlay is a game-overlay surface for ZugaTrader data — it shows the same financial data in a HUD format while gaming. It should be immediately recognizable as "ZugaTrader data" from the accent color alone. Matching ZugaTrader's emerald achieves this without extra visual vocabulary. |
-> | Alternates considered | Master cyan (neutral overlay convention from acc17) — rejected: ZugaTraderOverlay is not a neutral tool; it is specifically a financial data display, and the emerald markets accent is load-bearing for that association. Own distinct hue — rejected: the overlay and its parent studio should share an accent; introducing a third color splits the product identity. |
+> | Alternates considered | Master lime (neutral overlay convention from acc17) — rejected: ZugaTraderOverlay is not a neutral tool; it is specifically a financial data display, and the emerald markets accent is load-bearing for that association. Own distinct hue — rejected: the overlay and its parent studio should share an accent; introducing a third color splits the product identity. |
 > | Renders on | ZugaTraderOverlay position cards, P&L ticker, order status chips, financial HUD panel chrome |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc18: YYYY-MM-DD]`
@@ -450,7 +450,7 @@ The ZugaShield accent assignment is [MIKE-CHECKPOINT-acc19].
 > | Field | Value |
 > |---|---|
 > | Antonio's draft | `red.*` (red-500 reference, red-700 semantic stop for interactive elements). ZugaShield is the security studio — threat detection, account monitoring, shield events. Red is the universal security-signal color. It carries the same weight as `--feedback-danger` intentionally: security alerts ARE danger states. The studio UI should feel like a monitoring dashboard that takes its work seriously. |
-> | Alternates considered | A "softer" security color (slate, indigo) — rejected: security needs to read as "this matters" at a glance; a neutral or educational hue removes that urgency. Master cyan — rejected: ZugaShield earning the danger-signal red is the correct override; cyan here would make security surface feel like a generic Zuga tool. |
+> | Alternates considered | A "softer" security color (slate, indigo) — rejected: security needs to read as "this matters" at a glance; a neutral or educational hue removes that urgency. Master lime — rejected: ZugaShield earning the danger-signal red is the correct override; lime here would make security surface feel like a generic Zuga tool. |
 > | Renders on | ZugaShield threat alerts, shield event severity badges, account health indicators, security nav active state |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc19: YYYY-MM-DD]`
@@ -464,8 +464,8 @@ The ZugaClaw accent assignment is [MIKE-CHECKPOINT-acc20].
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `cyan.*` (master). ZugaClaw is an internal infrastructure tool — the third-party AI provider bridge layer. Internal tooling defaults to master cyan for cohesion; it does not have a user-facing product identity that would earn a category override. Engineers using ZugaClaw are Zuga engineers; the product context is "Zuga infrastructure" not a distinct studio. |
-> | Alternates considered | Own distinct hue to signal "internal / restricted" — rejected: creating a special color for internal tools adds a new semantic layer that does not exist in the token system; internal vs external is handled by access control, not color. Master cyan affirms that internal tools belong to the same design system. |
+> | Antonio's draft | `lime.*` (master). ZugaClaw is an internal infrastructure tool — the third-party AI provider bridge layer. Internal tooling defaults to master lime for cohesion; it does not have a user-facing product identity that would earn a category override. Engineers using ZugaClaw are Zuga engineers; the product context is "Zuga infrastructure" not a distinct studio. |
+> | Alternates considered | Own distinct hue to signal "internal / restricted" — rejected: creating a special color for internal tools adds a new semantic layer that does not exist in the token system; internal vs external is handled by access control, not color. Master lime affirms that internal tools belong to the same design system. |
 > | Renders on | ZugaClaw internal admin UI elements (if any surface-level UI exists), internal tooling chrome |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc20: YYYY-MM-DD]`
@@ -479,8 +479,8 @@ The BugaBot internal tooling accent assignment is [MIKE-CHECKPOINT-acc21].
 >
 > | Field | Value |
 > |---|---|
-> | Antonio's draft | `cyan.*` (master). BugaBot is internal tooling — Antonio's personal automation and development assistant layer. Like ZugaClaw (acc20), internal tooling defaults to master cyan. BugaBot has no user-facing product surface; the accent appears only in internal dashboards and developer tooling. Cohesion with the master brand is the right call for tools with no external audience. |
-> | Alternates considered | Own distinct hue to differentiate "developer persona" from product brand — rejected: the developer persona already has a dedicated hue (blue, ZugaCode); using blue for BugaBot would conflate internal automation with the ZugaCode studio product. Master cyan keeps internal tools clearly in the Zuga system without studio collision. |
+> | Antonio's draft | `lime.*` (master). BugaBot is internal tooling — Antonio's personal automation and development assistant layer. Like ZugaClaw (acc20), internal tooling defaults to master lime. BugaBot has no user-facing product surface; the accent appears only in internal dashboards and developer tooling. Cohesion with the master brand is the right call for tools with no external audience. |
+> | Alternates considered | Own distinct hue to differentiate "developer persona" from product brand — rejected: the developer persona already has a dedicated hue (blue, ZugaCode); using blue for BugaBot would conflate internal automation with the ZugaCode studio product. Master lime keeps internal tools clearly in the Zuga system without studio collision. |
 > | Renders on | BugaBot internal admin surfaces, developer tooling UI if rendered, internal status dashboards |
 >
 > ✅ Approve → flip to `[MIKE-APPROVED-acc21: YYYY-MM-DD]`
@@ -499,14 +499,14 @@ All ratios below are measured using the WCAG 2.1 relative-luminance formula. Rat
 | `--text-primary` slate-900 `#0f172a` | `--surface-primary` white `#ffffff` | ≈17.85:1 | AAA |
 | `--text-primary` slate-900 `#0f172a` | `--surface-canvas` slate-50 `#f8fafc` | ≈16.75:1 | AAA |
 | `--text-secondary` slate-700 `#334155` | `--surface-primary` white `#ffffff` | ≈10.65:1 | AAA |
-| `--text-link` cyan-700 `#0e7490` | `--surface-primary` white `#ffffff` | ≈5.36:1 | AA |
-| `--accent-brand` cyan-700 `#0e7490` | white `#ffffff` (button fg) | ≈5.36:1 | AA |
-| `--accent-fg` white `#ffffff` | `--accent-brand` cyan-700 `#0e7490` (button bg) | ≈5.36:1 | AA |
+| `--text-link` lime-700 `#4d7c0f` | `--surface-primary` white `#ffffff` | ≈5.00:1 | AA |
+| `--accent-brand` lime-400 `#a3e635` (filled bg) | `--accent-fg` dark `#0a0a0a` (button fg) | ≈13.1:1 | AAA |
+| `--accent-fg` dark `#0a0a0a` | `--accent-brand` lime-400 `#a3e635` (button bg) | ≈13.1:1 | AAA |
 | `--feedback-success` green-700 `#15803d` | white `#ffffff` | ≈5.02:1 | AA |
 | `--feedback-warn` amber-600 `#d97706` | `--surface-primary` white `#ffffff` | ≈3.12:1 | AA large/UI only — warn text uses `--text-primary` (slate-900) as fg, not white |
 | `--feedback-danger` red-600 `#dc2626` | white `#ffffff` | ≈4.83:1 | AA |
 
-**Known failure:** cyan-500 (`#06b6d4`) against white (`#ffffff`) ≈ 2.43:1 — fails AA for all text sizes. Cyan-500 is a brand reference stop, not a text color. It appears on dark surfaces (marketing hero, wordmark on slate-900) where it clears AAA at ≈7.35:1. Never place cyan-500 text on a white surface.
+**Known failure:** cyan-500 (`#06b6d4`) against white (`#ffffff`) ≈ 2.43:1 — fails AA for all text sizes. This remains true of the raw cyan ramp, but cyan-500 is no longer a brand reference stop — cyan is retired as the master accent and now backs only `--feedback-info` (see §2.4). Never place cyan-500 text on a white surface.
 
 ### Dark-mode — key pairings
 
@@ -514,9 +514,9 @@ All ratios below are measured using the WCAG 2.1 relative-luminance formula. Rat
 |---|---|---|---|
 | `--text-primary` slate-50 `#f8fafc` | `--surface-primary` slate-900 `#0f172a` | ≈17.06:1 | AAA |
 | `--text-secondary` slate-300 `#cbd5e1` | `--surface-primary` slate-900 `#0f172a` | ≈12.02:1 | AAA |
-| `--text-link` cyan-400 `#22d3ee` | `--surface-primary` slate-900 `#0f172a` | ≈9.88:1 | AAA |
-| `--accent-brand` cyan-700 `#0e7490` | `--surface-primary` slate-900 `#0f172a` | ≈3.33:1 — passes AA large/UI; for body-text use `--text-link` (cyan-400) instead | AA UI |
-| `--accent-fg` white `#ffffff` | `--accent-brand` cyan-700 `#0e7490` | ≈5.36:1 | AA |
+| `--text-link` lime-400 `#a3e635` | `--surface-primary` slate-900 `#0f172a` | ≈11.84:1 | AAA |
+| `--accent-brand` lime-400 `#a3e635` (filled bg) | `--accent-fg` dark `#0a0a0a` (button fg) | ≈13.1:1 | AAA |
+| `--accent-fg` dark `#0a0a0a` | `--accent-brand` lime-400 `#a3e635` | ≈13.1:1 | AAA |
 
 **Dark-mode feedback subtle note (from tokens-dark.css):** Subtle-bg + main-fg pairings like green-700 on green-950 produce approximately 3.2:1 — below AA for normal text. On dark surfaces, subtle alert boxes must pair the deep-stop subtle background with `--text-primary` (slate-50) as foreground, not the `--feedback-*-fg` stop.
 
@@ -525,7 +525,7 @@ All ratios below are measured using the WCAG 2.1 relative-luminance formula. Rat
 ## 5.12 Do / Don't
 
 **Do:**
-- Use `--accent-brand` (cyan-700 in master profile) for all interactive primary elements.
+- Use `--accent-brand` (lime-400 `#a3e635` in master profile, always with dark foreground) for all interactive primary elements.
 - Override `--accent-brand` at the profile level for studios that have earned a category convention.
 - Use `--feedback-*` tokens exclusively for success/warn/danger/info states — not for decorative accent.
 - Pair `--accent-fg` (white) as the text color on any `--accent-brand` background.
