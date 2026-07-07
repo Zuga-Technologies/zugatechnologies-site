@@ -51,13 +51,13 @@ const PLATFORMS = {
     discord:   { avatar: 512,  mark: 'robot' },
     instagram: { avatar: 1080, mark: 'robot' },
     tiktok:    { avatar: 1080, mark: 'robot' },
-    youtube:   { avatar: 800,  banner: [2048, 1152], mark: 'robot' },
+    youtube:   { avatar: 800,  banner: [2048, 1152], safe: [1235, 338], mark: 'robot' },
     facebook:  { avatar: 1024, banner: [1640, 624],  mark: 'robot' },
     reddit:    { avatar: 256,  banner: [1920, 384],  mark: 'robot' },
     twitch:    { avatar: 800,  banner: [1200, 480],  mark: 'robot' },
   },
   ludus: {
-    youtube:   { avatar: 800,  banner: [2048, 1152], mark: 'head' },
+    youtube:   { avatar: 800,  banner: [2048, 1152], safe: [1235, 338], mark: 'head' },
     tiktok:    { avatar: 1080, mark: 'head' },
     reddit:    { avatar: 256,  banner: [1920, 384], mark: 'head' },
     twitch:    { avatar: 800,  banner: [1200, 480], mark: 'head' },
@@ -66,7 +66,7 @@ const PLATFORMS = {
   spiritus: {
     tiktok:    { avatar: 1080, mark: 'orb' },
     instagram: { avatar: 1080, mark: 'orb' },
-    youtube:   { avatar: 800,  banner: [2048, 1152], mark: 'orb' },
+    youtube:   { avatar: 800,  banner: [2048, 1152], safe: [1235, 338], mark: 'orb' },
     reddit:    { avatar: 256,  banner: [1920, 384], mark: 'orb' },
     facebook:  { avatar: 1024, mark: 'orb' },
   },
@@ -108,8 +108,11 @@ async function makeAvatar(px, markKind, accent, file) {
 }
 
 // ---- banner: mark + wordmark lockup, centered on near-black ----
-async function makeBanner(w, h, brand, markKind, file, markHOverride) {
-  const markH = markHOverride ?? Math.round(h * 0.5);
+// `safe` = [w,h] of the platform's visible core area. YouTube uploads one
+// 2048x1152 canvas but desktop crops to the central ~1235x338 strip — the
+// lockup must fit THAT box or it decapitates on every real screen.
+async function makeBanner(w, h, brand, markKind, file, safe, markHOverride) {
+  const markH = markHOverride ?? Math.round(safe ? safe[1] * 0.62 : h * 0.5);
   const fs2 = Math.round(markH * 0.42);
   const ls = Math.round(fs2 * 0.08);
   const gap = Math.round(markH * 0.4);
@@ -124,10 +127,10 @@ async function makeBanner(w, h, brand, markKind, file, markHOverride) {
   const { data: textPng, info } = await sharp(Buffer.from(textSvg)).trim().png().toBuffer({ resolveWithObject: true });
 
   const totalW = markH + gap + info.width;
-  const maxW = Math.round(w * 0.82);
+  const maxW = Math.round(safe ? safe[0] * 0.9 : w * 0.82);
   if (totalW > maxW) {
     // Lockup too wide for this canvas — shrink the whole unit and re-render.
-    return makeBanner(w, h, brand, markKind, file, Math.floor(markH * (maxW / totalW)));
+    return makeBanner(w, h, brand, markKind, file, safe, Math.floor(markH * (maxW / totalW)));
   }
   const mark = await getMark(markKind, markH, brand.accent);
   const left = Math.round((w - totalW) / 2);
@@ -160,7 +163,7 @@ async function run(sampleOnly) {
       if (spec.banner && (!sampleOnly || firstBanner)) {
         const [bw, bh] = spec.banner;
         const bf = path.join(dir, `${tag}${platform}-banner-${bw}x${bh}.png`);
-        await makeBanner(bw, bh, brand, spec.mark, bf);
+        await makeBanner(bw, bh, brand, spec.mark, bf, spec.safe);
         console.log('banner', brandKey, platform, `${bw}x${bh}`); count++;
         firstBanner = false;
       }
