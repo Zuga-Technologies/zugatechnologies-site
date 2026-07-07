@@ -38,13 +38,22 @@ const BRANDS = {
 
 // platform -> { avatar: px, banner: [w,h], mark: 'Z'|'robot'|'head'|'orb' }
 const PLATFORMS = {
+  // 2026-07-07 (Buga): the robot IS the logo — no more Z-glyph avatars (neither
+  // this file's lime Z nor gen-social.js's cyan-gradient Z). Robot on every
+  // zuga surface; platforms the old social/ set covered now live here too.
   zuga: {
-    x:         { avatar: 400,  banner: [1500, 500], mark: 'Z' },
-    linkedin:  { avatar: 400,  banner: [1128, 191], mark: 'Z' },
-    substack:  { avatar: 256,  mark: 'Z' },
-    github:    { avatar: 500,  mark: 'Z' },
+    x:         { avatar: 400,  banner: [1500, 500], mark: 'robot' },
+    linkedin:  { avatar: 400,  banner: [1128, 191], mark: 'robot' },
+    substack:  { avatar: 256,  mark: 'robot' },
+    github:    { avatar: 500,  mark: 'robot' },
     threads:   { avatar: 1080, mark: 'robot' },
     discord:   { avatar: 512,  mark: 'robot' },
+    instagram: { avatar: 1080, mark: 'robot' },
+    tiktok:    { avatar: 1080, mark: 'robot' },
+    youtube:   { avatar: 800,  banner: [2048, 1152], mark: 'robot' },
+    facebook:  { avatar: 1024, banner: [1640, 624],  mark: 'robot' },
+    reddit:    { avatar: 256,  banner: [1920, 384],  mark: 'robot' },
+    twitch:    { avatar: 800,  banner: [1200, 480],  mark: 'robot' },
   },
   ludus: {
     youtube:   { avatar: 800,  banner: [2048, 1152], mark: 'head' },

@@ -1,11 +1,12 @@
 # Zuga Brand Package — upload guide (for Gio)
 
 Colors: Zuga lime `#a3e635` · Ludus purple `#a855f7` · Spiritus rose `#fb7185` · all on near-black `#0a0a0a`.
-Marks: Zuga = Z (professional pages) + lime robot (casual pages) · Ludus = purple robot head · Spiritus = rose orb.
+Marks: Zuga = lime robot on EVERY page (the Z glyphs — lime and the older cyan set — are retired 2026-07-07, Buga) · Ludus = purple robot head · Spiritus = rose orb.
 
 Each folder = one page. `*-avatar-*` = profile picture. `*-banner-*` = header/cover.
+**If a page still shows a Z (either color), replace it with the robot avatar from this package.**
 
-## ZUGA  (X, LinkedIn, Substack, GitHub = Z mark · Discord, Threads = robot)
+## ZUGA  (robot on all pages)
 | Page | Avatar | Banner |
 |---|---|---|
 | X | zuga/x/x-avatar-400.png | zuga/x/x-banner-1500x500.png |
@@ -14,6 +15,12 @@ Each folder = one page. `*-avatar-*` = profile picture. `*-banner-*` = header/co
 | GitHub org | zuga/github/github-avatar-500.png | — |
 | Threads | zuga/threads/threads-avatar-1080.png | — |
 | Discord | zuga/discord/discord-avatar-512.png | — |
+| Instagram | zuga/instagram/instagram-avatar-1080.png | — |
+| TikTok | zuga/tiktok/tiktok-avatar-1080.png | — |
+| YouTube | zuga/youtube/youtube-avatar-800.png | zuga/youtube/youtube-banner-2048x1152.png |
+| Facebook | zuga/facebook/facebook-avatar-1024.png | zuga/facebook/facebook-banner-1640x624.png |
+| Reddit | zuga/reddit/reddit-avatar-256.png | zuga/reddit/reddit-banner-1920x384.png |
+| Twitch | zuga/twitch/twitch-avatar-800.png | zuga/twitch/twitch-banner-1200x480.png |
 
 ## LUDUS  (purple robot head)
 | Page | Avatar | Banner |
