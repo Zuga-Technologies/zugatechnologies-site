@@ -41,10 +41,11 @@ const PLATFORMS = {
   // 2026-07-07 (Buga): the robot IS the logo — no more Z-glyph avatars (neither
   // this file's lime Z nor gen-social.js's cyan-gradient Z). Robot on every
   // zuga surface; platforms the old social/ set covered now live here too.
+  // BRAND surfaces only: Substack + personal LinkedIn are Buga's personal
+  // accounts, handled separately with their own images — not in this package.
   zuga: {
     x:         { avatar: 400,  banner: [1500, 500], mark: 'robot' },
-    linkedin:  { avatar: 400,  banner: [1128, 191], mark: 'robot' },
-    substack:  { avatar: 256,  mark: 'robot' },
+    linkedin:  { avatar: 400,  banner: [1128, 191], mark: 'robot' }, // COMPANY page
     github:    { avatar: 500,  mark: 'robot' },
     threads:   { avatar: 1080, mark: 'robot' },
     discord:   { avatar: 512,  mark: 'robot' },

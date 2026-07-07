@@ -6,12 +6,14 @@ Marks: Zuga = lime robot on EVERY page (the Z glyphs — lime and the older cyan
 Each folder = one page. `*-avatar-*` = profile picture. `*-banner-*` = header/cover.
 **If a page still shows a Z (either color), replace it with the robot avatar from this package.**
 
+BRAND surfaces only — Substack and Buga's personal LinkedIn are handled
+separately with their own images; they are NOT in this package.
+
 ## ZUGA  (robot on all pages)
 | Page | Avatar | Banner |
 |---|---|---|
 | X | zuga/x/x-avatar-400.png | zuga/x/x-banner-1500x500.png |
-| LinkedIn | zuga/linkedin/linkedin-avatar-400.png | zuga/linkedin/linkedin-banner-1128x191.png |
-| Substack | zuga/substack/substack-avatar-256.png | — |
+| LinkedIn (company page) | zuga/linkedin/linkedin-avatar-400.png | zuga/linkedin/linkedin-banner-1128x191.png |
 | GitHub org | zuga/github/github-avatar-500.png | — |
 | Threads | zuga/threads/threads-avatar-1080.png | — |
 | Discord | zuga/discord/discord-avatar-512.png | — |
