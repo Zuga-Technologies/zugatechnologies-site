@@ -1,0 +1,171 @@
+{
+  "$schema": "social-metrics-v1",
+  "$doc": "Canonical social KPI store. Consumed by weekly-review.mjs every Sunday eve. Per-platform raw numbers are dropped by n8n into raw/<platform>.json, then rolled up here. Targets are NOT set here yet — see targets.* fields; they are [NEEDS BUGA] and must be filled only after >=2 weeks of real baseline data (issue #55: do not invent targets pre-launch).",
+  "updated_at": "2026-07-27T16:01:29.535Z",
+  "week_of": "2026-07-27",
+  "lanes": {
+    "text": {
+      "signals": [
+        "replies",
+        "saves",
+        "dwell_see_through_rate"
+      ],
+      "lagging": [
+        "follower_growth"
+      ],
+      "platforms": {
+        "linkedin": {
+          "algorithm_weight": "first_60_min_reply_rate",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        "x": {
+          "algorithm_weight": "first_hour_engagement + concrete_numbers",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        "substack": {
+          "algorithm_weight": "replies + saves + dwell",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        "threads": {
+          "algorithm_weight": "replies + saves + dwell",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        }
+      }
+    },
+    "video": {
+      "signals": [
+        "completion_rate",
+        "rewatch_rate",
+        "shares"
+      ],
+      "lagging": [
+        "views"
+      ],
+      "platforms": {
+        "tiktok": {
+          "algorithm_weight": "watch_through + rewatch",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        "youtube": {
+          "algorithm_weight": "search + retention",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        "instagram": {
+          "algorithm_weight": "completion + shares",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        }
+      }
+    },
+    "community": {
+      "signals": [
+        "genuine_participation_streak_weeks"
+      ],
+      "lagging": [
+        "upvotes_on_first_post"
+      ],
+      "platforms": {
+        "reddit": {
+          "algorithm_weight": "upvote_to_comment_ratio",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        "discord": {
+          "algorithm_weight": "genuine_participation_streak",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        "twitch": {
+          "algorithm_weight": "genuine_participation_streak",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        "facebook_groups": {
+          "algorithm_weight": "genuine_participation_streak",
+          "baseline": null,
+          "last_week": null,
+          "targets": {
+            "needs": "buga",
+            "weekly": null,
+            "monthly": null
+          }
+        }
+      }
+    }
+  },
+  "review_cadence": {
+    "when": "Sunday evening, America/New_York (proposed — awaiting Buga confirm)",
+    "needs_buga": true,
+    "drafts_reviewer": "Gio",
+    "trends_reviewer": "Buga",
+    "steps": [
+      "Run: node .claude/social/weekly-review.mjs  (pulls raw/*.json, rolls up into metrics.json)",
+      "Review top + bottom performer per lane (text / video / community)",
+      "Adjust next week's content queue based on what signal moved",
+      "Buga reviews KPI trends; Gio reviews pending drafts"
+    ]
+  },
+  "queue_flush_vs_pause": {
+    "needs_buga": true,
+    "proposed": {
+      "flush_queue": "A lane's leading signal misses target by >50% for 2 consecutive weeks AND no external cause (algorithm change, posting gap) → flush that lane's queue, re-baseline.",
+      "pause_lane": "A lane regresses below baseline for 3 consecutive weeks despite on-doctrine posts → pause the lane, diagnose before resuming."
+    }
+  }
+}

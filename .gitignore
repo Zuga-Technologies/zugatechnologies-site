@@ -23,3 +23,6 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 brand/Zuga-Brand-Package.zip
+
+# social KPI raw n8n drops (transient); rolled-up metrics.json is committed
+.claude/social/raw/*.json
