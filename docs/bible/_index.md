@@ -1,6 +1,6 @@
 # Zuga Design Bible
 
-Overview of the bible structure. The bible is organized into 18 sections covering mission, brand, visual foundations, components, patterns, accessibility, tokens, governance, and more.
+Overview of the bible structure. The bible is organized into 20 sections covering mission, brand, visual foundations, components, patterns, accessibility, tokens, governance, audience & registers, and the pre-post marketing gate.
 
 ## Sections
 
@@ -22,6 +22,8 @@ Overview of the bible structure. The bible is organized into 18 sections coverin
 16. Cross-platform
 17. Governance
 18. Glossary
+19. Audience & Registers (parallel PR, issue #53 #6)
+20. Pre-post Checklist
 
 Sub-directories:
 - `11-components/` — 13 component reference pages
