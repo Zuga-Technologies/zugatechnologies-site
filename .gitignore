@@ -23,3 +23,18 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 brand/Zuga-Brand-Package.zip
+
+# Design-bible PDF exports. These are Chrome print-to-PDF renders of
+# docs/bible/ (Producer: Skia/PDF) — output, not source, and stale the instant
+# the markdown moves. Two of them sat untracked from 2026-07-01 to 2026-08-31,
+# by which point the bible had been edited past both. Polished binaries belong
+# in the Zuga Brand Assets Drive folder, which is the same rule that already
+# ignores brand/Zuga-Brand-Package.zip above.
+#
+# Ignored rather than deleted: the exports themselves are cheap to regenerate,
+# but nothing in this repo regenerates them, so the copies on disk are the only
+# copies. Leaving them present and unseen costs nothing; removing them would
+# throw away the only artifact.
+*.pdf
+# A PDF the site actually SERVES is content, not an export — keep tracking those.
+!public/**/*.pdf
