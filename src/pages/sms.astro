@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+
+const lastUpdated = 'October 2, 2026';
+const number = '(279) 205-7034';
+const numberHref = 'sms:+12792057034';
+---
+
+<Layout
+  title="Zugabot Text Alerts — Zuga Technologies"
+  description="How to opt in to Zugabot Text Alerts: account alerts sent by text message to the owner of a Zugabot account."
+>
+  <article class="py-section">
+    <Container width="narrow">
+      <h1 class="text-3xl font-semibold tracking-tight text-ink-100 sm:text-4xl">Zugabot Text Alerts</h1>
+      <p class="mt-2 text-sm text-ink-500">Last updated: {lastUpdated}</p>
+
+      <div class="mt-12 space-y-10 text-ink-300 leading-relaxed">
+        <p>
+          Zugabot is the AI assistant built by Zuga Technologies. Zugabot Text Alerts sends the owner of a Zugabot account short text messages about their own account: system alerts (a job failed, a spending limit was reached), goal and job updates, and replies when the owner texts Zugabot a question.
+        </p>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">How to opt in</h2>
+          <p class="mt-3">
+            Text <strong class="text-ink-100">START</strong> to <a href={numberHref} class="text-accent-500 hover:text-accent-400">{number}</a> from your mobile phone. You will receive one confirmation:
+          </p>
+          <blockquote class="mt-3 border-l-2 border-rule pl-4 text-ink-400">
+            Zugabot: You're subscribed to Zugabot Text Alerts. Msg frequency varies (up to 10/day). Msg &amp; data rates may apply. Reply HELP for help, STOP to cancel.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">Program details</h2>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">Who receives them:</strong> only the person who owns the Zugabot account and opts in. No marketing messages are sent.</li>
+            <li><strong class="text-ink-200">How often:</strong> message frequency varies, up to 10 messages per day.</li>
+            <li><strong class="text-ink-200">Cost:</strong> Message and data rates may apply.</li>
+            <li><strong class="text-ink-200">Opt out:</strong> reply <strong class="text-ink-100">STOP</strong> at any time. You will get one final confirmation and no further messages.</li>
+            <li><strong class="text-ink-200">Help:</strong> reply <strong class="text-ink-100">HELP</strong>, or email <a href="mailto:buga@zugabot.ai" class="text-accent-500 hover:text-accent-400">buga@zugabot.ai</a>.</li>
+            <li>Carriers are not liable for delayed or undelivered messages.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-ink-100">Privacy</h2>
+          <p class="mt-3">
+            Your mobile number is used only to send these alerts. Mobile numbers and SMS opt-in consent are never shared with or sold to third parties or affiliates for marketing or promotional purposes. See our <a href="/privacy" class="text-accent-500 hover:text-accent-400">Privacy Policy</a> and <a href="/terms#sms" class="text-accent-500 hover:text-accent-400">Terms</a>.
+          </p>
+        </section>
+      </div>
+    </Container>
+  </article>
+</Layout>

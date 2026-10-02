@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
 
-const lastUpdated = 'May 4, 2026';
+const lastUpdated = 'October 2, 2026';
 ---
 
 <Layout
@@ -24,6 +24,7 @@ const lastUpdated = 'May 4, 2026';
           <p class="mt-3">This policy covers all Zuga Technologies products and websites including:</p>
           <ul class="mt-3 list-disc space-y-1 pl-5">
             <li><strong class="text-ink-200">ZugaApp</strong> (zugabot.ai) — AI workspace platform</li>
+            <li><strong class="text-ink-200">Zugabot</strong> — AI assistant, including Zugabot Text Alerts (SMS)</li>
             <li><strong class="text-ink-200">Ludus — Gaming Companion</strong> — AI voice gaming assistant</li>
             <li><strong class="text-ink-200">Spiritus</strong> — Wellness and journaling</li>
             <li><strong class="text-ink-200">ZugaTrader</strong> — Trading analytics</li>
@@ -89,6 +90,15 @@ const lastUpdated = 'May 4, 2026';
             <li><strong class="text-ink-200">Storage:</strong> We do NOT collect, process, or store payment card information</li>
             <li>We store only subscription status and transaction IDs for billing records</li>
           </ul>
+
+          <h3 class="mt-5 text-base font-medium text-ink-200">2.8 SMS / Text Messages (Zugabot Text Alerts)</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li><strong class="text-ink-200">What:</strong> Your mobile phone number and the text messages you send to or receive from Zugabot</li>
+            <li><strong class="text-ink-200">Why:</strong> To send the account alerts you opted into and to answer messages you send. Message frequency varies, up to 10 messages per day. Message and data rates may apply. Reply STOP to opt out, HELP for help. Program details: <a href="/sms" class="text-accent-500 hover:text-accent-400">zugatechnologies.com/sms</a></li>
+            <li><strong class="text-ink-200">Processing:</strong> Messages are delivered through Twilio</li>
+            <li><strong class="text-ink-200">Sharing:</strong> Mobile numbers and SMS opt-in consent are not shared with or sold to third parties or affiliates for marketing or promotional purposes. They are shared only with Twilio, solely to deliver the messages.</li>
+            <li><strong class="text-ink-200">Storage:</strong> Your number is stored with your Zugabot account settings. Message content is kept with your Zugabot conversation history and deleted when you delete your account.</li>
+          </ul>
         </section>
 
         <section>
@@ -112,6 +122,7 @@ const lastUpdated = 'May 4, 2026';
                 <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Account info</td><td>No</td><td>SuperTokens (auth)</td><td>Yes</td></tr>
                 <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Payments</td><td>No</td><td>Stripe / Tebex</td><td>Status only</td></tr>
                 <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Video clips</td><td>Yes</td><td>No</td><td>No</td></tr>
+                <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Phone number + text messages</td><td>No</td><td>Twilio (delivery only)</td><td>Yes (Zugabot account)</td></tr>
                 <tr><td class="py-2 pr-4">Analytics events</td><td>No</td><td>PostHog (anonymous)</td><td>No</td></tr>
               </tbody>
             </table>
@@ -132,6 +143,7 @@ const lastUpdated = 'May 4, 2026';
             <li><strong class="text-ink-200">Tebex / Overwolf</strong> — Payment processing (ZugaGamer)</li>
             <li><strong class="text-ink-200">Spotify</strong> — Music playback control (optional, user-initiated)</li>
             <li><strong class="text-ink-200">PostHog</strong> — Anonymous product analytics (all products including The Box Breather)</li>
+            <li><strong class="text-ink-200">Twilio</strong> — SMS delivery for Zugabot Text Alerts</li>
           </ul>
         </section>
 
