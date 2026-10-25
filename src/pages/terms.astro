@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
 
-const lastUpdated = 'October 2, 2026';
+const lastUpdated = 'October 25, 2026';
 ---
 
 <Layout
@@ -16,14 +16,14 @@ const lastUpdated = 'October 2, 2026';
 
       <div class="mt-12 space-y-10 text-ink-300 leading-relaxed">
         <p>
-          These Terms of Use ("Terms") govern your use of products, services, and websites operated by Zuga Technologies LLC ("we", "us", "our"), including ZugaApp, Ludus â Gaming Companion, and related products and websites (collectively, "our Products"). By using any of our Products, you agree to these Terms.
+          These Terms of Use ("Terms") govern your use of products, services, and websites operated by Zuga Technologies LLC ("we", "us", "our"), including ZugaApp, Ludus — Gaming Companion, and related products and websites (collectively, "our Products"). By using any of our Products, you agree to these Terms.
         </p>
 
         <section>
           <h2 class="text-xl font-semibold text-ink-100">1. Products and Sites</h2>
           <ul class="mt-3 list-disc space-y-1 pl-5">
             <li><strong class="text-ink-200">ZugaApp</strong> (zugabot.ai) — AI workspace platform with studios for coding, trading, news, learning, and more</li>
-            <li><strong class="text-ink-200">Ludus â Gaming Companion</strong> — AI-powered voice gaming assistant (desktop overlay)</li>
+            <li><strong class="text-ink-200">Ludus — Gaming Companion</strong> — AI-powered voice gaming assistant (desktop overlay)</li>
             <li><strong class="text-ink-200">Spiritus</strong> — Wellness, journaling, and meditation</li>
             <li><strong class="text-ink-200">The Box Breather</strong> (theboxbreather.com) — Free breathing exercise timer</li>
             <li><strong class="text-ink-200">zugatechnologies.com</strong> — Corporate website (informational)</li>
@@ -39,7 +39,7 @@ const lastUpdated = 'October 2, 2026';
         <section>
           <h2 class="text-xl font-semibold text-ink-100">3. Accounts</h2>
           <ul class="mt-3 list-disc space-y-1 pl-5">
-            <li>Some Products require an account (ZugaApp). Others work without one (Ludus â Gaming Companion, The Box Breather, zugatechnologies.com).</li>
+            <li>Some Products require an account (ZugaApp). Others work without one (Ludus — Gaming Companion, The Box Breather, zugatechnologies.com).</li>
             <li>You are responsible for maintaining the security of your account credentials.</li>
             <li>One account works across all Zuga Technologies products that require authentication.</li>
           </ul>
@@ -49,7 +49,7 @@ const lastUpdated = 'October 2, 2026';
           <h2 class="text-xl font-semibold text-ink-100">4. Subscriptions and Payments</h2>
           <ul class="mt-3 list-disc space-y-1 pl-5">
             <li><strong class="text-ink-200">ZugaApp:</strong> Credit-based system (pay-per-use tokens) via Stripe. See <a href="https://zugabot.ai/tokens" class="text-accent-500 hover:text-accent-400">Token Dashboard</a> for pricing.</li>
-            <li><strong class="text-ink-200">Ludus â Gaming Companion:</strong> Free tier (20 AI queries/day) or Pro ($9.99/month via Tebex/Overwolf).</li>
+            <li><strong class="text-ink-200">Ludus — Gaming Companion:</strong> Free tier (20 AI queries/day) or Pro ($9.99/month via Tebex/Overwolf).</li>
             <li><strong class="text-ink-200">BYOK:</strong> You may provide your own API keys for unlimited access. You are solely responsible for costs on your own accounts.</li>
           </ul>
           <p class="mt-3">Subscriptions are billed monthly. Cancel at any time through the respective payment platform (Stripe, Tebex, Overwolf). Cancellation takes effect at the end of the current billing period. All token purchases are non-refundable.</p>
@@ -64,14 +64,14 @@ const lastUpdated = 'October 2, 2026';
             <li>Attempt to circumvent rate limits, subscription tiers, or security measures</li>
             <li>Use our Products to harass, abuse, or harm others</li>
             <li>Transmit malicious content through any input method</li>
-            <li>Use Ludus â Gaming Companion to cheat or gain unfair competitive advantage in violation of game rules</li>
+            <li>Use Ludus — Gaming Companion to cheat or gain unfair competitive advantage in violation of game rules</li>
             <li>Resell, redistribute, or sublicense access to our Products</li>
           </ul>
         </section>
 
         <section>
           <h2 class="text-xl font-semibold text-ink-100">6. AI-Generated Content</h2>
-          <p class="mt-3">Our Products use artificial intelligence to generate responses, analysis, and recommendations. AI output is provided "as is." We do not guarantee accuracy, completeness, or reliability. Specifically:</p>
+          <p class="mt-3">Our Products use artificial intelligence (Claude by Anthropic and the other providers named in section 8) to generate responses, analysis, and recommendations. In Ludus — Gaming Companion, game answers may come from Zuga Technologies' own written game library, from short passages of community wikis shown with their credit and licence, or from an AI model. AI output is provided "as is." We do not guarantee accuracy, completeness, or reliability. Specifically:</p>
           <ul class="mt-3 list-disc space-y-1 pl-5">
             <li>AI responses may contain errors or outdated information</li>
             <li>Trading analysis (ZugaTrader) is informational only — not financial advice</li>
@@ -96,6 +96,10 @@ const lastUpdated = 'October 2, 2026';
         <section>
           <h2 class="text-xl font-semibold text-ink-100">8. Third-Party Services</h2>
           <p class="mt-3">Our Products integrate with third-party services (Anthropic, Deepgram, Cartesia, Spotify, Stripe, Tebex, Overwolf, Twilio, and others), each subject to their own terms. We are not responsible for the availability, accuracy, or terms of third-party services.</p>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li>TypeSafe AI: chooses which guide page answers a game question.</li>
+            <li>Anthropic (Claude): writes game answers when our game library has none.</li>
+          </ul>
 
           <h3 id="sms" class="mt-5 text-base font-medium text-ink-200">8.1 Zugabot Text Alerts (SMS)</h3>
           <p class="mt-2">By texting START to the Zugabot number you agree to receive recurring account alert messages from Zugabot (Zuga Technologies). Message frequency varies, up to 10 messages per day. Message and data rates may apply. Reply STOP to cancel at any time; reply HELP for help or email <a href="mailto:buga@zugabot.ai" class="text-accent-500 hover:text-accent-400">buga@zugabot.ai</a>. Consent is not a condition of any purchase. Carriers are not liable for delayed or undelivered messages. We do not share, sell, or provide your mobile phone number or messaging consent data to third parties or affiliates for marketing or promotional purposes. See the <a href="/privacy" class="text-accent-500 hover:text-accent-400">Privacy Policy</a>. Program details: <a href="/sms" class="text-accent-500 hover:text-accent-400">zugatechnologies.com/sms</a>.</p>
@@ -104,11 +108,12 @@ const lastUpdated = 'October 2, 2026';
         <section>
           <h2 class="text-xl font-semibold text-ink-100">9. Intellectual Property</h2>
           <p class="mt-3">Our Products, including code, design, and branding, are the property of Zuga Technologies LLC. Game names, logos, music, and third-party content referenced by our Products belong to their respective owners.</p>
+          <p class="mt-3">Passages from community wikis are shown under their own licence (CC BY-SA), with the page link and licence shown on screen.</p>
         </section>
 
         <section>
           <h2 class="text-xl font-semibold text-ink-100">10. Anti-Cheat Compatibility (ZugaGamer)</h2>
-          <p class="mt-3">Ludus â Gaming Companion operates as a standard desktop overlay. It does not inject code into game processes, modify game files, or read game memory. However, we cannot guarantee compatibility with all anti-cheat systems. Use is at your own risk regarding potential conflicts with game anti-cheat software.</p>
+          <p class="mt-3">Ludus — Gaming Companion operates as a standard desktop overlay. It does not inject code into game processes, modify game files, or read game memory. However, we cannot guarantee compatibility with all anti-cheat systems. Use is at your own risk regarding potential conflicts with game anti-cheat software.</p>
         </section>
 
         <section>
