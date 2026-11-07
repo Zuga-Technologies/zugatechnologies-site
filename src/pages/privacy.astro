@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
 
-const lastUpdated = 'October 25, 2026';
+const lastUpdated = 'November 7, 2026';
 ---
 
 <Layout
@@ -50,6 +50,8 @@ const lastUpdated = 'October 25, 2026';
             <li><strong class="text-ink-200">What:</strong> Audio from your microphone when the overlay is listening</li>
             <li><strong class="text-ink-200">Processing:</strong> Streamed in real-time to Deepgram for speech-to-text</li>
             <li><strong class="text-ink-200">Storage:</strong> Audio is NOT stored. Processed in real-time and discarded immediately. We do not record or retain any audio data.</li>
+            <li><strong class="text-ink-200">Cloud voice passes (paid tiers):</strong> Ludus asks our server (zugabot.ai) for a short-lived pass to connect to Deepgram and Cartesia. The request carries your account ID and no audio. The pass is not stored by us.</li>
+            <li><strong class="text-ink-200">Cloned voices (paid tier, only when you clone a voice):</strong> the voice sample you record or upload, and the name you give it, go from Ludus to our server (zugabot.ai), which passes them on to Cartesia to make the voice. The sample is not stored by us. Cartesia may keep it under its own terms.</li>
           </ul>
 
           <h3 class="mt-5 text-base font-medium text-ink-200">2.3 AI Conversations</h3>
@@ -119,6 +121,7 @@ const lastUpdated = 'October 25, 2026';
               </thead>
               <tbody class="text-ink-400">
                 <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Voice audio</td><td>No</td><td>Deepgram (stream, not stored)</td><td>No</td></tr>
+                <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Voice sample (only when you clone a voice)</td><td>No</td><td>Cartesia, through our server</td><td>Yes, passed on to Cartesia, not stored by us</td></tr>
                 <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Text queries</td><td>In memory / account</td><td>Anthropic, Moonshot</td><td>ZugaApp only</td></tr>
                 <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Screenshots</td><td>If you save</td><td>Anthropic (on request)</td><td>No</td></tr>
                 <tr class="border-b border-rule-soft"><td class="py-2 pr-4">Player memory</td><td>Yes (JSON files)</td><td>Included in AI context</td><td>No</td></tr>
@@ -147,7 +150,7 @@ const lastUpdated = 'October 25, 2026';
             <li><strong class="text-ink-200">Anthropic (Claude AI)</strong> — AI reasoning and vision analysis</li>
             <li><strong class="text-ink-200">Moonshot (Kimi)</strong> — AI coding and research</li>
             <li><strong class="text-ink-200">Deepgram</strong> — Speech-to-text (ZugaGamer)</li>
-            <li><strong class="text-ink-200">Cartesia</strong> — Text-to-speech (ZugaGamer)</li>
+            <li><strong class="text-ink-200">Cartesia</strong> — Text-to-speech and voice cloning (ZugaGamer). A voice sample for a cloned voice reaches Cartesia through our server. Cartesia may keep it under its own terms.</li>
             <li><strong class="text-ink-200">Tavily</strong> — Web search for game information</li>
             <li><strong class="text-ink-200">SuperTokens</strong> — Authentication</li>
             <li><strong class="text-ink-200">Stripe</strong> — Payment processing (ZugaApp)</li>
@@ -158,7 +161,7 @@ const lastUpdated = 'October 25, 2026';
             <li><strong class="text-ink-200">TypeSafe AI</strong> — receives your game question, the game's name and the titles and first lines of guide pages, to choose which guide page answers your question. TypeSafe does not use this to train or tune AI models. It may keep this data under its own terms.</li>
             <li><strong class="text-ink-200">Anthropic (Claude)</strong> — receives your game question and the game's name when our game library has no answer, to write the answer.</li>
           </ul>
-          <p class="mt-3"><strong class="text-ink-200">Zuga Technologies servers (zugabot.ai)</strong> receive Ludus game questions and, only if you opt in, filtered game text, as described in section 3.</p>
+          <p class="mt-3"><strong class="text-ink-200">Zuga Technologies servers (zugabot.ai)</strong> receive Ludus game questions and, only if you opt in, filtered game text, as described in section 3. On paid tiers they also receive requests for short-lived voice passes and, only when you clone a voice, the voice sample, which they pass on to Cartesia and do not store (section 2.2).</p>
         </section>
 
         <section>
@@ -200,6 +203,8 @@ const lastUpdated = 'October 25, 2026';
           <ul class="mt-3 list-disc space-y-1 pl-5">
             <li><strong class="text-ink-200">Account data:</strong> Until you delete your account</li>
             <li><strong class="text-ink-200">Voice audio:</strong> Not retained (real-time only)</li>
+            <li><strong class="text-ink-200">Voice sample for a cloned voice:</strong> Not stored by us. Our server passes it on to Cartesia, which may keep it under its own terms.</li>
+            <li><strong class="text-ink-200">Voice request log:</strong> For each signed-in voice request, our server logs one line with your account ID, the route, the vendor and the result (never the audio or the pass). Kept for 30 days, then deleted.</li>
             <li><strong class="text-ink-200">ZugaApp conversations:</strong> Until you delete them</li>
             <li><strong class="text-ink-200">ZugaGamer conversations:</strong> Until app restart (in memory only)</li>
             <li><strong class="text-ink-200">Local files (memory, clips, cache):</strong> Until you delete or uninstall</li>
