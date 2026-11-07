@@ -227,8 +227,12 @@ const API = 'https://zugabot.ai';
 </style>
 
 <script>
+  import { buildSource } from '../lib/attribution';
+
   const API = 'https://zugabot.ai';
   const ref = new URLSearchParams(location.search).get('ref') || '';
+  // utm_source/utm_medium -> "twitch/chat"; counts signups by channel (hm-#1011).
+  const src = buildSource(location.search);
 
   // Auto-greet so the face feels alive (no audio on the page to drive the mouth).
   const face = document.getElementById('ludus-face');
@@ -261,7 +265,7 @@ const API = 'https://zugabot.ai';
     try {
       const res = await fetch(`${API}/api/ludus/waitlist`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, referral_code: ref || undefined }),
+        body: JSON.stringify({ email, referral_code: ref || undefined, source: src }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) { if (errEl) { errEl.textContent = data.detail || 'Something went wrong — try again.'; errEl.hidden = false; } return; }
