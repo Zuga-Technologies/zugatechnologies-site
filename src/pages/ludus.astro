@@ -103,7 +103,27 @@ const API = 'https://zugabot.ai';
 </Layout>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+  /* Self-hosted (SIL OFL 1.1) so a visitor's IP and referrer never go to Google. Files: public/fonts. */
+  @font-face {
+    font-family: 'Press Start 2P'; font-style: normal; font-weight: 400; font-display: swap;
+    src: url('/fonts/press-start-2p-latin-ext.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Press Start 2P'; font-style: normal; font-weight: 400; font-display: swap;
+    src: url('/fonts/press-start-2p-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'VT323'; font-style: normal; font-weight: 400; font-display: swap;
+    src: url('/fonts/vt323-latin-ext.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'VT323'; font-style: normal; font-weight: 400; font-display: swap;
+    src: url('/fonts/vt323-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
 
   .ludus {
     --gold: #ffd76e; --navy-bg: #0a1024; --navy-fill-top: #16235e; --navy-fill-bot: #0a1234;
@@ -207,8 +227,12 @@ const API = 'https://zugabot.ai';
 </style>
 
 <script>
+  import { buildSource } from '../lib/attribution';
+
   const API = 'https://zugabot.ai';
   const ref = new URLSearchParams(location.search).get('ref') || '';
+  // utm_source/utm_medium -> "twitch/chat"; counts signups by channel (hm-#1011).
+  const src = buildSource(location.search);
 
   // Auto-greet so the face feels alive (no audio on the page to drive the mouth).
   const face = document.getElementById('ludus-face');
@@ -241,7 +265,7 @@ const API = 'https://zugabot.ai';
     try {
       const res = await fetch(`${API}/api/ludus/waitlist`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, referral_code: ref || undefined }),
+        body: JSON.stringify({ email, referral_code: ref || undefined, source: src }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) { if (errEl) { errEl.textContent = data.detail || 'Something went wrong — try again.'; errEl.hidden = false; } return; }

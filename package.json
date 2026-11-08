@@ -14,7 +14,8 @@
     "astro": "astro",
     "lint:tokens": "node packages/design-tokens/scripts/tokens-lint.mjs",
     "build:bible-review": "node packages/design-tokens/scripts/aggregate-mike-review.mjs",
-    "test:scripts": "vitest run packages/design-tokens/scripts"
+    "test:scripts": "vitest run packages/design-tokens/scripts",
+    "test:lib": "vitest run src/lib"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
